@@ -123,6 +123,19 @@
             margin: 20px 0;
             border: 1px solid #eee;
         }
+        header {
+        position: relative;
+        z-index: 10;
+        background: white; /* Optional: solid background */
+        padding-bottom: 20px;
+    }
+    
+    #protein-viewer {
+        position: relative;
+        z-index: 1;
+        margin-top: 40px;
+        overflow: hidden; /* Prevents canvas overflow */
+    }
     </style>
 </head>
 <body>
