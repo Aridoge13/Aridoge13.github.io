@@ -493,7 +493,7 @@
             // 3D Protein Viewer
             if(typeof $3Dmol !== 'undefined') {
                 let viewer = $3Dmol.createViewer("protein-viewer");
-                fetch('https://files.rcsb.org/view/1CRN.pdb')
+                fetch('https://files.rcsb.org/view/9F42.pdb')
                     .then(response => response.text())
                     .then(pdbData => {
                         viewer.addModel(pdbData, "pdb");
