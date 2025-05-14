@@ -538,6 +538,10 @@
                   })
                   .catch(error => console.error('Error fetching PDB file:', error));
           }
+          let viewer = $3Dmol.createViewer("protein-viewer", {
+    backgroundColor: "white",
+    defaultViewport: { x:0, y:0, width: "100%", height: 400 } // Explicit dimensions
+});
       
           // Animate skill bars sequentially
           const skillBars = document.querySelectorAll('.skill-level');
