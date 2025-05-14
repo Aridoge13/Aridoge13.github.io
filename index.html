@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <script src="https://3dmol.org/build/3Dmol-min.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aritra Mukherjee - Computational Biologist</title>
@@ -364,19 +365,58 @@
     </div>
     
 
-    
+
     <div class="section">
       <h2>Technical Skills Visualization</h2>
       <p>Here are some of my core competencies visualized:</p>
       <p>As a computational biologist, I have a strong foundation in both experimental and computational techniques. My skills span molecular biology, bioinformatics, machine learning, and data visualization.</p>
       <p>Below is a typewriter effect simulating a terminal output, showcasing my skills and projects:</p>
-      <p>Feel free to explore my GitHub for more projects and code samples!</p>
-      <p>Let's connect and collaborate on exciting projects!</p>
-      <p>Thank you for visiting my profile!</p>
-      <p>For any inquiries or collaborations, please reach out via email or LinkedIn.</p>
-      <p>Looking forward to connecting with you!</p>
-      <p>Best regards,</p>
-      <p>Aritra Mukherjee</p>
+      <p>To view my projects, please visit my <a href="https://github.com/Aridoge13" target="_blank">GitHub</a> profile.</p>
+      <p>Hover over the skill bars to see the exact percentage.</p>
+      <p>My skills are categorized into three main areas:</p>
+      <ul>
+          <li><strong>Molecular Biology:</strong> Techniques and methodologies used in experimental biology.</li>
+          <li><strong>Omics & Computational Biology:</strong> Skills related to bioinformatics and computational analysis.</li>
+          <li><strong>Machine Learning & AI:</strong> Proficiencies in machine learning algorithms and applications.</li>
+      </ul>
+      <p>Each skill is represented with a percentage indicating my proficiency level.</p>
+
+
+        <style>
+        .terminal {
+            background: #2d2d2d;
+            color: #f8f8f8;
+            padding: 15px;
+            border-radius: 5px;
+            font-family: monospace;
+            margin: 20px 0;
+        }
+        .terminal-header {
+            background: #1a1a1a;
+            color: #ccc;
+            padding: 5px 10px;
+            margin: -15px -15px 15px -15px;
+            border-radius: 5px 5px 0 0;
+        }
+        
+        /* Skill Bars */
+        .skill-bar {
+            background: #e0e0e0;
+            height: 10px;
+            border-radius: 5px;
+            margin: 5px 0;
+        }
+        .skill-level {
+            background: #3498db;
+            height: 100%;
+            border-radius: 5px;
+            width: 0;
+            animation: fill 1s forwards;
+        }
+        @keyframes fill { to { width: var(--level); } }
+        </style>
+
+
       <div class="terminal">
           <div class="terminal-header">bash</div>
           <pre id="typewriter"></pre>
@@ -578,40 +618,45 @@
 
 
   <script>
-      // Typewriter Effect
-      const text = "$ cd projects/\n$ ls\nAI_Genomics  Transcriptomics  CRISPR_Analysis";
-      let i = 0;
-      function typeWriter() {
-          if (i < text.length) {
-              document.getElementById("typewriter").innerHTML += text.charAt(i);
-              i++;
-              setTimeout(typeWriter, 50);
-          }
-      }
-      typeWriter();
-      
-      // Animate skill bars
-      document.querySelectorAll('.skill-level').forEach(bar => {
-          const percent = bar.parentElement.previousElementSibling.textContent;
-          bar.style.setProperty('--level', percent);
-      });
-      
-      
-      if(typeof $3Dmol !== 'undefined') {
-          let viewer = $3Dmol.createViewer("protein-viewer");
-          viewer.setBackgroundColor('white');
-          viewer.setSize(800, 400);
-          viewer.setStyle({stick: {}}); // Set default style to stick
-          viewer.setStyle({cartoon: {}}); // Set default style to cartoon
-          fetch('https://files.rcsb.org/view/9F42.pdb')
-              .then(response => response.text())
-              .then(pdbData => {
-                  viewer.addModel(pdbData, "pdb");
-                  viewer.setStyle({cartoon: {color: 'spectrum'}});
-                  viewer.zoomTo();
-                  viewer.render();
-              });
-      }
-  </script>
+    // Wait for DOM to load
+    document.addEventListener('DOMContentLoaded', function() {
+        // Typewriter Effect
+        const text = "$ cd projects/\n$ ls\nAI_Genomics  Transcriptomics  CRISPR_Analysis";
+        const typewriterEl = document.getElementById('typewriter');
+        let i = 0;
+        
+        function typeWriter() {
+            if (i < text.length) {
+                typewriterEl.innerHTML += text.charAt(i);
+                i++;
+                setTimeout(typeWriter, 50);
+            }
+        }
+        
+        // Animate skill bars
+        document.querySelectorAll('.skill-container').forEach((container, index) => {
+            const percent = container.querySelector('.skill-percentage').textContent;
+            const bar = container.querySelector('.skill-level');
+            
+            // Set CSS variable
+            bar.style.setProperty('--target-width', percent);
+            
+            // Delay animations sequentially
+            bar.style.animationDelay = `${index * 0.1}s`;
+        });
+    
+        // 3Dmol viewer
+        if(typeof $3Dmol !== 'undefined') {
+            let viewer = $3Dmol.createViewer("protein-viewer");
+            // ... rest of your 3Dmol code
+        }
+    });
+    document.addEventListener('DOMContentLoaded', function() {
+    // ... all your existing code
+    
+    // Mark as loaded
+    document.body.classList.add('loaded');
+    });
+    </script>
 </body>
 </html>

@@ -2,3 +2,12 @@ title: "Aritra Mukherjee - CV"
 theme: minima
 plugins:
   - jekyll-feed
+  
+
+# In _config.yml
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
+      classes: "text-center"
