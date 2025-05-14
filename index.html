@@ -155,7 +155,6 @@
             }
         }
     </style>
-      <script src="https://3dmol.org/build/3Dmol-min.js"></script>
 </head>
 
 <body>
@@ -282,7 +281,7 @@
             <p class="timeline">Amity University Kolkata | 2017-2020</p>
         </div>
     </div>
-    
+
     <div class="section">
         <h2>Skills</h2>
         <div class="skills-container">
@@ -600,15 +599,6 @@
       <p>Thank you for visiting my profile!</p>
       <img src="https://profile-counter.glitch.me/Aridoge13/count.svg" alt="Visitor counter">
   </div>
-
-
-  
-  <div class="section">
-      <h2>Molecular Visualization</h2>
-      <div id="protein-viewer" style="width: 100%; height: 300px; margin: 0 auto;"></div>
-  </div>
-
-
   <script>
     // Wait for DOM to load
     document.addEventListener('DOMContentLoaded', function() {
@@ -637,22 +627,9 @@
             bar.style.animationDelay = `${index * 0.1}s`;
         });
     
-        // 3Dmol viewer
-        if(typeof $3Dmol !== 'undefined') {
-            let viewer = $3Dmol.createViewer("protein-viewer");
-            viewer.setBackgroundColor('white');
-            viewer.setSize(800, 400);
-            viewer.setStyle({cartoon: {}}); // Set default style to cartoon
-            fetch('https://files.rcsb.org/view/9F42.pdb')
-              .then(response => response.text())
-              .then(pdbData => {
-                  viewer.addModel(pdbData, "pdb");
-                  viewer.setStyle({cartoon: {color: 'spectrum'}});
-                  viewer.zoomTo();
-                  viewer.render();
-              });
+        
       }
-        }
+      
     );
     document.addEventListener('DOMContentLoaded', function() {
     // ... all your existing code
