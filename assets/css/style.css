@@ -98,3 +98,15 @@ a:hover { text-decoration: underline; }
 .loaded .skill-level {
     visibility: visible;
 }
+
+/* Add to your existing CSS */
+header {
+    position: relative;
+    z-index: 10; /* Ensures header stays above other elements */
+}
+
+#protein-viewer {
+    position: relative;
+    z-index: 1;
+    margin-top: 40px; /* Adds space below header */
+}
