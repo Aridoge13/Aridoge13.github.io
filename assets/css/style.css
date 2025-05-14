@@ -111,6 +111,29 @@ header {
     margin-top: 40px; /* Adds space below header */
 }
 
+/* Add these to your existing CSS */
+#protein-viewer {
+    width: 100%;
+    height: 400px;
+    margin: 20px 0;
+    position: relative;
+    background-color: white;
+    border: 1px solid #eee;
+    overflow: hidden;
+}
 
-    /* Add these to your existing CSS */
-    
+/* Ensure WebGL canvas is properly contained */
+#protein-viewer canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100% !important;
+}
+.error {
+    color: #e74c3c;
+    padding: 20px;
+    text-align: center;
+    background: #fde8e8;
+    border-radius: 4px;
+}
