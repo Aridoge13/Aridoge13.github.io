@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aritra Mukherjee - Computational Biologist</title>
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --secondary: #3498db;
+            --accent: #e74c3c;
+            --light: #ecf0f1;
+            --dark: #2c3e50;
+            --gray: #95a5a6;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        
+        header {
+            text-align: center;
+            padding: 2rem 0;
+            margin-bottom: 2rem;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        
+        h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+        
+        h2 {
+            color: var(--primary);
+            border-bottom: 2px solid var(--secondary);
+            padding-bottom: 0.5rem;
+            margin-top: 2rem;
+        }
+        
+        h3 {
+            color: var(--dark);
+            margin-bottom: 0.5rem;
+        }
+        
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1.5rem;
+            margin: 1rem 0;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        a {
+            color: var(--secondary);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        a:hover {
+            color: var(--accent);
+            text-decoration: underline;
+        }
+        
+        .section {
+            background: white;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        
+        .experience-item, .education-item {
+            margin-bottom: 1.5rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .experience-item:last-child, .education-item:last-child {
+            border-bottom: none;
+        }
+        
+        .timeline {
+            font-style: italic;
+            color: var(--gray);
+            margin: 0.5rem 0;
+        }
+        
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        
+        .skill-category {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .skill-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        
+        .skill-list li {
+            margin-bottom: 0.5rem;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+        
+        .skill-list li:before {
+            content: "▹";
+            position: absolute;
+            left: 0;
+            color: var(--secondary);
+        }
+        
+        .tech-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+        
+        .tech-tag {
+            background-color: var(--light);
+            color: var(--dark);
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+        
+        @media (max-width: 768px) {
+            .contact-info {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .skills-container {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Aritra Mukherjee</h1>
+        <p>Computational Biologist | Data Scientist | Biomedical Researcher</p>
+        <p>Bridging Bench and Code to Solve Biomedical Challenges</p>
+        <p></p>
+        <p>Welcome to my digital lab! I am a passionate computational biologist with a knack for transforming complex biological data into actionable insights. My journey spans experimental biology and computational innovation, and I thrive at the intersection of these fields.</p>
+        <p>Let's connect and explore the fascinating world of genomics, machine learning, and personalized medicine together!</p>
+        <p>📍 Currently based in India, open to opportunities worldwide.</p>
+    </header>
+
+    <div class="section">
+        <div class="contact-info">
+            <div class="contact-item">📧 <a href="mailto:aritra.mukherjee98@gmail.com">aritra.mukherjee98@gmail.com</a></div>
+            <div class="contact-item">📞 +91 7044181694</div>
+            <div class="contact-item">🔗 <a href="http://www.linkedin.com/in/aritra-mukherjee-82b070125" target="_blank">LinkedIn</a></div>
+            <div class="contact-item">💻 <a href="https://github.com/Aridoge13" target="_blank">GitHub</a></div>
+            <div class="contact-item">📚 <a href="https://orcid.org/0000-0002-6061-611X" target="_blank">ORCID</a></div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Professional Summary</h2>
+        <p><strong>Bridging Bench and Code to Solve Biomedical Challenges</strong><br>
+        🔬 Experimental Biologist | 💻 Computational Biologist | 📊 Data Alchemist</p>
+        
+        <p>I thrive at the intersection of wet-lab science and computational innovation, leveraging dual expertise to decode biological complexity into actionable insights. With a foundation in molecular biology and advanced training in machine learning-driven bioinformatics, I design experiments and algorithms that answer why and how—whether dissecting host-pathogen interactions or modeling cancer genomics.</p>
+        
+        <h3>What I Bring to the Table:</h3>
+        <ul>
+            <li><strong>Experimental Biology:</strong> Mastery of molecular techniques (RNA-seq, CRISPR, histology) and preclinical models.</li>
+            <li><strong>Computational Biology:</strong> End-to-end pipeline development for multi-omics integration, phylogenetics, and biomarker discovery.</li>
+            <li><strong>Machine Learning:</strong> Building predictive models (random forests, neural networks) to stratify disease risk and optimize therapies.</li>
+            <li><strong>Translational Impact:</strong> Passion for turning data into decisions—from precision medicine platforms to clinical diagnostics.</li>
+        </ul>
+        
+        <h3>My Playground:</h3>
+        <ul>
+            <li><strong>Tools:</strong> Python | R | TensorFlow | PyTorch | Linux/HPC | AWS/Google Cloud</li>
+            <li><strong>Domains:</strong> Genomics, Oncology, Infectious Disease, Drug Discovery, Synthetic Biology</li>
+            <li><strong>Mindset:</strong> "Bench-to-benchmarking"—I connect lab experiments to computational workflows, ensuring biological relevance at every step.</li>
+        </ul>
+        
+        <h3>Why Work With Me?</h3>
+        <p>I've spearheaded projects like Kabosu, an AI-driven precision medicine tool integrating multi-omics data, and published on CRISPR innovations. Whether optimizing a neural network to predict drug responses or troubleshooting a qPCR assay, I bridge disciplines to deliver robust, reproducible science.</p>
+        
+        <h3>Open to Roles That Demand:</h3>
+        <ul>
+            <li>Hybrid experimental/computational problem-solving.</li>
+            <li>Scalable bioinformatics pipelines for genomics or proteomics.</li>
+            <li>Machine learning applications in drug discovery or diagnostics.</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Research Experience</h2>
+        
+        <div class="experience-item">
+            <h3>Kabosu: AI-Powered Personalized Medicine Platform</h3>
+            <p class="timeline">Independent Project (Currently in Training & Development) | Aug 2024 – Present</p>
+            <ul>
+                <li>Developing an ML tool to classify disease subtypes and assess risk using transcriptomic data (TCGA RNA-seq).</li>
+                <li>Built a preprocessing pipeline for RNA-seq data standardization.</li>
+                <li>Currently training a Random Forest model & a feed-forward neural network for expression-based classification.</li>
+                <li>Deployed Google Cloud for scalable training, tuning, and deployment.</li>
+                <li>Publicly documented and version-controlled on a GitHub repository for transparency and reproducibility.</li>
+            </ul>
+            <div class="tech-tags">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">TensorFlow</span>
+                <span class="tech-tag">PyTorch</span>
+                <span class="tech-tag">Scikit-learn</span>
+                <span class="tech-tag">SHAP</span>
+                <span class="tech-tag">Google Cloud Platform</span>
+            </div>
+        </div>
+        
+        <div class="experience-item">
+            <h3>PhD Researcher (Short-term, Discontinued)</h3>
+            <h4>Project: The Role of WNT Signaling in Dorsal Pallium Regeneration in Axolotl</h4>
+            <p class="timeline">UNAM – Institute of Biomedicine, Mexico City | Aug 2023 – Jan 2024</p>
+            <ul>
+                <li>Conducted microsurgical procedures and brain lesion experiments in Ambystoma mexicanum (axolotl) to study neural regeneration.</li>
+                <li>Investigated WNT pathway signaling dynamics using molecular biology techniques.</li>
+                <li>Managed preclinical models and implemented histological, microscopy and imaging workflows.</li>
+                <li>Discontinued due to institutional limitations, but inspired a pivot toward computational biology.</li>
+            </ul>
+        </div>
+        
+        <div class="experience-item">
+            <h3>Master's Student Researcher</h3>
+            <h4>Project: Phylogenetic Characterization of the Cytochrome B Region of the Indian Gaur Bison</h4>
+            <p class="timeline">Central University of Kerala | Supervisor: Dr. M. Nagarajan | Mar 2022 – Aug 2022</p>
+            <ul>
+                <li>Processed 131 field-collected tissue samples for DNA extraction and mitochondrial sequencing (cyt b).</li>
+                <li>Conducted haplotype mapping, phylogenetic tree reconstruction, and evolutionary divergence analysis using ClustalW, MEGA, and Arlequin.</li>
+                <li>Identified lineage-specific haplotypes linked to metabolic regulation and adaptive evolution.</li>
+            </ul>
+        </div>
+        
+        <div class="experience-item">
+            <h3>Bachelor's Student Researcher</h3>
+            <h4>Project: Genomic Study of Leprosy-Causing Bacteria</h4>
+            <p class="timeline">Amity University | Supervisor: Dr. Prabuddha Gupta | Jan 2020 – Jun 2020</p>
+            <ul>
+                <li>Used RNA-seq to assess transcriptional changes during dormancy of M. leprae and M. lepromatosis.</li>
+                <li>Conducted HLA and IRGM variant profiling to map host immune responses across Indian and Mexican populations.</li>
+                <li>Modeled fatty acyl-CoA synthetase for host metabolic hijacking and studied immune evasion strategies.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Education</h2>
+        
+        <div class="education-item">
+            <h3>M.Sc. Genomic Science</h3>
+            <p class="timeline">Central University of Kerala | 2020-2022</p>
+        </div>
+        
+        <div class="education-item">
+            <h3>B.Sc. Biotechnology</h3>
+            <p class="timeline">Amity University Kolkata | 2017-2020</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Skills</h2>
+        <div class="skills-container">
+            <div class="skill-category">
+                <h3>Molecular Biology</h3>
+                <ul class="skill-list">
+                    <li>Genomic DNA isolation (bacterial, mammalian, avian)</li>
+                    <li>Plasmid DNA isolation (alkaline lysis method)</li>
+                    <li>Total RNA extraction</li>
+                    <li>Metagenomic DNA isolation from soil</li>
+                    <li>Agarose gel electrophoresis</li>
+                    <li>Bacterial transformation</li>
+                    <li>Animal cell culture techniques</li>
+                    <li>Restriction digestion and ligation</li>
+                    <li>cDNA synthesis and RT-PCR</li>
+                    <li>PCR amplification and optimization</li>
+                    <li>Western blotting</li>
+                    <li>ELISA</li>
+                </ul>
+            </div>
+            
+            <div class="skill-category">
+                <h3>Omics & Computational Biology</h3>
+                <ul class="skill-list">
+                    <li>Linux/Unix HPC environments</li>
+                    <li>Google Cloud Platform (Vertex AI)</li>
+                    <li>AWS cloud services</li>
+                    <li>Python (Biopython, Pandas, NumPy)</li>
+                    <li>R (tidyverse, DESeq2)</li>
+                    <li>Codon usage analysis</li>
+                    <li>GC content calculation</li>
+                    <li>Multiple sequence alignment</li>
+                    <li>Phylogenetic tree construction</li>
+                    <li>RNA-Seq (bulk and single-cell)</li>
+                    <li>Variant calling and annotation</li>
+                    <li>Differential expression analysis</li>
+                </ul>
+            </div>
+            
+            <div class="skill-category">
+                <h3>Machine Learning & AI</h3>
+                <ul class="skill-list">
+                    <li>Supervised learning (Random Forests, Neural Networks)</li>
+                    <li>Unsupervised learning (Clustering, PCA)</li>
+                    <li>Deep learning frameworks (TensorFlow, PyTorch)</li>
+                    <li>Predictive modeling</li>
+                    <li>Pattern recognition</li>
+                    <li>Drug response prediction</li>
+                    <li>Multi-Omics Integration</li>
+                    <li>Transcriptomics (RNA-seq)</li>
+                    <li>Proteomics (LC-MS/MS)</li>
+                    <li>Systems biology approaches</li>
+                    <li>Data visualization and interpretation</li>
+                </ul>
+            </div>
+        </div>
+        
+        <h3>Technical Proficiencies</h3>
+        <div class="tech-tags">
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">R</span>
+            <span class="tech-tag">Linux</span>
+            <span class="tech-tag">Git</span>
+            <span class="tech-tag">Google Cloud</span>
+            <span class="tech-tag">TensorFlow</span>
+            <span class="tech-tag">PyTorch</span>
+            <span class="tech-tag">RNA-Seq</span>
+            <span class="tech-tag">CRISPR</span>
+            <span class="tech-tag">NGS</span>
+            <span class="tech-tag">ELISA</span>
+            <span class="tech-tag">Western Blot</span>
+            <span class="tech-tag">HPC</span>
+            <span class="tech-tag">Bioinformatics</span>
+            <span class="tech-tag">Machine Learning</span>
+            <span class="tech-tag">Data Visualization</span>
+            <span class="tech-tag">Omics Integration</span>
+            <span class="tech-tag">Experimental Design</span>
+            <span class="tech-tag">Statistical Analysis</span>
+        </div>
+    </div>
+    
+
+    
+    <div class="section">
+      <h2>Technical Skills Visualization</h2>
+      <p>Here are some of my core competencies visualized:</p>
+      <p>As a computational biologist, I have a strong foundation in both experimental and computational techniques. My skills span molecular biology, bioinformatics, machine learning, and data visualization.</p>
+      <p>Below is a typewriter effect simulating a terminal output, showcasing my skills and projects:</p>
+      <p>Feel free to explore my GitHub for more projects and code samples!</p>
+      <p>Let's connect and collaborate on exciting projects!</p>
+      <p>Thank you for visiting my profile!</p>
+      <p>For any inquiries or collaborations, please reach out via email or LinkedIn.</p>
+      <p>Looking forward to connecting with you!</p>
+      <p>Best regards,</p>
+      <p>Aritra Mukherjee</p>
+      <div class="terminal">
+          <div class="terminal-header">bash</div>
+          <pre id="typewriter"></pre>
+      </div>
+      <p>My skills are categorized into three main areas:</p>
+      <ul>
+          <li><strong>Molecular Biology:</strong> Techniques and methodologies used in experimental biology.</li>
+          <li><strong>Omics & Computational Biology:</strong> Skills related to bioinformatics and computational analysis.</li>
+          <li><strong>Machine Learning & AI:</strong> Proficiencies in machine learning algorithms and applications.</li>
+      </ul>
+      <p>Each skill is represented with a percentage indicating my proficiency level.</p>
+      <p>Hover over the skill bars to see the exact percentage.</p>
+      <div class="skills-visualization">
+          <h3>Core Competencies</h3>
+          <div class="skill-container">
+              <div class="skill-name">Python</div>
+              <div class="skill-percentage">90%</div>
+              <div class="skill-bar">
+                  <div class="skill-level" style="width: 90%"></div>
+              </div>
+          </div>
+          <div class="skill-container">
+              <div class="skill-name">R</div>
+              <div class="skill-percentage">85%</div>
+              <div class="skill-bar">
+                  <div class="skill-level" style="width: 85%"></div>
+              </div>
+          </div>
+          <div class="skill-container">
+              <div class="skill-name">Linux</div>
+              <div class="skill-percentage">80%</div>
+              <div class="skill-bar">
+                  <div class="skill-level" style="width: 80%"></div>
+              </div>
+          </div>
+          <div class="skill-container">
+              <div class="skill-name">Machine Learning</div>
+              <div class="skill-percentage">85%</div>
+              <div class="skill-bar">
+                  <div class="skill-level" style="width: 85%"></div>
+              </div>
+          </div>  
+          <div class="skill-container">
+              <div class="skill-name">Bioinformatics</div>
+              <div class="skill-percentage">90%</div>
+              <div class="skill-bar">
+                  <div class="skill-level" style="width: 90%"></div>
+              </div>
+          </div>
+          <div class="skill-container">
+              <div class="skill-name">Data Visualization</div>
+              <div class="skill-percentage">80%</div>
+              <div class="skill-bar">
+                  <div class="skill-level" style="width: 80%"></div>
+              </div>
+          </div>  
+          <div class="skill-container">
+              <div class="skill-name">Genomics</div>
+              <div class="skill-percentage">85%</div>
+              <div class="skill-bar">
+                  <div class="skill-level" style="width: 85%"></div>
+              </div>
+          </div>
+          <div class="skill-container">
+              <div class="skill-name">Proteomics</div>
+              <div class="skill-percentage">80%</div>
+              <div class="skill-bar">
+                  <div class="skill-level" style="width: 80%"></div>
+              </div>
+          </div>    
+          <div class="skill-container">
+              <div class="skill-name">CRISPR</div>
+              <div class="skill-percentage">75%</div>
+              <div class="skill-bar">
+                  <div class="skill-level" style="width: 75%"></div>
+              </div>
+          </div>
+          <div class="skill-container">
+              <div class="skill-name">RNA-Seq</div>
+              <div class="skill-percentage">80%</div>
+              <div class="skill-bar">
+                  <div class="skill-level" style="width: 80%"></div>
+              </div>
+          </div>  
+          <div class="skill-container">
+              <div class="skill-name">Statistical Analysis</div>
+              <div class="skill-percentage">75%</div>
+              <div class="skill-bar">
+                  <div class="skill-level" style="width: 75%"></div>
+              </div>
+          </div>  
+          <div class="skill-container">
+              <div class="skill-name">Experimental Design</div>
+              <div class="skill-percentage">80%</div>
+              <div class="skill-bar">
+                  <div class="skill-level" style="width: 80%"></div>
+              </div>
+          </div>
+          <div class="skill-container">
+              <div class="skill-name">Data Analysis</div>
+              <div class="skill-percentage">85%</div>
+              <div class="skill-bar">
+                  <div class="skill-level" style="width: 85%"></div>
+              </div>
+          </div>  
+          <div class="skill-container">
+              <div class="skill-name">Cloud Computing</div>
+              <div class="skill-percentage">75%</div>
+              <div class="skill-bar">
+                  <div class="skill-level" style="width: 75%"></div>
+              </div>
+          </div>
+          <div class="skill-container">
+              <div class="skill-name">Git</div>
+              <div class="skill-percentage">80%</div>
+              <div class="skill-bar">
+                  <div class="skill-level" style="width: 80%"></div>
+              </div>
+          </div>
+          <div class="skill-container">
+              <div class="skill-name"> Machine Learning </div>
+              <div class="skill-percentage">70%</div>
+              <div class="skill-bar">
+                  <div class="skill-level" style="width: 70%"></div>
+              </div>
+          </div>  
+          <div class="skill-container">
+              <div class="skill-name"> TensorFlow</div>
+              <div class="skill-percentage">75%</div>
+              <div class="skill-bar">
+                  <div class="skill-level" style="width: 75%"></div>
+              </div>
+          </div>
+          <div class="skill-container">
+              <div class="skill-name"> PyTorch</div>
+              <div class="skill-percentage">70%</div>
+              <div class="skill-bar">
+                  <div class="skill-level" style="width: 70%"></div>
+              </div>
+          </div>
+          <div class="skill-container">
+              <div class="skill-name"> Scikit-learn</div>
+              <div class="skill-percentage">75%</div>
+              <div class="skill-bar">
+                  <div class="skill-level" style="width: 75%"></div>
+              </div>
+          </div>
+          <div class="skill-container">
+              <div class="skill-name"> SHAP</div>
+              <div class="skill-percentage">70%</div>
+              <div class="skill-bar">
+                  <div class="skill-level" style="width: 70%"></div>
+              </div>
+          </div>
+          <div class="skill-container">
+              <div class="skill-name"> Molecular Biology</div>
+              <div class="skill-percentage">80%</div>
+              <div class="skill-bar">
+                  <div class="skill-level" style="width: 80%"></div>
+              </div>
+          </div>
+          <div class="skill-container">
+              <div class="skill-name"> Transcriptomics</div>
+              <div class="skill-percentage">85%</div>
+              <div class="skill-bar">
+                  <div class="skill-level" style="width: 85%"></div>
+              </div>
+          </div>
+          <div class="skill-container">
+              <div class="skill-name"> Experimental Biology</div>
+              <div class="skill-percentage">80%</div>
+              <div class="skill-bar">
+                  <div class="skill-level" style="width: 80%"></div>
+              </div>
+          </div>  
+          <div class="skill-container">
+              <div class="skill-name"> Data Science</div>
+              <div class="skill-percentage">75%</div>
+              <div class="skill-bar">
+                  <div class="skill-level" style="width: 75%"></div>
+              </div>
+          </div>  
+      </div>
+  </div>
+
+
+  <div class="section" style="text-align: center;">
+      <h2>Profile Views</h2>
+      <p>Thank you for visiting my profile!</p>
+      <img src="https://profile-counter.glitch.me/Aridoge13/count.svg" alt="Visitor counter">
+  </div>
+
+
+  
+  <div class="section">
+      <h2>Molecular Visualization</h2>
+      <div id="protein-viewer" style="width: 100%; height: 300px; margin: 0 auto;"></div>
+  </div>
+
+
+  <script>
+      // Typewriter Effect
+      const text = "$ cd projects/\n$ ls\nAI_Genomics  Transcriptomics  CRISPR_Analysis";
+      let i = 0;
+      function typeWriter() {
+          if (i < text.length) {
+              document.getElementById("typewriter").innerHTML += text.charAt(i);
+              i++;
+              setTimeout(typeWriter, 50);
+          }
+      }
+      typeWriter();
+      
+      // Animate skill bars
+      document.querySelectorAll('.skill-level').forEach(bar => {
+          const percent = bar.parentElement.previousElementSibling.textContent;
+          bar.style.setProperty('--level', percent);
+      });
+      
+      
+      if(typeof $3Dmol !== 'undefined') {
+          let viewer = $3Dmol.createViewer("protein-viewer");
+          viewer.setBackgroundColor('white');
+          viewer.setSize(800, 400);
+          viewer.setStyle({stick: {}}); // Set default style to stick
+          viewer.setStyle({cartoon: {}}); // Set default style to cartoon
+          fetch('https://files.rcsb.org/view/9F42.pdb')
+              .then(response => response.text())
+              .then(pdbData => {
+                  viewer.addModel(pdbData, "pdb");
+                  viewer.setStyle({cartoon: {color: 'spectrum'}});
+                  viewer.zoomTo();
+                  viewer.render();
+              });
+      }
+  </script>
+</body>
+</html>

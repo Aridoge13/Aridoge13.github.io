@@ -1,4 +1,4 @@
 title: "Aritra Mukherjee - CV"
-theme: minima 
+theme: minima
 plugins:
-  - jekyll-sass-converter
+  - jekyll-feed
