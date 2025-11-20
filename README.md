@@ -9,7 +9,8 @@
 A static portfolio/CV hosted on GitHub Pages, featuring:  
 - My professional background  
 - Key projects  
-- Skills in computational/experimental biology  
+- Skills in computational biology  
+- Skills in experimental biology
 
 ---
 ## Tools Used  
