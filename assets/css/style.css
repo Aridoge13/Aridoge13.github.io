@@ -45,7 +45,7 @@ body::before {
     content: "";
     position: fixed;
     inset: 0;
-    background-image: url("Aridoge13.github.io/assets/docs/elephant.jpg");
+    background-image: url("../docs/elephant.jpg");
     background-size: cover;
     background-position: center;
     opacity: 0.18;
