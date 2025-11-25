@@ -332,55 +332,63 @@
 
 <body>
     <div class="container">
-
         <header>
-            <div class="hero-card">
+            <div class="hero">
                 <h1>Aritra Mukherjee</h1>
-                <span class="tagline">Conservation Genomics • Pangenomes • Structural Variation</span>
-                <p class="muted">
-                    Computational biology focused on translating genomic variation into data-driven conservation action.
-                    I build reproducible workflows to evaluate genetic compatibility and load in endangered populations.
-                </p>
-
-                <div class="motto">Motto: Do Only Good Everyday.</div>
-
-                <div class="btn-row">
-                    <a href="https://github.com/Aridoge13" class="btn btn-primary">View GitHub</a>
-                    <a href="mailto:aritra.mukherjee98@gmail.com" class="btn btn-ghost">Email Me</a>
-                    <a href="https://www.kaggle.com/aridoge13" class="btn btn-ghost">Kaggle Profile</a>
+                <div class="tagline">Conservation Genomics • Pangenomes • Structural Variation
+                    <small class="muted">Computational biology focused on translating genomic variation into data-driven
+                        conservation action</small>
+                </div>
+                <p class="lead">I build reproducible workflows and pangenome-based analyses to evaluate genetic
+                    compatibility, load and structural-variant risk in endangered populations. Conservation genomics is
+                    the primary focus; experimental biology and machine learning are supporting skills I draw on when
+                    they add practical value.</p>
+                <div>
+                    <p class="lead">Personal and Professional Motto: Do Only Good Everyday.</p>
+                </div>
+                <div style="margin-top:12px;display:flex;gap:10px;align-items:center;flex-wrap:wrap">
+                    <a class="btn" href="https://github.com/Aridoge13" target="_blank">View GitHub</a>
+                    <a class="btn btn-ghost" href="mailto:aritra.mukherjee98@gmail.com">Email</a>
+                    <a class="btn btn-ghost" href="https://www.kaggle.com/aridoge13" target="_blank">View Kaggle
+                        Profile</a>
                 </div>
             </div>
 
-            <aside class="sidebar-card">
-                <div style="margin-bottom: 20px;">
-                    <h3>Contact</h3>
-                    <div class="contact-item">📍 Kolkata, India</div>
-                    <div class="contact-item">📧 aritra.mukherjee98@gmail.com</div>
-                    <div class="contact-item">🟢 Open to PhD positions</div>
-                </div>
-                <hr style="border: 0; border-top: 1px solid var(--border); margin: 15px 0;">
-                <div>
-                    <h3 style="font-size: 1rem;">Quick Capabilities</h3>
-                    <div class="tech-list">
-                        <span class="tech">Flye</span>
-                        <span class="tech">hifiasm</span>
-                        <span class="tech">Minigraph</span>
-                        <span class="tech">Sniffles2</span>
-                        <span class="tech">CADD</span>
-                        <span class="tech">Snakemake</span>
+            <aside class="quick-links">
+                <div style="display:flex;justify-content:space-between;align-items:center">
+                    <div>
+                        <div style="font-weight:700">Contact</div>
+                        <div class="contact-item">Kolkata, India</div>
+                        <div class="contact-item">aritra.mukherjee98@gmail.com</div>
+                        <div class="contact-item"><a href="https://github.com/Aridoge13"
+                                target="_blank">github.com/Aridoge13</a></div>
                     </div>
+                    <div style="text-align:right">
+                        <div style="font-weight:700">Availability</div>
+                        <div class="muted">Open to PhD positions</div>
+                    </div>
+                </div>
+
+                <hr style="margin:12px 0;border:none;border-top:1px solid #f0f4ff">
+                <div style="font-weight:700;margin-bottom:8px">Quick Peek into My Capabilites</div>
+                <div class="muted">Pangenome pipelines • Long-read assembly • SV & load analysis</div>
+                <div style="margin-top:10px;display:flex;gap:8px;flex-wrap:wrap">
+                    <span class="tech">Flye</span>
+                    <span class="tech">hifiasm</span>
+                    <span class="tech">Minigraph</span>
+                    <span class="tech">Sniffles2</span>
+                    <span class="tech">CADD</span>
                 </div>
             </aside>
         </header>
 
-        <div class="main-grid">
-
-            <main>
-                <section class="section-card">
+        <main class="sections">
+            <div>
+                <section class="section">
                     <h2>Selected Projects</h2>
 
-                    <div class="project-item">
-                        <h3>Computational Biology Toolkit — Conservation</h3>
+                    <div class="project">
+                        <h3>Computational Biology Toolkit — Conservation Branch</h3>
                         <p class="muted">Open-source workflows and modular scripts for SV calling, pangenome
                             construction and genetic load estimation in non-model vertebrates.</p>
                         <div class="tech-list">
@@ -391,7 +399,7 @@
                         </div>
                     </div>
 
-                    <div class="project-item">
+                    <div class="project">
                         <h3>Phylogenetic Characterization of Indian Gaur</h3>
                         <p class="muted">M.Sc. thesis — end-to-end field sampling and computational phylogenetic
                             analysis of 131 samples informing regional conservation actions.</p>
@@ -402,41 +410,155 @@
                         </div>
                     </div>
 
-                    <div class="project-item">
-                        <h3>Evolutionary Genomics Pipeline</h3>
+                    <div class="project">
+                        <h3>Evolutionary Genomics</h3>
                         <p class="muted">Genome annotation and downstream transcriptome analysis pipeline for any
-                            species.</p>
+                            species. </p>
                         <div class="tech-list">
                             <span class="tech">EviAnn</span>
+                            <span class="tech">SRA Toolkit</span>
                             <span class="tech">hisat2</span>
+                            <span class="tech">SAM tools</span>
                             <span class="tech">Stringtie</span>
+                        </div>
+                    </div>
+
+                    <div class="project">
+                        <h3>Kabosu — ML for Multi-omics (supporting)</h3>
+                        <p class="muted">Independent project building ML tools for multi-omic classification and
+                            model interpretability. Machine learning is a supporting capability for integrative
+                            analyses.</p>
+                        <div class="tech-list">
+                            <span class="tech">TensorFlow</span>
+                            <span class="tech">PyTorch</span>
+                            <span class="tech">Scikit-learn</span>
+                            <span class="tech">SHAP</span>
+                        </div>
+                    </div>
+
+                </section>
+
+                <section class="section" style="margin-top:14px">
+                    <h2>Why conservation genomics?</h2>
+                    <p class="muted">I believe the motto 'Do Only Good Everyday' must extend to our stewardship of the
+                        planet's most vulnerable species. For
+                        me, conservation genomics is the practical embodiment of this principle. In the race against
+                        extinction, good intentions
+                        are not enough—we need precision. This discipline is how we listen carefully to what a species'
+                        genome is telling us
+                        before we intervene.
+
+                        Building pangenomes to find missing diversity or quantifying genetic load to prevent inbreeding
+                        depression—these aren't
+                        abstract tasks. They are acts of responsibility and an ethical imperative. Using these
+                        high-resolution tools allows us
+                        to move beyond guesswork to ensure that our well-intentioned actions, like facilitating
+                        connectivity or genetic rescue,
+                        are lineage-aware and genuinely good for the species' long-term health. This rigorous,
+                        compassionate science is how I
+                        strive to ensure our technical skills always serve the highest moral goal: safeguarding the
+                        evolutionary future of
+                        threatened species.</p>
+                </section>
+
+                <section class="section" style="margin-top:14px">
+                    <h2>Approach & readiness</h2>
+                    <p class="muted">I deliver production-ready code and reproducible HPC workflows (Snakemake + SLURM +
+                        containers). My emphasis is on biologically interpretable pipelines that provide transparent
+                        outputs for conservation stakeholders. If helpful, I can develop small, interpretable
+                        decision-support tools on top of these outputs; these would be explicit downstream aids rather
+                        than replacements for biological interpretation.</p>
+                </section>
+            </div>
+
+            <aside>
+                <section class="section">
+                    <h2>Skills snapshot</h2>
+                    <div class="skills-grid">
+                        <div>
+                            <div class="skill-pill">
+                                <div class="skill-name">Pangenomes & Graphs</div>
+                                <div class="skill-level">Advanced</div>
+                            </div>
+                            <div style="height:8px"></div>
+                            <div class="skill-pill">
+                                <div class="skill-name">Long-read Assembly</div>
+                                <div class="skill-level">Advanced</div>
+                            </div>
+                            <div style="height:8px"></div>
+                            <div class="skill-pill">
+                                <div class="skill-name">Structural Variants</div>
+                                <div class="skill-level">Advanced</div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="skill-pill">
+                                <div class="skill-name">Population Genomics</div>
+                                <div class="skill-level">Advanced</div>
+                            </div>
+                            <div style="height:8px"></div>
+                            <div class="skill-pill">
+                                <div class="skill-name">Reproducible Workflows</div>
+                                <div class="skill-level">Advanced</div>
+                            </div>
+                            <div style="height:8px"></div>
+                            <div class="skill-pill">
+                                <div class="skill-name">Machine Learning (support)</div>
+                                <div class="skill-level">Competent</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="margin-top:12px">
+                        <div class="muted">Signal bars</div>
+                        <div style="margin-top:6px">
+                            <div class="skill-name">Genome assembly</div>
+                            <div class="heat" style="margin-top:6px"><i style="width:88%"></i></div>
+
+                            <div style="height:8px"></div>
+                            <div class="skill-name">Pangenome workflows</div>
+                            <div class="heat" style="margin-top:6px"><i style="width:86%"></i></div>
+
+                            <div style="height:8px"></div>
+                            <div class="skill-name">SV curation & load</div>
+                            <div class="heat" style="margin-top:6px"><i style="width:84%"></i></div>
                         </div>
                     </div>
                 </section>
 
-                <section class="section-card">
-                    <h2>Why Conservation Genomics?</h2>
-                    <p class="muted">
-                        In the race against extinction, good intentions are not enough—we need precision. This
-                        discipline is how we listen carefully to what a species' genome is telling us before we
-                        intervene.
-                    </p>
-                    <p class="muted">
-                        Building pangenomes to find missing diversity or quantifying genetic load—these aren't abstract
-                        tasks. They are acts of responsibility. This rigorous science is how I strive to ensure our
-                        technical skills serve the highest moral goal: safeguarding the evolutionary future of
-                        threatened species.
-                    </p>
+                <section class="section" style="margin-top:12px">
+                    <h2>Highlights for Conservation Genomics PIs</h2>
+                    <ul class="muted">
+                        <li>Direct experience with long-read assemblers (Flye, hifiasm) and polishing workflows.</li>
+                        <li>Practical pangenome construction (Minigraph/VG) and PAV/SV interpretation.</li>
+                        <li>Genetic load estimation using constraint-based annotation and CADD-style pipelines.</li>
+                        <li>Experience translating genomic outputs into recommendations for stakeholders.</li>
+                        <li>Open-source code and reproducible pipelines on GitHub for verification.</li>
+                    </ul>
                 </section>
-            </main>
 
-            <aside>
-                <div class="section-card">
-                    <h2>Skills Snapshot</h2>
+                <section class="section" style="margin-top:12px">
+                    <h2>Availability to collaborate</h2>
+                    <p class="muted">I am prepared to begin immediately with data analysis and project integration. If
+                        selected, I will prioritise validating genomic data quality and establishing analytical
+                        frameworks that support evidence-based conservation decision-making.</p>
+                </section>
+            </aside>
+        </main>
 
-                    <div class="skill-group">
-                        <div class="skill-pill">
-                            <span>Pangenomes & Graphs</span>
-                            <span class="skill-val">Advanced</span>
-                        </div>
-                        <div class="skill-pill
+        <footer>
+            <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
+                <div style="text-align:left">
+                    <div style="font-weight:700">Quick GitHub tagline</div>
+                    <div class="muted">"Pangenomes for conservation • Long-reads for structural variations •
+                        Reproducible
+                        pipelines for actionable genomics"</div>
+                </div>
+                <div style="text-align:right;color:var(--muted)">Last updated: Nov 2025</div>
+            </div>
+            <div style="margin-top:12px;color:var(--muted)">© 2025 Aritra Mukherjee — Open-source & collaborative</div>
+        </footer>
+    </div>
+</body>
+
+</html>
