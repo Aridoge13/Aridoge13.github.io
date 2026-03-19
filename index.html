@@ -4,16 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Aritra Mukherjee | Computational Biology & Scientific Computing</title>
 
     <style>
         :root {
-            --bg: #f4f7fb;
+            --bg: #f5f7fb;
             --card: #ffffff;
             --accent: #2563eb;
             --text: #0f172a;
             --muted: #64748b;
-            --radius: 14px;
+            --radius: 16px;
             --sans: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
         }
 
@@ -25,27 +26,22 @@
         }
 
         .container {
-            max-width: 1150px;
+            max-width: 1100px;
             margin: auto;
-            padding: 28px;
-        }
-
-        header {
-            display: grid;
-            grid-template-columns: 1.4fr 0.8fr;
-            gap: 22px;
+            padding: 30px;
         }
 
         .card {
             background: var(--card);
             padding: 26px;
             border-radius: var(--radius);
-            box-shadow: 0 8px 24px rgba(2, 6, 23, 0.05);
+            box-shadow: 0 10px 28px rgba(2, 6, 23, 0.05);
+            margin-bottom: 20px;
         }
 
         h1 {
             margin: 0;
-            font-size: 30px;
+            font-size: 34px;
             letter-spacing: -0.5px;
         }
 
@@ -57,21 +53,21 @@
 
         .lead {
             margin-top: 14px;
-            font-size: 15px;
             color: var(--muted);
-            line-height: 1.6;
+            line-height: 1.65;
+            font-size: 15px;
         }
 
         .btn {
             display: inline-block;
             margin-top: 14px;
             margin-right: 10px;
-            padding: 9px 14px;
+            padding: 10px 16px;
             border-radius: 10px;
             background: var(--accent);
             color: white;
-            font-weight: 600;
             text-decoration: none;
+            font-weight: 600;
         }
 
         .btn.alt {
@@ -80,190 +76,193 @@
             color: var(--accent);
         }
 
-        .section {
-            margin-top: 22px;
+        h2 {
+            margin-bottom: 10px;
+            font-size: 20px;
         }
 
-        h2 {
-            font-size: 19px;
-            margin-bottom: 12px;
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 18px;
+        }
+
+        .skill {
+            background: #eff6ff;
+            padding: 10px;
+            border-radius: 10px;
+            font-size: 14px;
+            margin: 6px 0;
         }
 
         .project {
             border-left: 4px solid var(--accent);
             padding-left: 14px;
-            margin-bottom: 16px;
+            margin-bottom: 18px;
         }
 
         .tech {
             display: inline-block;
-            background: #eff6ff;
-            color: var(--accent);
-            padding: 5px 8px;
+            background: #eef2ff;
+            padding: 5px 9px;
             border-radius: 8px;
             font-size: 12px;
             margin-top: 6px;
             margin-right: 6px;
-        }
-
-        ul {
-            padding-left: 18px;
-            color: var(--muted);
-            font-size: 14px;
-            line-height: 1.6;
+            color: var(--accent);
         }
 
         footer {
             text-align: center;
-            margin-top: 40px;
             font-size: 13px;
             color: var(--muted);
+            margin-top: 30px;
         }
 
         @media(max-width:900px) {
-            header {
+            .grid {
                 grid-template-columns: 1fr;
             }
         }
     </style>
+
 </head>
 
 <body>
 
     <div class="container">
 
-        <header>
+        <!-- HERO -->
 
-            <div class="card">
+        <div class="card">
 
-                <h1>Aritra Mukherjee</h1>
+            <h1>Aritra Mukherjee</h1>
 
-                <div class="tagline">
-                    Computational Biology • Scientific Programming • Scalable Data Analysis
+            <div class="tagline">
+                Computational Biology • Scientific Programming • Data-Driven Biological Discovery
+            </div>
+
+            <p class="lead">
+                I develop computational methods and reproducible analytical workflows for extracting biological insight
+                from
+                large-scale genomic and multi-modal datasets. My work combines statistical modeling, machine learning,
+                and scientific software development to study complex biological systems across domains such as disease
+                biology,
+                evolution, and host–pathogen interactions.
+            </p>
+
+            <p class="lead">
+                I am particularly interested in scalable data analysis, interpretable modeling, and building robust
+                computational
+                frameworks that enable reliable scientific inference.
+            </p>
+
+            <a class="btn" href="https://github.com/Aridoge13" target="_blank">GitHub</a>
+            <a class="btn alt" href="mailto:aritra.mukherjee98@gmail.com">Email</a>
+            <a class="btn alt" href="https://www.kaggle.com/aridoge13" target="_blank">Kaggle</a>
+
+        </div>
+
+        <!-- CORE CAPABILITIES -->
+
+        <div class="card">
+
+            <h2>Core Computational Capabilities</h2>
+
+            <div class="grid">
+
+                <div>
+                    <div class="skill">Scientific Programming (Python, R, Bash)</div>
+                    <div class="skill">Linux-based data analysis environments</div>
+                    <div class="skill">High-performance computing workflows</div>
+                    <div class="skill">Workflow automation (reproducible pipelines)</div>
                 </div>
 
-                <p class="lead">
-                    I develop reproducible computational methods for analyzing large-scale biological datasets.
-                    My work integrates genomics, transcriptomics, and other high-dimensional data using statistical
-                    modeling,
-                    machine learning, and workflow automation on Linux and HPC systems.
-                </p>
+                <div>
+                    <div class="skill">Statistical modeling & probabilistic reasoning</div>
+                    <div class="skill">Machine learning for biological datasets</div>
+                    <div class="skill">Multi-omics data integration</div>
+                    <div class="skill">Version-controlled collaborative research</div>
+                </div>
 
-                <p class="lead">
-                    I am interested in building robust analytical frameworks that translate complex biological data into
-                    quantitative insight — supporting discovery in areas such as evolution, disease biology,
-                    host–pathogen interactions,
-                    and systems-level regulation.
-                </p>
-
-                <a class="btn" href="https://github.com/Aridoge13" target="_blank">GitHub</a>
-                <a class="btn alt" href="mailto:aritra.mukherjee98@gmail.com">Email</a>
-                <a class="btn alt" href="https://www.kaggle.com/aridoge13" target="_blank">Kaggle</a>
-
-            </div>
-
-            <div class="card">
-
-                <h2>Profile Snapshot</h2>
-
-                <ul>
-                    <li>Programming: Python, R, Bash</li>
-                    <li>Computing: Linux environments, HPC clusters, workflow automation</li>
-                    <li>Data: Genomics, transcriptomics, metagenomics, tabular and signal data</li>
-                    <li>Methods: statistical modeling, machine learning, probabilistic reasoning</li>
-                    <li>Tools: Git version control, containerized pipelines, reproducible research</li>
-                    <li>Focus: scalable analysis of complex biological systems</li>
-                </ul>
-
-                <h2>Availability</h2>
-                <ul>
-                    <li>Seeking PhD opportunities in computational biology / bioinformatics</li>
-                    <li>Open to interdisciplinary projects at the intersection data science, genomics, statistics and
-                        scientific computing</li>
-                </ul>
-
-            </div>
-
-        </header>
-
-        <div class="section card">
-
-            <h2>Selected Computational Projects</h2>
-
-            <div class="project">
-                <strong>Kabosu — Interpretable Machine Learning Framework</strong>
-                <p class="lead">
-                    Framework for identifying stable predictors across heterogeneous biomedical datasets,
-                    with emphasis on robustness to dataset shift and interpretable model outputs.
-                </p>
-                <span class="tech">Machine Learning</span>
-                <span class="tech">High-Dimensional Data</span>
-                <span class="tech">Model Interpretation</span>
-            </div>
-
-            <div class="project">
-                <strong>HAMON — Longitudinal Risk Modeling System</strong>
-                <p class="lead">
-                    Temporal modeling framework designed for probabilistic inference from time-dependent biological or
-                    clinical data,
-                    supporting uncertainty quantification and calibrated prediction.
-                </p>
-                <span class="tech">Time-Series Modeling</span>
-                <span class="tech">Probabilistic Methods</span>
-                <span class="tech">Predictive Analytics</span>
-            </div>
-
-            <div class="project">
-                <strong>Viromics Analysis Pipeline</strong>
-                <p class="lead">
-                    End-to-end workflow for viral genome detection from metagenomic sequencing reads,
-                    including host prediction and scalable processing on distributed compute infrastructure.
-                </p>
-                <span class="tech">Metagenomics</span>
-                <span class="tech">Workflow Systems</span>
-                <span class="tech">Cloud / HPC</span>
-            </div>
-
-            <div class="project">
-                <strong>Population Genomics & Phylogenetic Inference</strong>
-                <p class="lead">
-                    Reconstruction of evolutionary relationships and haplotype networks from genomic sequence data,
-                    demonstrating quantitative inference of population-level processes.
-                </p>
-                <span class="tech">Population Genetics</span>
-                <span class="tech">Phylogenetics</span>
-                <span class="tech">Evolutionary Modeling</span>
-            </div>
-
-            <div class="project">
-                <strong>Immunogenomic RNA-seq Integration Study</strong>
-                <p class="lead">
-                    Integrated analysis of bacterial transcriptomics and host genomic variation to investigate
-                    mechanisms of immune response and host–pathogen interaction.
-                </p>
-                <span class="tech">RNA-seq</span>
-                <span class="tech">Multi-omics</span>
-                <span class="tech">Systems Biology</span>
             </div>
 
         </div>
 
-        <div class="section card">
+        <!-- RESEARCH THEMES -->
+
+        <div class="card">
+
+            <h2>Selected Research Themes</h2>
+
+            <div class="project">
+                <strong>Interpretable Modeling of High-Dimensional Biological Data</strong>
+                <p class="lead">
+                    Development of machine learning and statistical approaches for identifying stable predictors and
+                    extracting
+                    meaningful biological signal from heterogeneous datasets.
+                </p>
+                <span class="tech">Machine Learning</span>
+                <span class="tech">Statistical Inference</span>
+                <span class="tech">Model Robustness</span>
+            </div>
+
+            <div class="project">
+                <strong>Scalable Genomics & Multi-Omics Analysis</strong>
+                <p class="lead">
+                    Design of reproducible computational workflows for processing sequencing data and integrating
+                    genomic,
+                    transcriptomic, and other large-scale biological datasets.
+                </p>
+                <span class="tech">RNA-seq</span>
+                <span class="tech">Metagenomics</span>
+                <span class="tech">HPC</span>
+            </div>
+
+            <div class="project">
+                <strong>Evolutionary and Population-Level Inference</strong>
+                <p class="lead">
+                    Quantitative analysis of genomic variation to investigate evolutionary processes, population
+                    structure,
+                    and biological diversity.
+                </p>
+                <span class="tech">Population Genetics</span>
+                <span class="tech">Phylogenetics</span>
+                <span class="tech">Comparative Genomics</span>
+            </div>
+
+            <div class="project">
+                <strong>Temporal and Systems-Level Biological Modeling</strong>
+                <p class="lead">
+                    Computational approaches for modeling longitudinal biological or clinical data, including
+                    probabilistic risk
+                    modeling and multi-scale systems analysis.
+                </p>
+                <span class="tech">Time-Series Modeling</span>
+                <span class="tech">Systems Biology</span>
+                <span class="tech">Predictive Modeling</span>
+            </div>
+
+        </div>
+
+        <!-- RESEARCH APPROACH -->
+
+        <div class="card">
 
             <h2>Research Approach</h2>
 
-            <ul>
-                <li>Design modular, reproducible pipelines for large biological datasets</li>
-                <li>Use quantitative models to connect statistical patterns with biological mechanisms</li>
-                <li>Emphasize interpretability, robustness, and transparent methodology</li>
-                <li>Adapt computational tools across domains and data modalities</li>
-                <li>Contribute to collaborative, open, and reproducible scientific research</li>
+            <ul class="lead">
+                <li>Build modular, scalable analytical pipelines for complex biological datasets</li>
+                <li>Integrate computational modeling with biological interpretation</li>
+                <li>Emphasize reproducibility, transparency, and robust validation</li>
+                <li>Adapt computational methods across domains and data modalities</li>
+                <li>Contribute to collaborative open scientific research</li>
             </ul>
 
         </div>
 
         <footer>
-            Last updated — 2026 • Open science • Collaborative research
+            Open science • Computational biology • PhD applications 2026
         </footer>
 
     </div>
