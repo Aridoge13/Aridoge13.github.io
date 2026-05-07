@@ -2,271 +2,1201 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aritra Mukherjee — Computational Biologist</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap"
+    rel="stylesheet">
+  <style>
+    :root {
+      --bg: #FAFAF7;
+      --bg2: #F2F0EB;
+      --bg3: #E8E4DC;
+      --text: #1C1C18;
+      --text2: #4A4A42;
+      --text3: #7A7A6E;
+      --accent: #2D6A4F;
+      --accent2: #52B788;
+      --accent3: #B7E4C7;
+      --warm: #D4A96A;
+      --warm2: #F4E4C4;
+      --border: rgba(28, 28, 24, 0.1);
+      --shadow: 0 2px 20px rgba(28, 28, 24, 0.06);
+      --shadow-lg: 0 8px 40px rgba(28, 28, 24, 0.10);
+      --radius: 14px;
+      --transition: 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    }
 
-    <title>Aritra Mukherjee | Computational Biology & Scientific Computing</title>
+    [data-theme="dark"] {
+      --bg: #141410;
+      --bg2: #1E1E18;
+      --bg3: #28281E;
+      --text: #F0EDE4;
+      --text2: #C4C0B0;
+      --text3: #7A7A6E;
+      --accent: #52B788;
+      --accent2: #74C69D;
+      --accent3: #2D6A4F;
+      --warm: #D4A96A;
+      --warm2: #3A2E1A;
+      --border: rgba(240, 237, 228, 0.08);
+      --shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+      --shadow-lg: 0 8px 40px rgba(0, 0, 0, 0.4);
+    }
 
-    <style>
-        :root {
-            --bg: #f5f7fb;
-            --card: #ffffff;
-            --accent: #2563eb;
-            --text: #0f172a;
-            --muted: #64748b;
-            --radius: 16px;
-            --sans: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
-        }
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-        body {
-            margin: 0;
-            font-family: var(--sans);
-            background: var(--bg);
-            color: var(--text);
-        }
+    html {
+      scroll-behavior: smooth;
+    }
 
-        .container {
-            max-width: 1100px;
-            margin: auto;
-            padding: 30px;
-        }
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      transition: background var(--transition), color var(--transition);
+      overflow-x: hidden;
+    }
 
-        .card {
-            background: var(--card);
-            padding: 26px;
-            border-radius: var(--radius);
-            box-shadow: 0 10px 28px rgba(2, 6, 23, 0.05);
-            margin-bottom: 20px;
-        }
+    /* ── Navigation ── */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      padding: 0 2rem;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: rgba(250, 250, 247, 0.85);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      transition: background var(--transition);
+    }
 
-        h1 {
-            margin: 0;
-            font-size: 34px;
-            letter-spacing: -0.5px;
-        }
+    [data-theme="dark"] nav {
+      background: rgba(20, 20, 16, 0.85);
+    }
 
-        .tagline {
-            margin-top: 6px;
-            font-weight: 700;
-            color: var(--accent);
-        }
+    .nav-brand {
+      font-family: 'Lora', serif;
+      font-size: 1.05rem;
+      font-weight: 500;
+      color: var(--text);
+      text-decoration: none;
+      letter-spacing: -0.01em;
+    }
 
-        .lead {
-            margin-top: 14px;
-            color: var(--muted);
-            line-height: 1.65;
-            font-size: 15px;
-        }
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
 
-        .btn {
-            display: inline-block;
-            margin-top: 14px;
-            margin-right: 10px;
-            padding: 10px 16px;
-            border-radius: 10px;
-            background: var(--accent);
-            color: white;
-            text-decoration: none;
-            font-weight: 600;
-        }
+    .nav-links {
+      display: flex;
+      gap: 1.5rem;
+      list-style: none;
+    }
 
-        .btn.alt {
-            background: transparent;
-            border: 1px solid #dbeafe;
-            color: var(--accent);
-        }
+    .nav-links a {
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: var(--text2);
+      text-decoration: none;
+      letter-spacing: 0.02em;
+      transition: color var(--transition);
+    }
 
-        h2 {
-            margin-bottom: 10px;
-            font-size: 20px;
-        }
+    .nav-links a:hover {
+      color: var(--accent);
+    }
 
-        .grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 18px;
-        }
+    /* Social icons row */
+    .social-nav {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
 
-        .skill {
-            background: #eff6ff;
-            padding: 10px;
-            border-radius: 10px;
-            font-size: 14px;
-            margin: 6px 0;
-        }
+    .social-nav a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 30px;
+      height: 30px;
+      border-radius: 8px;
+      background: var(--bg2);
+      color: var(--text2);
+      text-decoration: none;
+      font-size: 0.75rem;
+      font-weight: 600;
+      font-family: 'DM Mono', monospace;
+      border: 1px solid var(--border);
+      transition: all var(--transition);
+      letter-spacing: 0;
+    }
 
-        .project {
-            border-left: 4px solid var(--accent);
-            padding-left: 14px;
-            margin-bottom: 18px;
-        }
+    .social-nav a:hover {
+      background: var(--accent);
+      color: #fff;
+      border-color: var(--accent);
+      transform: translateY(-1px);
+    }
 
-        .tech {
-            display: inline-block;
-            background: #eef2ff;
-            padding: 5px 9px;
-            border-radius: 8px;
-            font-size: 12px;
-            margin-top: 6px;
-            margin-right: 6px;
-            color: var(--accent);
-        }
+    /* Dark mode toggle */
+    .theme-toggle {
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 4px 12px;
+      cursor: pointer;
+      font-size: 0.78rem;
+      font-weight: 500;
+      color: var(--text2);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: all var(--transition);
+      font-family: 'DM Sans', sans-serif;
+    }
 
-        footer {
-            text-align: center;
-            font-size: 13px;
-            color: var(--muted);
-            margin-top: 30px;
-        }
+    .theme-toggle:hover {
+      background: var(--bg3);
+      color: var(--text);
+    }
 
-        @media(max-width:900px) {
-            .grid {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
+    .theme-toggle .icon {
+      font-size: 0.9rem;
+    }
 
+    /* ── Hero ── */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      padding: 100px 2rem 60px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+      background:
+        radial-gradient(ellipse 60% 50% at 80% 30%, rgba(82, 183, 136, 0.08) 0%, transparent 70%),
+        radial-gradient(ellipse 40% 40% at 20% 70%, rgba(212, 169, 106, 0.07) 0%, transparent 70%);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 720px;
+      animation: fadeUp 0.8s ease both;
+    }
+
+    .hero-eyebrow {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.78rem;
+      font-weight: 500;
+      color: var(--accent);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 1.2rem;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .hero-eyebrow::before {
+      content: '';
+      display: block;
+      width: 28px;
+      height: 1.5px;
+      background: var(--accent);
+    }
+
+    h1 {
+      font-family: 'Lora', serif;
+      font-size: clamp(2.4rem, 5vw, 3.8rem);
+      font-weight: 500;
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+      color: var(--text);
+      margin-bottom: 1.4rem;
+    }
+
+    h1 em {
+      font-style: italic;
+      color: var(--accent);
+    }
+
+    .hero-sub {
+      font-size: 1.08rem;
+      color: var(--text2);
+      max-width: 560px;
+      line-height: 1.75;
+      margin-bottom: 2.2rem;
+      font-weight: 300;
+    }
+
+    .hero-cta {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .btn {
+      padding: 11px 24px;
+      border-radius: 10px;
+      font-size: 0.88rem;
+      font-weight: 500;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      transition: all var(--transition);
+      font-family: 'DM Sans', sans-serif;
+      border: none;
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: #fff;
+    }
+
+    .btn-primary:hover {
+      background: var(--accent2);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(45, 106, 79, 0.25);
+    }
+
+    .btn-ghost {
+      background: transparent;
+      color: var(--text2);
+      border: 1.5px solid var(--border);
+    }
+
+    .btn-ghost:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+      transform: translateY(-2px);
+    }
+
+    /* ── Section base ── */
+    section {
+      padding: 80px 2rem;
+    }
+
+    .container {
+      max-width: 880px;
+      margin: 0 auto;
+    }
+
+    .section-label {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.72rem;
+      font-weight: 500;
+      color: var(--accent);
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      margin-bottom: 0.6rem;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .section-label::before {
+      content: '';
+      display: block;
+      width: 20px;
+      height: 1.5px;
+      background: var(--accent);
+    }
+
+    h2 {
+      font-family: 'Lora', serif;
+      font-size: clamp(1.7rem, 3vw, 2.4rem);
+      font-weight: 500;
+      letter-spacing: -0.02em;
+      color: var(--text);
+      margin-bottom: 0.5rem;
+      line-height: 1.25;
+    }
+
+    .section-intro {
+      font-size: 1rem;
+      color: var(--text2);
+      max-width: 600px;
+      line-height: 1.75;
+      margin-bottom: 3rem;
+      font-weight: 300;
+    }
+
+    /* ── About ── */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      margin-bottom: 2.5rem;
+    }
+
+    @media (max-width: 640px) {
+      .about-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .about-card {
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.6rem;
+      transition: all var(--transition);
+    }
+
+    .about-card:hover {
+      box-shadow: var(--shadow-lg);
+      transform: translateY(-2px);
+    }
+
+    .about-card-icon {
+      font-size: 1.4rem;
+      margin-bottom: 0.8rem;
+      display: block;
+    }
+
+    .about-card h3 {
+      font-family: 'Lora', serif;
+      font-size: 1rem;
+      font-weight: 500;
+      margin-bottom: 0.5rem;
+      color: var(--text);
+    }
+
+    .about-card p {
+      font-size: 0.9rem;
+      color: var(--text2);
+      line-height: 1.65;
+      font-weight: 300;
+    }
+
+    /* ── Lab pitch ── */
+    .pitch-box {
+      background: linear-gradient(135deg, var(--accent3) 0%, var(--warm2) 100%);
+      border-radius: var(--radius);
+      padding: 2.2rem 2.4rem;
+      margin: 3rem 0;
+      border: 1px solid rgba(45, 106, 79, 0.12);
+      position: relative;
+      overflow: hidden;
+    }
+
+    [data-theme="dark"] .pitch-box {
+      background: linear-gradient(135deg, rgba(45, 106, 79, 0.18) 0%, rgba(58, 46, 26, 0.4) 100%);
+      border-color: rgba(82, 183, 136, 0.15);
+    }
+
+    .pitch-box::before {
+      content: '🔬';
+      position: absolute;
+      right: 1.5rem;
+      top: 1.2rem;
+      font-size: 2.5rem;
+      opacity: 0.18;
+    }
+
+    .pitch-box h3 {
+      font-family: 'Lora', serif;
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--accent);
+      margin-bottom: 0.7rem;
+    }
+
+    [data-theme="dark"] .pitch-box h3 {
+      color: var(--accent2);
+    }
+
+    .pitch-box p {
+      font-size: 0.95rem;
+      color: var(--text2);
+      line-height: 1.75;
+      font-weight: 300;
+    }
+
+    .pitch-box p strong {
+      color: var(--text);
+      font-weight: 500;
+    }
+
+    /* ── Skills ── */
+    #skills {
+      background: var(--bg2);
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 1.4rem;
+    }
+
+    .skill-group {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+      transition: all var(--transition);
+    }
+
+    .skill-group:hover {
+      box-shadow: var(--shadow-lg);
+      transform: translateY(-2px);
+    }
+
+    .skill-group-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 1rem;
+    }
+
+    .skill-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--accent);
+      flex-shrink: 0;
+    }
+
+    .skill-group h3 {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--text);
+      letter-spacing: 0.02em;
+      font-family: 'DM Mono', monospace;
+    }
+
+    .skill-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .tag {
+      font-size: 0.76rem;
+      font-weight: 400;
+      padding: 3px 10px;
+      border-radius: 6px;
+      background: var(--bg2);
+      color: var(--text2);
+      border: 1px solid var(--border);
+      font-family: 'DM Mono', monospace;
+      transition: all var(--transition);
+    }
+
+    .skill-group:hover .tag {
+      border-color: rgba(45, 106, 79, 0.2);
+    }
+
+    .tag.highlight {
+      background: var(--accent3);
+      color: var(--accent);
+      border-color: rgba(45, 106, 79, 0.2);
+    }
+
+    [data-theme="dark"] .tag.highlight {
+      background: rgba(45, 106, 79, 0.2);
+      color: var(--accent2);
+    }
+
+    /* ── Projects teaser ── */
+    .project-links {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 1.2rem;
+      margin-top: 2rem;
+    }
+
+    .project-link-card {
+      display: flex;
+      flex-direction: column;
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.4rem;
+      text-decoration: none;
+      color: var(--text);
+      transition: all var(--transition);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .project-link-card::after {
+      content: '↗';
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      font-size: 0.9rem;
+      color: var(--text3);
+      transition: all var(--transition);
+    }
+
+    .project-link-card:hover {
+      box-shadow: var(--shadow-lg);
+      transform: translateY(-3px);
+      border-color: var(--accent2);
+    }
+
+    .project-link-card:hover::after {
+      color: var(--accent);
+      transform: translate(2px, -2px);
+    }
+
+    .project-tag-row {
+      display: flex;
+      gap: 5px;
+      flex-wrap: wrap;
+      margin-bottom: 0.8rem;
+    }
+
+    .project-pill {
+      font-size: 0.68rem;
+      font-weight: 500;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-family: 'DM Mono', monospace;
+      letter-spacing: 0.04em;
+    }
+
+    .pill-green {
+      background: var(--accent3);
+      color: var(--accent);
+    }
+
+    .pill-warm {
+      background: var(--warm2);
+      color: var(--warm);
+    }
+
+    .pill-gray {
+      background: var(--bg3);
+      color: var(--text3);
+    }
+
+    [data-theme="dark"] .pill-green {
+      background: rgba(45, 106, 79, 0.25);
+      color: var(--accent2);
+    }
+
+    [data-theme="dark"] .pill-warm {
+      background: rgba(58, 46, 26, 0.5);
+      color: var(--warm);
+    }
+
+    [data-theme="dark"] .pill-gray {
+      background: var(--bg3);
+      color: var(--text3);
+    }
+
+    .project-link-card h3 {
+      font-family: 'Lora', serif;
+      font-size: 1rem;
+      font-weight: 500;
+      margin-bottom: 0.4rem;
+    }
+
+    .project-link-card p {
+      font-size: 0.83rem;
+      color: var(--text2);
+      line-height: 1.6;
+      font-weight: 300;
+      flex: 1;
+    }
+
+    .project-status {
+      margin-top: 0.8rem;
+      font-size: 0.72rem;
+      font-family: 'DM Mono', monospace;
+      color: var(--text3);
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .status-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      animation: pulse 2s infinite;
+    }
+
+    .status-active {
+      background: var(--accent2);
+    }
+
+    .status-done {
+      background: var(--text3);
+      animation: none;
+    }
+
+    /* ── Contact ── */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    @media (max-width: 600px) {
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.4rem;
+      text-decoration: none;
+      color: var(--text);
+      transition: all var(--transition);
+    }
+
+    .contact-item:hover {
+      box-shadow: var(--shadow-lg);
+      transform: translateY(-2px);
+      border-color: var(--accent2);
+    }
+
+    .contact-icon {
+      width: 38px;
+      height: 38px;
+      background: var(--accent3);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+      flex-shrink: 0;
+      font-family: 'DM Mono', monospace;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--accent);
+    }
+
+    [data-theme="dark"] .contact-icon {
+      background: rgba(45, 106, 79, 0.2);
+      color: var(--accent2);
+    }
+
+    .contact-label {
+      font-size: 0.72rem;
+      font-weight: 500;
+      color: var(--text3);
+      letter-spacing: 0.06em;
+      font-family: 'DM Mono', monospace;
+      text-transform: uppercase;
+      margin-bottom: 3px;
+    }
+
+    .contact-value {
+      font-size: 0.9rem;
+      font-weight: 400;
+      color: var(--text);
+    }
+
+    /* ── Footer ── */
+    footer {
+      padding: 2rem;
+      text-align: center;
+      font-size: 0.8rem;
+      color: var(--text3);
+      border-top: 1px solid var(--border);
+      font-family: 'DM Mono', monospace;
+    }
+
+    /* ── Animations ── */
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(24px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes pulse {
+
+      0%,
+      100% {
+        opacity: 1;
+      }
+
+      50% {
+        opacity: 0.4;
+      }
+    }
+
+    .fade-in {
+      animation: fadeUp 0.7s ease both;
+    }
+
+    .fade-in-1 {
+      animation-delay: 0.1s;
+    }
+
+    .fade-in-2 {
+      animation-delay: 0.2s;
+    }
+
+    .fade-in-3 {
+      animation-delay: 0.3s;
+    }
+
+    .fade-in-4 {
+      animation-delay: 0.4s;
+    }
+
+    /* ── ORCID badge ── */
+    .orcid-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 0.72rem;
+      font-family: 'DM Mono', monospace;
+      color: var(--text3);
+      text-decoration: none;
+      padding: 3px 8px;
+      border-radius: 5px;
+      border: 1px solid var(--border);
+      transition: all var(--transition);
+      margin-left: 0.5rem;
+    }
+
+    .orcid-badge:hover {
+      color: #A6CE39;
+      border-color: #A6CE39;
+    }
+
+    .orcid-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #A6CE39;
+    }
+  </style>
 </head>
 
 <body>
 
-    <div class="container">
-
-        <!-- HERO -->
-
-        <div class="card">
-
-            <h1>Aritra Mukherjee</h1>
-
-            <div class="tagline">
-                Computational Biology • Scientific Programming • Data-Driven Biological Discovery
-            </div>
-
-            <p class="lead">
-                I develop computational methods and reproducible analytical workflows for extracting biological insight
-                from
-                large-scale genomic and multi-modal datasets. My work combines statistical modeling, machine learning,
-                and scientific software development to study complex biological systems across domains such as disease
-                biology,
-                evolution, and host–pathogen interactions.
-            </p>
-
-            <p class="lead">
-                I am particularly interested in scalable data analysis, interpretable modeling, and building robust
-                computational
-                frameworks that enable reliable scientific inference.
-            </p>
-
-            <a class="btn" href="https://github.com/Aridoge13" target="_blank">GitHub</a>
-            <a class="btn alt" href="mailto:aritra.mukherjee98@gmail.com">Email</a>
-            <a class="btn alt" href="https://www.kaggle.com/aridoge13" target="_blank">Kaggle</a>
-
-        </div>
-
-        <!-- CORE CAPABILITIES -->
-
-        <div class="card">
-
-            <h2>Core Computational Capabilities</h2>
-
-            <div class="grid">
-
-                <div>
-                    <div class="skill">Scientific Programming (Python, R, Bash)</div>
-                    <div class="skill">Linux-based data analysis environments</div>
-                    <div class="skill">High-performance computing workflows</div>
-                    <div class="skill">Workflow automation (reproducible pipelines)</div>
-                </div>
-
-                <div>
-                    <div class="skill">Statistical modeling & probabilistic reasoning</div>
-                    <div class="skill">Machine learning for biological datasets</div>
-                    <div class="skill">Multi-omics data integration</div>
-                    <div class="skill">Version-controlled collaborative research</div>
-                </div>
-
-            </div>
-
-        </div>
-
-        <!-- RESEARCH THEMES -->
-
-        <div class="card">
-
-            <h2>Selected Research Themes</h2>
-
-            <div class="project">
-                <strong>Interpretable Modeling of High-Dimensional Biological Data</strong>
-                <p class="lead">
-                    Development of machine learning and statistical approaches for identifying stable predictors and
-                    extracting
-                    meaningful biological signal from heterogeneous datasets.
-                </p>
-                <span class="tech">Machine Learning</span>
-                <span class="tech">Statistical Inference</span>
-                <span class="tech">Model Robustness</span>
-            </div>
-
-            <div class="project">
-                <strong>Scalable Genomics & Multi-Omics Analysis</strong>
-                <p class="lead">
-                    Design of reproducible computational workflows for processing sequencing data and integrating
-                    genomic,
-                    transcriptomic, and other large-scale biological datasets.
-                </p>
-                <span class="tech">RNA-seq</span>
-                <span class="tech">Metagenomics</span>
-                <span class="tech">HPC</span>
-            </div>
-
-            <div class="project">
-                <strong>Evolutionary and Population-Level Inference</strong>
-                <p class="lead">
-                    Quantitative analysis of genomic variation to investigate evolutionary processes, population
-                    structure,
-                    and biological diversity.
-                </p>
-                <span class="tech">Population Genetics</span>
-                <span class="tech">Phylogenetics</span>
-                <span class="tech">Comparative Genomics</span>
-            </div>
-
-            <div class="project">
-                <strong>Temporal and Systems-Level Biological Modeling</strong>
-                <p class="lead">
-                    Computational approaches for modeling longitudinal biological or clinical data, including
-                    probabilistic risk
-                    modeling and multi-scale systems analysis.
-                </p>
-                <span class="tech">Time-Series Modeling</span>
-                <span class="tech">Systems Biology</span>
-                <span class="tech">Predictive Modeling</span>
-            </div>
-
-        </div>
-
-        <!-- RESEARCH APPROACH -->
-
-        <div class="card">
-
-            <h2>Research Approach</h2>
-
-            <ul class="lead">
-                <li>Build modular, scalable analytical pipelines for complex biological datasets</li>
-                <li>Integrate computational modeling with biological interpretation</li>
-                <li>Emphasize reproducibility, transparency, and robust validation</li>
-                <li>Adapt computational methods across domains and data modalities</li>
-                <li>Contribute to collaborative open scientific research</li>
-            </ul>
-
-        </div>
-
-        <footer>
-            Open science • Computational biology • PhD applications 2026
-        </footer>
-
+  <!-- Navigation -->
+  <nav>
+    <a href="#" class="nav-brand">Aritra Mukherjee</a>
+    <div class="nav-right">
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="social-nav">
+        <a href="https://github.com/Aridoge13" target="_blank" title="GitHub">GH</a>
+        <a href="https://www.kaggle.com/aridoge13" target="_blank" title="Kaggle">KG</a>
+        <a href="https://www.linkedin.com/in/aritra-mukherjee-82b070125" target="_blank" title="LinkedIn">LI</a>
+        <a href="https://bsky.app/profile/aridoge13.bsky.social" target="_blank" title="Bluesky">BS</a>
+        <a href="https://orcid.org/0000-0002-6061-611X" target="_blank" title="ORCID"
+          style="background:rgba(166,206,57,0.12);color:#7aaa00;border-color:rgba(166,206,57,0.3);">ID</a>
+      </div>
+      <button class="theme-toggle" onclick="toggleTheme()" id="themeBtn">
+        <span class="icon">☀</span> Light
+      </button>
     </div>
+  </nav>
 
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-content">
+      <div class="hero-eyebrow fade-in">Computational Biologist</div>
+      <h1 class="fade-in fade-in-1">
+        Where <em>biology</em> meets<br>data, code, and curiosity.
+      </h1>
+      <p class="hero-sub fade-in fade-in-2">
+        I build reproducible analytical frameworks for genomic, transcriptomic, and regulatory data — from population
+        genetics to cancer network inference. Based in Kolkata, preparing for doctoral research.
+      </p>
+      <div class="hero-cta fade-in fade-in-3">
+        <a href="#about" class="btn btn-primary">Learn more →</a>
+        <a href="https://github.com/Aridoge13" target="_blank" class="btn btn-ghost">View GitHub</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about">
+    <div class="container">
+      <div class="section-label">About</div>
+      <h2>A biologist who codes.<br>A coder who thinks biologically.</h2>
+      <p class="section-intro">
+        I have an M.Sc. in Genomic Science and work at the intersection of computational biology, machine learning, and
+        multi-omics data integration. My work spans population genomics, cancer genomics, regulatory network inference,
+        and single-cell analysis — built independently, with rigour.
+      </p>
+
+      <div class="about-grid">
+        <div class="about-card fade-in fade-in-1">
+          <span class="about-card-icon">🧬</span>
+          <h3>Research Identity</h3>
+          <p>I believe complex biological phenotypes — especially in cancer — emerge from stochastic, systems-level
+            regulatory networks rather than single deterministic elements. My work aims to model that complexity
+            honestly.</p>
+        </div>
+        <div class="about-card fade-in fade-in-2">
+          <span class="about-card-icon">⚙️</span>
+          <h3>Engineering Philosophy</h3>
+          <p>Reproducibility is non-negotiable. Every pipeline I build is modular, documented, version-controlled, and
+            runnable — whether on a laptop or a GCP cluster. Good code is good science.</p>
+        </div>
+        <div class="about-card fade-in fade-in-3">
+          <span class="about-card-icon">📐</span>
+          <h3>Breadth by Design</h3>
+          <p>From phylogenomics and metagenomics to GRN inference and deep learning for personalised medicine — my
+            computational breadth is intentional. Systems biology rewards generalists who think in depth.</p>
+        </div>
+        <div class="about-card fade-in fade-in-4">
+          <span class="about-card-icon">🌍</span>
+          <h3>Currently</h3>
+          <p>Preparing for doctoral research in computational biology. Actively developing PANDA/LIONESS gene regulatory
+            network inference pipelines and the Kabosu multi-omics integration framework.</p>
+        </div>
+      </div>
+
+      <!-- Lab pitch -->
+      <div class="pitch-box">
+        <h3>What could I bring to your lab?</h3>
+        <p>
+          If your research involves <strong>large-scale omics data, network-level biological questions, or integrating
+            heterogeneous datasets</strong> — I am likely already thinking about the same problems. I bring a
+          self-directed analytical toolkit spanning variant annotation, regulatory network inference, single-cell
+          workflows, and machine learning, all built with reproducibility and HPC deployment in mind. I work best in
+          environments where computational rigour and biological insight are treated as inseparable — and where the code
+          is expected to outlast the paper.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills">
+    <div class="container">
+      <div class="section-label">Skills</div>
+      <h2>The toolkit.</h2>
+      <p class="section-intro">Built across formal training, independent projects, and continuous self-directed
+        learning.</p>
+
+      <div class="skills-grid">
+        <div class="skill-group">
+          <div class="skill-group-header">
+            <div class="skill-dot"></div>
+            <h3>Languages</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="tag highlight">Python</span>
+            <span class="tag highlight">R</span>
+            <span class="tag highlight">Bash</span>
+            <span class="tag">SQL</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <div class="skill-group-header">
+            <div class="skill-dot"></div>
+            <h3>Network & GRN</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="tag highlight">PANDA</span>
+            <span class="tag highlight">LIONESS</span>
+            <span class="tag highlight">PyPanda</span>
+            <span class="tag">SCORPION</span>
+            <span class="tag">PORCUPINE</span>
+            <span class="tag">NetZooPy</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <div class="skill-group-header">
+            <div class="skill-dot"></div>
+            <h3>Single-cell & RNA-seq</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="tag highlight">Scanpy</span>
+            <span class="tag">UMAP</span>
+            <span class="tag">Leiden</span>
+            <span class="tag">DESeq2</span>
+            <span class="tag">edgeR</span>
+            <span class="tag">scRNA-seq</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <div class="skill-group-header">
+            <div class="skill-dot"></div>
+            <h3>Genomics & Variants</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="tag">PLINK</span>
+            <span class="tag">GATK</span>
+            <span class="tag">VEP</span>
+            <span class="tag">CADD</span>
+            <span class="tag">GWAS</span>
+            <span class="tag">PRS</span>
+            <span class="tag">bcftools</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <div class="skill-group-header">
+            <div class="skill-dot"></div>
+            <h3>Machine Learning</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="tag highlight">scikit-learn</span>
+            <span class="tag">Gradient Boosting Decision Trees</span>
+            <span class="tag">TensorFlow</span>
+            <span class="tag">SHAP</span>
+            <span class="tag">LIME</span>
+            <span class="tag">PyTorch</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <div class="skill-group-header">
+            <div class="skill-dot"></div>
+            <h3>Infrastructure & HPC</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="tag highlight">GCP</span>
+            <span class="tag highlight">SLURM</span>
+            <span class="tag">Snakemake</span>
+            <span class="tag">Docker</span>
+            <span class="tag">Singularity</span>
+            <span class="tag">Git</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <div class="skill-group-header">
+            <div class="skill-dot"></div>
+            <h3>Multi-omics & Pathways</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="tag">GSEA</span>
+            <span class="tag">Enrichr</span>
+            <span class="tag">KEGG</span>
+            <span class="tag">Reactome</span>
+            <span class="tag">TCGA</span>
+            <span class="tag">GTEx</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <div class="skill-group-header">
+            <div class="skill-dot"></div>
+            <h3>Phylogenetics & Pop Gen</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="tag">MEGA</span>
+            <span class="tag">RAxML</span>
+            <span class="tag">STRUCTURE</span>
+            <span class="tag">Biopython</span>
+            <span class="tag">PopLDdecay</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects">
+    <div class="container">
+      <div class="section-label">Projects</div>
+      <h2>Selected work.</h2>
+      <p class="section-intro">Independent research projects built alongside formal training. All code is open-source.
+      </p>
+
+      <div class="project-links">
+
+        <a href="https://github.com/Aridoge13/Kabosu" target="_blank" class="project-link-card">
+          <div class="project-tag-row">
+            <span class="project-pill pill-green">Multi-omics</span>
+            <span class="project-pill pill-warm">ML</span>
+            <span class="project-pill pill-green">Cancer</span>
+          </div>
+          <h3>Kabosu</h3>
+          <p>Multi-omics integration framework for cancer heterogeneity modelling. Integrates TCGA genomic,
+            transcriptomic, and proteomic data using GBDT and neural networks with SHAP explainability.</p>
+          <div class="project-status">
+            <div class="status-dot status-active"></div>
+            Active development
+          </div>
+        </a>
+
+        <a href="https://github.com/Aridoge13/Computational_Biology" target="_blank" class="project-link-card">
+          <div class="project-tag-row">
+            <span class="project-pill pill-green">GRN</span>
+            <span class="project-pill pill-green">scRNA-seq</span>
+            <span class="project-pill pill-gray">Pipelines</span>
+          </div>
+          <h3>Computational Biology Toolkit</h3>
+          <p>Modular pipeline collection spanning GRN inference (PANDA/LIONESS on TCGA-OV), single-cell RNA-seq analysis
+            of ovarian cancer data, variant annotation, phylogenetics, and metagenomics.</p>
+          <div class="project-status">
+            <div class="status-dot status-active"></div>
+            Active — GRN analysis in progress
+          </div>
+        </a>
+
+        <a href="https://github.com/Aridoge13/Viromics" target="_blank" class="project-link-card">
+          <div class="project-tag-row">
+            <span class="project-pill pill-gray">Metagenomics</span>
+            <span class="project-pill pill-gray">Viromics</span>
+          </div>
+          <h3>Viromics Pipeline</h3>
+          <p>Scalable pipeline for viral genome discovery and characterisation from metagenomic sequencing data.
+            Designed for reproducible deployment on HPC environments.</p>
+          <div class="project-status">
+            <div class="status-dot status-done"></div>
+            Complete
+          </div>
+        </a>
+
+        <a href="https://github.com/Aridoge13/Hamon" target="_blank" class="project-link-card">
+          <div class="project-tag-row">
+            <span class="project-pill pill-warm">Structural Variants</span>
+          </div>
+          <h3>Hamon</h3>
+          <p>Structural variant analysis and pangenome construction toolkit. Extends the Computational Biology
+            repository with specialised modules for large-scale genomic variation.</p>
+          <div class="project-status">
+            <div class="status-dot status-active"></div>
+            In development
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <div class="container">
+      <div class="section-label">Contact</div>
+      <h2>Let's talk science.</h2>
+      <p class="section-intro">
+        Open to doctoral positions, research collaborations, and conversations about genomics, network biology, and
+        computational approaches to complex biological systems.
+      </p>
+
+      <div class="contact-grid">
+        <a href="mailto:aritra.mukherjee98@gmail.com" class="contact-item">
+          <div class="contact-icon">@</div>
+          <div>
+            <div class="contact-label">Email</div>
+            <div class="contact-value">aritra.mukherjee98@gmail.com</div>
+          </div>
+        </a>
+        <a href="https://www.linkedin.com/in/aritra-mukherjee-82b070125" target="_blank" class="contact-item">
+          <div class="contact-icon">LI</div>
+          <div>
+            <div class="contact-label">LinkedIn</div>
+            <div class="contact-value">aritra-mukherjee</div>
+          </div>
+        </a>
+        <a href="https://github.com/Aridoge13" target="_blank" class="contact-item">
+          <div class="contact-icon">GH</div>
+          <div>
+            <div class="contact-label">GitHub</div>
+            <div class="contact-value">Aridoge13</div>
+          </div>
+        </a>
+        <a href="https://www.kaggle.com/aridoge13" target="_blank" class="contact-item">
+          <div class="contact-icon">KG</div>
+          <div>
+            <div class="contact-label">Kaggle</div>
+            <div class="contact-value">aridoge13</div>
+          </div>
+        </a>
+        <a href="https://orcid.org/0000-0002-6061-611X" target="_blank" class="contact-item">
+          <div class="contact-icon" style="background:rgba(166,206,57,0.12);color:#7aaa00;">ID</div>
+          <div>
+            <div class="contact-label">ORCID</div>
+            <div class="contact-value">0000-0002-6061-611X</div>
+          </div>
+        </a>
+        <a href="https://bsky.app/profile/aridoge13.bsky.social" target="_blank" class="contact-item">
+          <div class="contact-icon">BS</div>
+          <div>
+            <div class="contact-label">Bluesky</div>
+            <div class="contact-value">@aridoge13.bsky.social</div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>Aritra Mukherjee · Kolkata, India · Built with curiosity and caffeine.</p>
+  </footer>
+
+  <script>
+    // Theme toggle
+    const btn = document.getElementById('themeBtn');
+    let dark = false;
+    function toggleTheme() {
+      dark = !dark;
+      document.documentElement.setAttribute('data-theme', dark ? 'dark' : '');
+      btn.innerHTML = dark ? '<span class="icon">☽</span> Dark' : '<span class="icon">☀</span> Light';
+    }
+
+    // Scroll reveal
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.style.opacity = '1';
+          e.target.style.transform = 'translateY(0)';
+        }
+      });
+    }, { threshold: 0.08 });
+
+    document.querySelectorAll('.about-card, .skill-group, .project-link-card, .contact-item').forEach(el => {
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(18px)';
+      el.style.transition = 'opacity 0.5s ease, transform 0.5s ease, box-shadow 0.25s ease';
+      observer.observe(el);
+    });
+  </script>
 </body>
 
 </html>
