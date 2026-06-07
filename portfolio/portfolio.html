@@ -1,0 +1,1176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aritra Mukherjee — Computational Biologist</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #f5f2ec;
+    --bg2: #eceadf;
+    --ink: #1a1a16;
+    --ink2: #4a4a42;
+    --ink3: #8a8a7a;
+    --accent: #1d6e4f;
+    --accent2: #2d9e75;
+    --accent-light: #d4ede3;
+    --rule: #d0cdc0;
+    --tag-bg: #e8e4d8;
+    --card: #ffffff;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: 'Instrument Sans', sans-serif;
+    font-size: 16px;
+    line-height: 1.65;
+    overflow-x: hidden;
+  }
+
+  /* NAV */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 3rem;
+    background: rgba(245, 242, 236, 0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .nav-name {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.1rem;
+    letter-spacing: 0.01em;
+    color: var(--ink);
+    text-decoration: none;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+  }
+
+  .nav-links a {
+    font-size: 0.85rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink2);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .nav-links a:hover { color: var(--accent); }
+
+  /* HERO */
+  .hero {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-top: 5rem;
+  }
+
+  .hero-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 4rem 3rem 4rem 4rem;
+    border-right: 1px solid var(--rule);
+  }
+
+  .hero-eyebrow {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.75rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .hero-eyebrow::before {
+    content: '';
+    display: inline-block;
+    width: 2rem;
+    height: 1px;
+    background: var(--accent);
+  }
+
+  .hero-title {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(2.8rem, 5vw, 4.5rem);
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    color: var(--ink);
+    margin-bottom: 1.5rem;
+  }
+
+  .hero-title em {
+    font-style: italic;
+    color: var(--accent);
+  }
+
+  .hero-desc {
+    font-size: 1.05rem;
+    color: var(--ink2);
+    line-height: 1.75;
+    max-width: 440px;
+    margin-bottom: 2.5rem;
+  }
+
+  .hero-cta {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    background: var(--accent);
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.9rem;
+    border-radius: 2px;
+    transition: background 0.2s, transform 0.15s;
+  }
+
+  .btn-primary:hover { background: #155c41; transform: translateY(-1px); }
+
+  .btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    background: transparent;
+    color: var(--ink);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.9rem;
+    border: 1px solid var(--rule);
+    border-radius: 2px;
+    transition: border-color 0.2s, transform 0.15s;
+  }
+
+  .btn-secondary:hover { border-color: var(--accent); color: var(--accent); transform: translateY(-1px); }
+
+  .hero-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 4rem 4rem 4rem 3rem;
+    gap: 1.5rem;
+  }
+
+  .stat-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1px;
+    background: var(--rule);
+    border: 1px solid var(--rule);
+    margin-bottom: 0.5rem;
+  }
+
+  .stat-cell {
+    background: var(--bg);
+    padding: 1.5rem;
+  }
+
+  .stat-number {
+    font-family: 'DM Serif Display', serif;
+    font-size: 2.2rem;
+    color: var(--accent);
+    line-height: 1;
+    margin-bottom: 0.35rem;
+  }
+
+  .stat-label {
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--ink3);
+  }
+
+  .focus-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .focus-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    font-size: 0.9rem;
+    color: var(--ink2);
+    padding: 0.6rem 0.75rem;
+    border-left: 2px solid transparent;
+    transition: border-color 0.2s, background 0.2s;
+  }
+
+  .focus-list li:hover {
+    border-left-color: var(--accent2);
+    background: var(--accent-light);
+    border-radius: 0 2px 2px 0;
+  }
+
+  .focus-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--accent2);
+    margin-top: 0.45rem;
+    flex-shrink: 0;
+  }
+
+  /* SECTIONS */
+  section {
+    border-top: 1px solid var(--rule);
+  }
+
+  .section-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 5rem 4rem;
+  }
+
+  .section-header {
+    display: flex;
+    align-items: baseline;
+    gap: 1.5rem;
+    margin-bottom: 3.5rem;
+  }
+
+  .section-number {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.7rem;
+    color: var(--ink3);
+    letter-spacing: 0.1em;
+  }
+
+  .section-title {
+    font-family: 'DM Serif Display', serif;
+    font-size: 2rem;
+    color: var(--ink);
+    letter-spacing: -0.01em;
+  }
+
+  /* SKILLS */
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: var(--rule);
+    border: 1px solid var(--rule);
+  }
+
+  .skill-card {
+    background: var(--bg);
+    padding: 2rem;
+    transition: background 0.2s;
+  }
+
+  .skill-card:hover { background: var(--card); }
+
+  .skill-icon {
+    width: 36px;
+    height: 36px;
+    background: var(--accent-light);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+  }
+
+  .skill-icon svg { width: 18px; height: 18px; stroke: var(--accent); fill: none; stroke-width: 1.5; }
+
+  .skill-name {
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+    color: var(--ink);
+  }
+
+  .skill-desc {
+    font-size: 0.82rem;
+    color: var(--ink3);
+    line-height: 1.6;
+    margin-bottom: 1rem;
+  }
+
+  .tag-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem;
+  }
+
+  .tag {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.7rem;
+    padding: 0.2rem 0.55rem;
+    background: var(--tag-bg);
+    color: var(--ink2);
+    border-radius: 2px;
+  }
+
+  .tag.highlight {
+    background: var(--accent-light);
+    color: var(--accent);
+  }
+
+  /* PROJECTS */
+  .projects-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .project-row {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 0;
+    border: 1px solid var(--rule);
+    border-top: none;
+    transition: background 0.2s;
+  }
+
+  .project-row:first-child { border-top: 1px solid var(--rule); }
+  .project-row:hover { background: var(--card); }
+
+  .project-main {
+    padding: 1.75rem 2rem;
+    border-right: 1px solid var(--rule);
+  }
+
+  .project-title-row {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .project-name {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.1rem;
+    color: var(--ink);
+  }
+
+  .project-link {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.7rem;
+    color: var(--accent);
+    text-decoration: none;
+    padding: 0.15rem 0.4rem;
+    border: 1px solid var(--accent-light);
+    border-radius: 2px;
+    transition: background 0.2s;
+  }
+
+  .project-link:hover { background: var(--accent-light); }
+
+  .project-desc {
+    font-size: 0.88rem;
+    color: var(--ink2);
+    line-height: 1.65;
+  }
+
+  .project-meta {
+    padding: 1.75rem 1.5rem;
+    border-right: 1px solid var(--rule);
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .project-meta-label {
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink3);
+    margin-bottom: 0.25rem;
+  }
+
+  .project-meta-value {
+    font-size: 0.82rem;
+    color: var(--ink2);
+    font-family: 'DM Mono', monospace;
+  }
+
+  .project-relevance {
+    padding: 1.75rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 0.35rem;
+  }
+
+  .relevance-bar {
+    height: 4px;
+    background: var(--rule);
+    border-radius: 2px;
+    overflow: hidden;
+    margin-bottom: 0.25rem;
+  }
+
+  .relevance-fill {
+    height: 100%;
+    background: var(--accent2);
+    border-radius: 2px;
+    transition: width 0.6s ease;
+  }
+
+  .relevance-label {
+    font-size: 0.72rem;
+    color: var(--ink3);
+    font-family: 'DM Mono', monospace;
+  }
+
+  /* TIMELINE / EXPERIENCE */
+  .timeline {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    gap: 0;
+  }
+
+  .timeline-item {
+    display: contents;
+  }
+
+  .timeline-date {
+    padding: 1.5rem 2rem 1.5rem 0;
+    border-right: 1px solid var(--rule);
+    text-align: right;
+  }
+
+  .timeline-year {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.8rem;
+    color: var(--ink3);
+    line-height: 1.5;
+  }
+
+  .timeline-content {
+    padding: 1.5rem 0 1.5rem 2rem;
+    border-bottom: 1px solid var(--rule);
+    position: relative;
+  }
+
+  .timeline-content::before {
+    content: '';
+    position: absolute;
+    left: -5px;
+    top: 1.9rem;
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: var(--bg);
+    border: 1.5px solid var(--rule);
+  }
+
+  .timeline-item:first-child .timeline-content::before {
+    border-color: var(--accent2);
+    background: var(--accent2);
+  }
+
+  .timeline-date:last-of-type,
+  .timeline-content:last-of-type { border-bottom: none; }
+
+  .timeline-role {
+    font-weight: 600;
+    font-size: 0.95rem;
+    margin-bottom: 0.2rem;
+    color: var(--ink);
+  }
+
+  .timeline-org {
+    font-size: 0.82rem;
+    color: var(--accent);
+    margin-bottom: 0.6rem;
+    font-family: 'DM Mono', monospace;
+  }
+
+  .timeline-body {
+    font-size: 0.87rem;
+    color: var(--ink2);
+    line-height: 1.65;
+  }
+
+  /* PUBLICATIONS */
+  .pubs-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .pub-card {
+    display: flex;
+    gap: 1.5rem;
+    padding: 1.5rem;
+    border: 1px solid var(--rule);
+    border-radius: 2px;
+    background: var(--card);
+    transition: border-color 0.2s;
+  }
+
+  .pub-card:hover { border-color: var(--accent2); }
+
+  .pub-year {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.8rem;
+    color: var(--ink3);
+    min-width: 40px;
+    padding-top: 0.1rem;
+  }
+
+  .pub-title {
+    font-weight: 500;
+    font-size: 0.92rem;
+    color: var(--ink);
+    margin-bottom: 0.3rem;
+    line-height: 1.5;
+  }
+
+  .pub-doi {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.75rem;
+    color: var(--accent);
+    text-decoration: none;
+  }
+
+  .pub-doi:hover { text-decoration: underline; }
+
+  /* CONTACT */
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: start;
+  }
+
+  .contact-intro {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.6rem;
+    line-height: 1.3;
+    color: var(--ink);
+    margin-bottom: 1.25rem;
+  }
+
+  .contact-sub {
+    font-size: 0.9rem;
+    color: var(--ink2);
+    line-height: 1.7;
+  }
+
+  .contact-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .contact-link-row {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.85rem 1rem;
+    border: 1px solid var(--rule);
+    background: var(--card);
+    text-decoration: none;
+    color: var(--ink);
+    font-size: 0.88rem;
+    transition: border-color 0.2s, background 0.2s;
+    border-radius: 2px;
+  }
+
+  .contact-link-row:hover {
+    border-color: var(--accent2);
+    background: var(--accent-light);
+  }
+
+  .contact-link-label {
+    font-weight: 500;
+  }
+
+  .contact-link-value {
+    margin-left: auto;
+    font-family: 'DM Mono', monospace;
+    font-size: 0.78rem;
+    color: var(--ink3);
+  }
+
+  /* FOOTER */
+  footer {
+    border-top: 1px solid var(--rule);
+    padding: 1.5rem 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 0.78rem;
+    color: var(--ink3);
+    font-family: 'DM Mono', monospace;
+  }
+
+  /* POSITION CALLOUT */
+  .position-callout {
+    margin: 0 0 2.5rem;
+    padding: 1.25rem 1.5rem;
+    background: var(--accent-light);
+    border-left: 3px solid var(--accent);
+    border-radius: 0 2px 2px 0;
+  }
+
+  .position-callout-label {
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 0.4rem;
+    font-family: 'DM Mono', monospace;
+  }
+
+  .position-callout-text {
+    font-size: 0.9rem;
+    color: var(--ink);
+    line-height: 1.6;
+  }
+
+  /* AMR FIT SECTION */
+  .fit-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1px;
+    background: var(--rule);
+    border: 1px solid var(--rule);
+    margin-bottom: 3rem;
+  }
+
+  .fit-cell {
+    background: var(--bg);
+    padding: 1.75rem;
+  }
+
+  .fit-cell:hover { background: var(--card); }
+
+  .fit-req {
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink3);
+    margin-bottom: 0.5rem;
+    font-family: 'DM Mono', monospace;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+  }
+
+  .fit-req::before {
+    content: '✓';
+    color: var(--accent2);
+    font-size: 0.8rem;
+  }
+
+  .fit-title {
+    font-weight: 600;
+    font-size: 0.92rem;
+    color: var(--ink);
+    margin-bottom: 0.4rem;
+  }
+
+  .fit-body {
+    font-size: 0.84rem;
+    color: var(--ink2);
+    line-height: 1.6;
+  }
+
+  /* Responsive basics */
+  @media (max-width: 860px) {
+    nav { padding: 1rem 1.5rem; }
+    .nav-links { display: none; }
+    .hero { grid-template-columns: 1fr; }
+    .hero-left { border-right: none; border-bottom: 1px solid var(--rule); padding: 3rem 1.5rem; }
+    .hero-right { padding: 2rem 1.5rem; }
+    .section-inner { padding: 3rem 1.5rem; }
+    .skills-grid { grid-template-columns: 1fr; }
+    .project-row { grid-template-columns: 1fr; }
+    .project-meta, .project-relevance { border-right: none; border-top: 1px solid var(--rule); }
+    .timeline { grid-template-columns: 1fr; }
+    .timeline-date { border-right: none; text-align: left; padding: 1rem 0 0; }
+    .timeline-content { padding: 0.5rem 0 1.5rem 0; border-bottom: 1px solid var(--rule); }
+    .timeline-content::before { display: none; }
+    .contact-grid { grid-template-columns: 1fr; }
+    .fit-grid { grid-template-columns: 1fr; }
+    footer { flex-direction: column; gap: 0.5rem; padding: 1.5rem; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="#" class="nav-name">Aritra Mukherjee</a>
+  <ul class="nav-links">
+    <li><a href="#fit">Position Fit</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero" style="border-top: none;">
+  <div class="hero-left">
+    <div class="hero-eyebrow">Computational Biologist</div>
+    <h1 class="hero-title">
+      Metagenomics,<br>
+      <em>AMR Surveillance</em><br>
+      &amp; Scalable Pipelines
+    </h1>
+    <p class="hero-desc">
+      Building reproducible analytical frameworks for environmental resistome analysis, microbial community profiling, and large-scale sequencing data — with a focus on understanding how antimicrobial resistance spreads.
+    </p>
+    <div class="hero-cta">
+      <a href="#fit" class="btn-primary">View PhD Application Fit →</a>
+      <a href="https://github.com/Aridoge13" class="btn-secondary" target="_blank">GitHub Profile</a>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="stat-grid">
+      <div class="stat-cell">
+        <div class="stat-number">M.Sc.</div>
+        <div class="stat-label">Genomic Science, CUK</div>
+      </div>
+      <div class="stat-cell">
+        <div class="stat-number">3+</div>
+        <div class="stat-label">Active Pipeline Projects</div>
+      </div>
+      <div class="stat-cell">
+        <div class="stat-number">2</div>
+        <div class="stat-label">Peer-Reviewed Publications</div>
+      </div>
+      <div class="stat-cell">
+        <div class="stat-number">GCP</div>
+        <div class="stat-label">Cloud + HPC Deployments</div>
+      </div>
+    </div>
+    <ul class="focus-list">
+      <li><span class="focus-dot"></span>Metagenomic resistome analysis &amp; ARG profiling</li>
+      <li><span class="focus-dot"></span>Reproducible workflows — Snakemake, Docker, Singularity</li>
+      <li><span class="focus-dot"></span>Microbial taxonomy — Kraken, MetaPhlAn, MAG reconstruction</li>
+      <li><span class="focus-dot"></span>HPC &amp; Google Cloud Platform environments</li>
+      <li><span class="focus-dot"></span>Python · R · Bash · SQL</li>
+    </ul>
+  </div>
+</section>
+
+<!-- FIT FOR POSITION -->
+<section id="fit">
+  <div class="section-inner">
+    <div class="section-header">
+      <span class="section-number">01</span>
+      <h2 class="section-title">Fit for the Łabaj Lab PhD</h2>
+    </div>
+
+    <div class="position-callout">
+      <div class="position-callout-label">Target Position</div>
+      <div class="position-callout-text">PhD Researcher — Computational Metagenomics &amp; AMR Bioinformatics<br>
+      Małopolska Centre of Biotechnology, Jagiellonian University · Supervisor: Dr. Paweł Łabaj</div>
+    </div>
+
+    <div class="fit-grid">
+      <div class="fit-cell">
+        <div class="fit-req">Required</div>
+        <div class="fit-title">M.Sc. in Life Sciences</div>
+        <div class="fit-body">M.Sc. in Genomic Science, Central University of Kerala (2020–2022). Coursework in Metagenomics, Microbial Genomics, Population Genetics, Biostatistics &amp; Bioinformatics.</div>
+      </div>
+      <div class="fit-cell">
+        <div class="fit-req">Required</div>
+        <div class="fit-title">Solid understanding of microbiology &amp; genetics</div>
+        <div class="fit-body">Wet-lab background in microbial culture, DNA/RNA extraction, PCR, and recombinant cloning. Thesis work on phylogenetics and comparative genomics of pathogen populations.</div>
+      </div>
+      <div class="fit-cell">
+        <div class="fit-req">Required</div>
+        <div class="fit-title">Programming experience</div>
+        <div class="fit-body">Proficient in Python, R, and Bash for biological data analysis. Multiple open-source repositories demonstrating modular, reproducible pipeline development for genomic datasets.</div>
+      </div>
+      <div class="fit-cell">
+        <div class="fit-req">Required</div>
+        <div class="fit-title">Data science experience</div>
+        <div class="fit-body">Statistical analysis, dimensionality reduction (PCA, MDS), differential expression analysis, pathway enrichment, and machine learning for biological sequence classification.</div>
+      </div>
+      <div class="fit-cell">
+        <div class="fit-req">Desirable</div>
+        <div class="fit-title">Nextflow / Snakemake / Docker / Singularity</div>
+        <div class="fit-body">Active use of Snakemake for reproducible pipeline design. Environment management with Conda, Docker, and Singularity. Version-controlled development with Git/GitHub across all projects.</div>
+      </div>
+      <div class="fit-cell">
+        <div class="fit-req">Desirable</div>
+        <div class="fit-title">HPC or cloud environments</div>
+        <div class="fit-body">SLURM-managed HPC environments and Google Cloud Platform for scalable metagenomic analysis. Virome pipeline designed specifically for large-scale GCP deployment.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <div class="section-inner">
+    <div class="section-header">
+      <span class="section-number">02</span>
+      <h2 class="section-title">Technical Skills</h2>
+    </div>
+
+    <div class="skills-grid">
+      <div class="skill-card">
+        <div class="skill-icon">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M4.22 4.22l2.12 2.12M17.66 17.66l2.12 2.12M2 12h3M19 12h3M4.22 19.78l2.12-2.12M17.66 6.34l2.12-2.12"/></svg>
+        </div>
+        <div class="skill-name">Metagenomic Analysis</div>
+        <div class="skill-desc">Taxonomic profiling, community analysis, and functional annotation of environmental and host-associated microbiomes.</div>
+        <div class="tag-row">
+          <span class="tag highlight">Kraken2</span>
+          <span class="tag highlight">MetaPhlAn</span>
+          <span class="tag highlight">VirSorter2</span>
+          <span class="tag highlight">iPHoP</span>
+          <span class="tag">MetaBAT</span>
+          <span class="tag">CheckM</span>
+          <span class="tag">DAS Tool</span>
+        </div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-icon">
+          <svg viewBox="0 0 24 24"><path d="M3 3h18v18H3zM9 3v18M15 3v18M3 9h18M3 15h18"/></svg>
+        </div>
+        <div class="skill-name">Pipeline Engineering</div>
+        <div class="skill-desc">Modular, reproducible workflow design for scalable genomic and metagenomic analyses across HPC and cloud environments.</div>
+        <div class="tag-row">
+          <span class="tag highlight">Snakemake</span>
+          <span class="tag highlight">Docker</span>
+          <span class="tag highlight">Singularity</span>
+          <span class="tag">Conda</span>
+          <span class="tag">Git/GitHub</span>
+          <span class="tag highlight">SLURM</span>
+          <span class="tag">GCP</span>
+        </div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-icon">
+          <svg viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+        </div>
+        <div class="skill-name">Programming</div>
+        <div class="skill-desc">Data analysis, visualisation, statistical modelling, and machine learning for high-dimensional biological datasets.</div>
+        <div class="tag-row">
+          <span class="tag highlight">Python</span>
+          <span class="tag highlight">R</span>
+          <span class="tag highlight">Bash</span>
+          <span class="tag">SQL</span>
+          <span class="tag">Linux/Unix</span>
+        </div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-icon">
+          <svg viewBox="0 0 24 24"><path d="M21 3H3v18h18V3zM12 8v8M8 12h8"/></svg>
+        </div>
+        <div class="skill-name">Comparative Genomics</div>
+        <div class="skill-desc">Sequence alignment, variant calling, SNP annotation, phylogenetic inference, and genome organisation analysis.</div>
+        <div class="tag-row">
+          <span class="tag">NGS QC</span>
+          <span class="tag">Variant Calling</span>
+          <span class="tag">SNP Annotation</span>
+          <span class="tag">Phylogenetics</span>
+          <span class="tag">Long-read</span>
+        </div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-icon">
+          <svg viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+        </div>
+        <div class="skill-name">Transcriptomics &amp; Functional Genomics</div>
+        <div class="skill-desc">Bulk RNA-seq analysis, differential expression, pathway enrichment, and functional interpretation of omics datasets.</div>
+        <div class="tag-row">
+          <span class="tag">RNA-seq</span>
+          <span class="tag">DESeq2</span>
+          <span class="tag">GSEA</span>
+          <span class="tag">Pathway Analysis</span>
+        </div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-icon">
+          <svg viewBox="0 0 24 24"><rect x="2" y="2" width="9" height="9"/><rect x="13" y="2" width="9" height="9"/><rect x="2" y="13" width="9" height="9"/><rect x="13" y="13" width="9" height="9"/></svg>
+        </div>
+        <div class="skill-name">Wet Lab</div>
+        <div class="skill-desc">Foundational molecular biology skills bridging experimental design and computational analysis.</div>
+        <div class="tag-row">
+          <span class="tag">DNA/RNA Extraction</span>
+          <span class="tag">PCR</span>
+          <span class="tag">Gel Electrophoresis</span>
+          <span class="tag">cDNA Synthesis</span>
+          <span class="tag">Microbial Culture</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="section-inner">
+    <div class="section-header">
+      <span class="section-number">03</span>
+      <h2 class="section-title">Research &amp; Computational Projects</h2>
+    </div>
+
+    <div class="projects-list">
+      <div class="project-row">
+        <div class="project-main">
+          <div class="project-title-row">
+            <div class="project-name">Virome Discovery Pipeline</div>
+            <a href="https://github.com/Aridoge13/Viromics" class="project-link" target="_blank">GitHub ↗</a>
+          </div>
+          <p class="project-desc">Reproducible pipeline for viral genome discovery from metagenomic reads, integrating VirSorter2 and iPHoP for uncultivated virus identification and host prediction. Designed for large-scale GCP deployment with modular architecture applicable to environmental and host-associated viromes — directly relevant to environmental metagenomic surveillance.</p>
+        </div>
+        <div class="project-meta">
+          <div>
+            <div class="project-meta-label">Status</div>
+            <div class="project-meta-value">Active · Feb 2026</div>
+          </div>
+          <div style="margin-top:0.75rem;">
+            <div class="project-meta-label">Stack</div>
+            <div class="project-meta-value">Python · Snakemake<br>GCP · Docker</div>
+          </div>
+        </div>
+        <div class="project-relevance">
+          <div class="project-meta-label">AMR Relevance</div>
+          <div class="relevance-bar"><div class="relevance-fill" style="width: 92%"></div></div>
+          <div class="relevance-label">92% — MGE / mobilome</div>
+        </div>
+      </div>
+
+      <div class="project-row">
+        <div class="project-main">
+          <div class="project-title-row">
+            <div class="project-name">Computational Biology Toolkit</div>
+            <a href="https://github.com/Aridoge13/Computational_Biology" class="project-link" target="_blank">GitHub ↗</a>
+          </div>
+          <p class="project-desc">Modular HPC-compatible workflows for metagenomic profiling, microbial community analysis, comparative genomics, transcriptomics, and large-scale sequencing analysis. Includes microbial taxonomic profiling with Kraken and MetaPhlAn, scalable genomics pipelines for variant annotation, and reproducible environments using Snakemake, Conda, and Docker.</p>
+        </div>
+        <div class="project-meta">
+          <div>
+            <div class="project-meta-label">Status</div>
+            <div class="project-meta-value">Active · Oct 2024</div>
+          </div>
+          <div style="margin-top:0.75rem;">
+            <div class="project-meta-label">Stack</div>
+            <div class="project-meta-value">Python · R · Bash<br>Snakemake · HPC</div>
+          </div>
+        </div>
+        <div class="project-relevance">
+          <div class="project-meta-label">AMR Relevance</div>
+          <div class="relevance-bar"><div class="relevance-fill" style="width: 88%"></div></div>
+          <div class="relevance-label">88% — resistome pipelines</div>
+        </div>
+      </div>
+
+      <div class="project-row">
+        <div class="project-main">
+          <div class="project-title-row">
+            <div class="project-name">Kabosu — Integrative Omics Framework</div>
+            <a href="https://github.com/Aridoge13/Kabosu" class="project-link" target="_blank">GitHub ↗</a>
+          </div>
+          <p class="project-desc">Computational frameworks for integrative analysis of heterogeneous genomic and multi-omics datasets. Focused on modelling interactions across omics layers, interpretable biological representation learning, and scalable machine learning for comparative genomics and multi-modal data integration — aimed at predictive modelling across complex biological systems.</p>
+        </div>
+        <div class="project-meta">
+          <div>
+            <div class="project-meta-label">Status</div>
+            <div class="project-meta-value">Active · Nov 2024</div>
+          </div>
+          <div style="margin-top:0.75rem;">
+            <div class="project-meta-label">Stack</div>
+            <div class="project-meta-value">Python · ML<br>Multi-omics</div>
+          </div>
+        </div>
+        <div class="project-relevance">
+          <div class="project-meta-label">AMR Relevance</div>
+          <div class="relevance-bar"><div class="relevance-fill" style="width: 75%"></div></div>
+          <div class="relevance-label">75% — cross-dataset integration</div>
+        </div>
+      </div>
+
+      <div class="project-row">
+        <div class="project-main">
+          <div class="project-title-row">
+            <div class="project-name">M.Sc. Thesis — Indian Gaur Phylogenetics</div>
+          </div>
+          <p class="project-desc">Phylogenetic and population-level analyses of mitochondrial cytochrome b sequences across Indian gaur populations. Integrated field sampling, wet-lab molecular workflows, and computational sequence analysis across 131 biological samples. Applied PCA, MDS, sequence alignment, and phylogenetic inference to investigate genetic diversity and evolutionary relationships.</p>
+        </div>
+        <div class="project-meta">
+          <div>
+            <div class="project-meta-label">Period</div>
+            <div class="project-meta-value">Mar–Aug 2022</div>
+          </div>
+          <div style="margin-top:0.75rem;">
+            <div class="project-meta-label">Methods</div>
+            <div class="project-meta-value">PCA · MDS<br>Phylogenetics</div>
+          </div>
+        </div>
+        <div class="project-relevance">
+          <div class="project-meta-label">AMR Relevance</div>
+          <div class="relevance-bar"><div class="relevance-fill" style="width: 55%"></div></div>
+          <div class="relevance-label">55% — population genomics</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE & EDUCATION -->
+<section id="experience">
+  <div class="section-inner">
+    <div class="section-header">
+      <span class="section-number">04</span>
+      <h2 class="section-title">Experience &amp; Education</h2>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-date">
+          <div class="timeline-year">2024 – Present</div>
+        </div>
+        <div class="timeline-content">
+          <div class="timeline-role">Independent Computational Biology Researcher</div>
+          <div class="timeline-org">Self-directed · Kolkata, India</div>
+          <div class="timeline-body">Developing reproducible bioinformatics pipelines for metagenomics, virome discovery, and integrative multi-omics analysis. Building and maintaining open-source toolkits for microbial community profiling, comparative genomics, and scalable sequencing data analysis deployed on HPC and Google Cloud Platform.</div>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-date">
+          <div class="timeline-year">2023 – 2024</div>
+        </div>
+        <div class="timeline-content">
+          <div class="timeline-role">PhD Candidate (transitioned to computational genomics)</div>
+          <div class="timeline-org">Instituto de Biomedicina, UNAM · Mexico City</div>
+          <div class="timeline-body">Selected through national entrance examination for a PhD in developmental neurobiology. Conducted brain regeneration experiments in axolotl model systems, gaining direct experience in experimental design and biological data generation. Made a deliberate decision to redirect focus toward computational genomics — an area where substantial independent expertise had already been developed.</div>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-date">
+          <div class="timeline-year">2020 – 2022</div>
+        </div>
+        <div class="timeline-content">
+          <div class="timeline-role">M.Sc. in Genomic Science</div>
+          <div class="timeline-org">Central University of Kerala · India</div>
+          <div class="timeline-body">Specialised coursework in Metagenomics, Microbial Genomics, Evolutionary Biology, Population Genetics, Functional Genomics, and Biostatistics. Thesis on phylogenetic characterisation of the cytochrome B region of the Indian Gaur across 131 biological samples.</div>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-date">
+          <div class="timeline-year">2017 – 2020</div>
+        </div>
+        <div class="timeline-content">
+          <div class="timeline-role">B.Sc. in Biotechnology</div>
+          <div class="timeline-org">Amity University · India</div>
+          <div class="timeline-body">Foundation in Bioinformatics, Microbiology, Molecular Biology, Genomics, and Proteomics. Bachelor's thesis on comparative genomic and evolutionary differences between <em>M. leprae</em> and <em>M. lepromatosis</em> across geographically distinct populations.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PUBLICATIONS -->
+<section id="publications">
+  <div class="section-inner">
+    <div class="section-header">
+      <span class="section-number">05</span>
+      <h2 class="section-title">Publications</h2>
+    </div>
+
+    <div class="pubs-list">
+      <div class="pub-card">
+        <div class="pub-year">2024</div>
+        <div>
+          <div class="pub-title">Recent Advances of the CRISPR-CAS Genome Engineering</div>
+          <a href="https://doi.org/10.2174/9789815165678124010004" class="pub-doi" target="_blank">10.2174/9789815165678124010004 ↗</a>
+        </div>
+      </div>
+      <div class="pub-card">
+        <div class="pub-year">2022</div>
+        <div>
+          <div class="pub-title">Trimethylamine-N-oxide and its Role in Cardiovascular Disease</div>
+          <a href="https://doi.org/10.5772/intechopen.107976" class="pub-doi" target="_blank">10.5772/intechopen.107976 ↗</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="section-inner">
+    <div class="section-header">
+      <span class="section-number">06</span>
+      <h2 class="section-title">Contact</h2>
+    </div>
+
+    <div class="contact-grid">
+      <div>
+        <p class="contact-intro">Open to PhD opportunities in computational metagenomics &amp; AMR research.</p>
+        <p class="contact-sub">Based in Kolkata, India. Available for interviews and relocation to Kraków, Poland for the Łabaj Lab PhD position at MCB Jagiellonian University.</p>
+      </div>
+      <div class="contact-links">
+        <a href="mailto:aritra.mukherjee98@gmail.com" class="contact-link-row">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 7 10-7"/></svg>
+          <span class="contact-link-label">Email</span>
+          <span class="contact-link-value">aritra.mukherjee98@gmail.com</span>
+        </a>
+        <a href="https://github.com/Aridoge13" class="contact-link-row" target="_blank">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+          <span class="contact-link-label">GitHub</span>
+          <span class="contact-link-value">Aridoge13</span>
+        </a>
+        <a href="https://www.linkedin.com/in/aritra-mukherjee-82b070125" class="contact-link-row" target="_blank">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          <span class="contact-link-label">LinkedIn</span>
+          <span class="contact-link-value">aritra-mukherjee</span>
+        </a>
+        <a href="https://orcid.org/0000-0002-6061-611X" class="contact-link-row" target="_blank">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M8 12h8M12 8v8"/></svg>
+          <span class="contact-link-label">ORCID</span>
+          <span class="contact-link-value">0000-0002-6061-611X</span>
+        </a>
+        <a href="https://aridoge13.github.io/" class="contact-link-row" target="_blank">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          <span class="contact-link-label">Personal Portfolio</span>
+          <span class="contact-link-value">aridoge13.github.io</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <span>Aritra Mukherjee · Computational Biologist</span>
+  <span>Kolkata, India · 2026</span>
+</footer>
+
+</body>
+</html>
