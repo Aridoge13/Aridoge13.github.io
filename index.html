@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Aritra Mukherjee — Computational Biologist</title>
+  <title>Aritra Mukherjee — Microbial Symbiosis & Archaeal Evolution</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link
     href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap"
@@ -123,7 +123,6 @@
       color: var(--accent);
     }
 
-    /* Social icons row */
     .social-nav {
       display: flex;
       align-items: center;
@@ -155,7 +154,6 @@
       transform: translateY(-1px);
     }
 
-    /* Dark mode toggle */
     .theme-toggle {
       background: var(--bg2);
       border: 1px solid var(--border);
@@ -177,11 +175,6 @@
       color: var(--text);
     }
 
-    .theme-toggle .icon {
-      font-size: 0.9rem;
-    }
-
-    /* ── Hero ── */
     .hero {
       min-height: 100vh;
       display: flex;
@@ -203,7 +196,7 @@
     .hero-content {
       position: relative;
       z-index: 1;
-      max-width: 720px;
+      max-width: 780px;
       animation: fadeUp 0.8s ease both;
     }
 
@@ -246,17 +239,10 @@
     .hero-sub {
       font-size: 1.08rem;
       color: var(--text2);
-      max-width: 560px;
+      max-width: 620px;
       line-height: 1.75;
       margin-bottom: 2.2rem;
       font-weight: 300;
-    }
-
-    .hero-cta {
-      display: flex;
-      gap: 1rem;
-      flex-wrap: wrap;
-      align-items: center;
     }
 
     .btn {
@@ -297,7 +283,6 @@
       transform: translateY(-2px);
     }
 
-    /* ── Section base ── */
     section {
       padding: 80px 2rem;
     }
@@ -341,13 +326,12 @@
     .section-intro {
       font-size: 1rem;
       color: var(--text2);
-      max-width: 600px;
+      max-width: 700px;
       line-height: 1.75;
       margin-bottom: 3rem;
       font-weight: 300;
     }
 
-    /* ── About ── */
     .about-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -395,37 +379,36 @@
       font-weight: 300;
     }
 
-    /* ── Lab pitch ── */
     .pitch-box {
       background: linear-gradient(135deg, var(--accent3) 0%, var(--warm2) 100%);
       border-radius: var(--radius);
       padding: 2.2rem 2.4rem;
       margin: 3rem 0;
-      border: 1px solid rgba(45, 106, 79, 0.12);
+      border: 1px solid rgba(45, 106, 79, 0.2);
       position: relative;
       overflow: hidden;
     }
 
     [data-theme="dark"] .pitch-box {
-      background: linear-gradient(135deg, rgba(45, 106, 79, 0.18) 0%, rgba(58, 46, 26, 0.4) 100%);
-      border-color: rgba(82, 183, 136, 0.15);
+      background: linear-gradient(135deg, rgba(45, 106, 79, 0.2) 0%, rgba(58, 46, 26, 0.5) 100%);
+      border-color: rgba(82, 183, 136, 0.2);
     }
 
     .pitch-box::before {
-      content: '🔬';
+      content: '🦠';
       position: absolute;
       right: 1.5rem;
       top: 1.2rem;
-      font-size: 2.5rem;
-      opacity: 0.18;
+      font-size: 2.8rem;
+      opacity: 0.2;
     }
 
     .pitch-box h3 {
       font-family: 'Lora', serif;
-      font-size: 1.1rem;
+      font-size: 1.2rem;
       font-weight: 600;
       color: var(--accent);
-      margin-bottom: 0.7rem;
+      margin-bottom: 0.75rem;
     }
 
     [data-theme="dark"] .pitch-box h3 {
@@ -439,12 +422,6 @@
       font-weight: 300;
     }
 
-    .pitch-box p strong {
-      color: var(--text);
-      font-weight: 500;
-    }
-
-    /* ── Skills ── */
     #skills {
       background: var(--bg2);
     }
@@ -509,10 +486,6 @@
       transition: all var(--transition);
     }
 
-    .skill-group:hover .tag {
-      border-color: rgba(45, 106, 79, 0.2);
-    }
-
     .tag.highlight {
       background: var(--accent3);
       color: var(--accent);
@@ -520,14 +493,13 @@
     }
 
     [data-theme="dark"] .tag.highlight {
-      background: rgba(45, 106, 79, 0.2);
+      background: rgba(45, 106, 79, 0.25);
       color: var(--accent2);
     }
 
-    /* ── Projects teaser ── */
     .project-links {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
       gap: 1.2rem;
       margin-top: 2rem;
     }
@@ -603,16 +575,6 @@
       color: var(--accent2);
     }
 
-    [data-theme="dark"] .pill-warm {
-      background: rgba(58, 46, 26, 0.5);
-      color: var(--warm);
-    }
-
-    [data-theme="dark"] .pill-gray {
-      background: var(--bg3);
-      color: var(--text3);
-    }
-
     .project-link-card h3 {
       font-family: 'Lora', serif;
       font-size: 1rem;
@@ -649,12 +611,6 @@
       background: var(--accent2);
     }
 
-    .status-done {
-      background: var(--text3);
-      animation: none;
-    }
-
-    /* ── Contact ── */
     .contact-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -724,7 +680,6 @@
       color: var(--text);
     }
 
-    /* ── Footer ── */
     footer {
       padding: 2rem;
       text-align: center;
@@ -734,7 +689,6 @@
       font-family: 'DM Mono', monospace;
     }
 
-    /* ── Animations ── */
     @keyframes fadeUp {
       from {
         opacity: 0;
@@ -778,40 +732,11 @@
     .fade-in-4 {
       animation-delay: 0.4s;
     }
-
-    /* ── ORCID badge ── */
-    .orcid-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 5px;
-      font-size: 0.72rem;
-      font-family: 'DM Mono', monospace;
-      color: var(--text3);
-      text-decoration: none;
-      padding: 3px 8px;
-      border-radius: 5px;
-      border: 1px solid var(--border);
-      transition: all var(--transition);
-      margin-left: 0.5rem;
-    }
-
-    .orcid-badge:hover {
-      color: #A6CE39;
-      border-color: #A6CE39;
-    }
-
-    .orcid-dot {
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      background: #A6CE39;
-    }
   </style>
 </head>
 
 <body>
 
-  <!-- Navigation -->
   <nav>
     <a href="#" class="nav-brand">Aritra Mukherjee</a>
     <div class="nav-right">
@@ -835,331 +760,210 @@
     </div>
   </nav>
 
-  <!-- Hero -->
   <section class="hero">
     <div class="hero-bg"></div>
     <div class="hero-content">
-      <div class="hero-eyebrow fade-in">Computational Biologist</div>
+      <div class="hero-eyebrow fade-in">PhD candidate · Microbial Symbiosis & Archaeal Genomics</div>
       <h1 class="fade-in fade-in-1">
-        Where <em>biology</em> meets<br>data, code, and curiosity.
+        From <em>DPANN</em> to <em>Asgard</em>:<br>genome reduction & host dependence
       </h1>
       <p class="hero-sub fade-in fade-in-2">
-        I build reproducible computational frameworks for comparative genomics, phylogenomics, metagenomics, and
-        transcriptomic
-        analysis across complex biological systems. My current work focuses on microbial evolution, genome organisation,
-        symbiosis-associated genome reduction, and scalable evolutionary inference using HPC and cloud environments.
-        Actively looking for doctoral research positions.
+        I am a computational biologist applying phylogenomics, molecular dating, metagenomics, and machine learning to
+        understand how obligate symbiosis reshapes archaeal and bacterial genomes. My research focuses on DPANN archaea,
+        Asgard host‑symbiont systems, and the deep evolution of cellular complexity — directly aligning with the NWO
+        Vici
+        programme of Prof. Dr. Anja Spang at NIOZ.
       </p>
       <div class="hero-cta fade-in fade-in-3">
-        <a href="#about" class="btn btn-primary">Learn more →</a>
-        <a href="https://github.com/Aridoge13" target="_blank" class="btn btn-ghost">View GitHub</a>
+        <a href="#about" class="btn btn-primary">Research focus →</a>
+        <a href="https://github.com/Aridoge13" target="_blank" class="btn btn-ghost">GitHub</a>
       </div>
     </div>
   </section>
 
-  <!-- About -->
   <section id="about">
     <div class="container">
       <div class="section-label">About</div>
-      <h2>A biologist who codes.<br>A coder who thinks biologically.</h2>
+      <h2>Why archaeal symbionts? Why genome streamlining?</h2>
       <p class="section-intro">
-        I have an M.Sc. in Genomic Science and work at the intersection of computational biology, evolutionary genomics,
-        and
-        microbial systems analysis. My work spans comparative genomics, phylogenomics, metagenomics, transcriptomics,
-        and
-        large-scale biological inference, with particular interests in archaeal evolution, genome streamlining, and
-        host-dependent microbial systems.
+        Obligate symbiosis drives some of the most extreme selective pressures in evolution: metabolic outsourcing,
+        progressive genome reduction, and loss of biosynthetic independence. The discovery of DPANN archaea and the
+        Candidate Phyla Radiation showed that this is not an anomaly but a major, understudied dimension of microbial
+        diversity. My work builds scalable computational frameworks to reconstruct these evolutionary trajectories.
       </p>
-
       <div class="about-grid">
-        <div class="about-card fade-in fade-in-1">
+        <div class="about-card">
           <span class="about-card-icon">🧬</span>
-          <h3>Research Identity</h3>
-          <p>I am interested in how evolutionary processes reshape genomes across deep biological timescales. My work
-            focuses on
-            comparative genomics, microbial evolution, genome organisation, and scalable computational approaches for
-            reconstructing
-            evolutionary relationships from complex and heterogeneous biological data.</p>
+          <h3>Phylogenomics & dating</h3>
+          <p>I use RAxML, IQ-TREE2, and BEAST to reconstruct evolutionary relationships and estimate divergence times
+            for uncultured symbiont lineages — essential for understanding when host dependence emerged in archaeal
+            evolution.</p>
         </div>
-        <div class="about-card fade-in fade-in-2">
+        <div class="about-card">
+          <span class="about-card-icon">🔬</span>
+          <h3>Metagenomics & MAGs</h3>
+          <p>Experience processing environmental metagenomes, assembly (metaSPAdes), binning (DASTool), and handling
+            fragmented MAGs from DPANN and other host‑associated lineages — a core challenge in symbiont genomics.</p>
+        </div>
+        <div class="about-card">
           <span class="about-card-icon">⚙️</span>
-          <h3>Engineering Philosophy</h3>
-          <p>Reproducibility is non-negotiable. Every workflow I build is modular, documented, version-controlled, and
-            designed for
-            scalable deployment across Linux, HPC, and cloud environments. I believe computational infrastructure should
-            function as
-            a long-term scientific asset rather than disposable analysis code.</p>
+          <h3>Genome reduction pipelines</h3>
+          <p>I built a comparative Genome Dependency Index and PCA‑based reduction landscape for <em>Nanoarchaeum
+              equitans</em>, Asgard archaea, and free‑living relatives. Integrates coding density, hypothetical protein
+            fraction, and metabolic features.</p>
         </div>
-        <div class="about-card fade-in fade-in-3">
-          <span class="about-card-icon">📐</span>
-          <h3>Breadth by Design</h3>
-          <p>My computational work spans phylogenomics, metagenomics, transcriptomics, regulatory network inference, and
-            machine
-            learning. The goal is not breadth for its own sake, but developing transferable analytical frameworks
-            capable of
-            addressing biological questions across different genomic scales and systems.</p>
-        </div>
-        <div class="about-card fade-in fade-in-4">
-          <span class="about-card-icon">🌍</span>
-          <h3>Currently</h3>
-          <p>Currently developing comparative genome reduction analysis pipelines for archaeal and bacterial symbionts,
-            transcriptome-guided comparative genomics workflows, PANDA/LIONESS regulatory network inference pipelines,
-            and the
-            Kabosu framework for heterogeneous multi-omics integration.</p>
+        <div class="about-card">
+          <span class="about-card-icon">🤖</span>
+          <h3>ML for symbiosis</h3>
+          <p>Developing graph neural networks and network approaches (PANDA/LIONESS) to predict host‑symbiont metabolic
+            complementarity, directly supporting the Vici 2025 machine‑learning integration.</p>
         </div>
       </div>
 
-      <!-- Lab pitch -->
       <div class="pitch-box">
-        <h3>What could I bring to your lab?</h3>
+        <h3>🎯 Aligned with the Spang lab & NWO Vici 2025</h3>
         <p>
-          If your research involves comparative genomics, phylogenomics, metagenomics, microbial evolution, or
-          large-scale omics
-          integration, we are probably interested in similar computational problems. My work focuses on building
-          reproducible and
-          scalable analytical frameworks for extracting biologically interpretable signals from heterogeneous genomic
-          datasets. I
-          am particularly interested in environments where computational rigour, evolutionary reasoning, and biological
-          interpretation are treated as inseparable parts of the scientific process.
+          <strong>I have applied for the PhD position on microbial symbiosis and genome evolution at NIOZ (Prof. Dr.
+            Anja Spang).</strong>
+          My self‑directed research on DPANN genome reduction, my phylogenomic workflows (including BEAST molecular
+          dating), and my metagenomic/MAG processing pipelines are a direct match with the Vici programme’s goal to
+          integrate phylogenomics, ancestral reconstruction, machine learning, and network approaches. I am eager to
+          apply these tools to NIOZ’s unique marine microbial communities — from deep‑sea sediments to tidal flats — and
+          to investigate how obligate symbiosis shaped life on Earth.
         </p>
       </div>
     </div>
   </section>
 
-  <!-- Skills -->
   <section id="skills">
     <div class="container">
       <div class="section-label">Skills</div>
-      <h2>The toolkit.</h2>
-      <p class="section-intro">Built across formal training, independent projects, and continuous self-directed
-        learning.</p>
-
-      <!-- Skills -->
-      
-      <section id="skills">
-        <div class="container">
-          <div class="section-label">Skills</div>
-          <h2>The toolkit.</h2>
-          <p class="section-intro">
-            Built through formal training, independent computational projects, and large-scale biological data analysis across
-            evolutionary genomics, transcriptomics, metagenomics, and microbial systems research.
-          </p>
-      
-        
-          <div class="skills-grid">
-      
-            <div class="skill-group">
-              <div class="skill-group-header">
-                <div class="skill-dot"></div>
-                <h3>Programming & Scripting</h3>
-              </div>
-              <div class="skill-tags">
-                <span class="tag highlight">Python</span>
-                <span class="tag highlight">R</span>
-                <span class="tag highlight">Bash</span>
-                <span class="tag">SQL</span>
-                <span class="tag">Biopython</span>
-              </div>
-            </div>
-      
-            <div class="skill-group">
-              <div class="skill-group-header">
-                <div class="skill-dot"></div>
-                <h3>Phylogenomics & Evolution</h3>
-              </div>
-              <div class="skill-tags">
-                <span class="tag highlight">RAxML</span>
-                <span class="tag highlight">IQ-TREE2</span>
-                <span class="tag">BEAST</span>
-                <span class="tag">MrBayes</span>
-                <span class="tag">FastTree</span>
-                <span class="tag">MAFFT</span>
-                <span class="tag">MUSCLE</span>
-                <span class="tag">ADMIXTURE</span>
-              </div>
-            </div>
-      
-            <div class="skill-group">
-              <div class="skill-group-header">
-                <div class="skill-dot"></div>
-                <h3>Comparative & Microbial Genomics</h3>
-              </div>
-              <div class="skill-tags">
-                <span class="tag highlight">Metagenomics</span>
-                <span class="tag highlight">Genome Reduction</span>
-                <span class="tag">GC Skew Analysis</span>
-                <span class="tag">Codon Analysis</span>
-                <span class="tag">Variant Annotation</span>
-                <span class="tag">Genome Assembly</span>
-              </div>
-            </div>
-      
-            <div class="skill-group">
-              <div class="skill-group-header">
-                <div class="skill-dot"></div>
-                <h3>Transcriptomics</h3>
-              </div>
-              <div class="skill-tags">
-                <span class="tag highlight">RNA-seq</span>
-                <span class="tag highlight">scRNA-seq</span>
-                <span class="tag">Scanpy</span>
-                <span class="tag">DESeq2</span>
-                <span class="tag">edgeR</span>
-                <span class="tag">UMAP</span>
-                <span class="tag">Leiden</span>
-              </div>
-            </div>
-      
-            <div class="skill-group">
-              <div class="skill-group-header">
-                <div class="skill-dot"></div>
-                <h3>Machine Learning</h3>
-              </div>
-              <div class="skill-tags">
-                <span class="tag highlight">scikit-learn</span>
-                <span class="tag">TensorFlow</span>
-                <span class="tag">PyTorch</span>
-                <span class="tag">Neural Networks</span>
-                <span class="tag">Feature Engineering</span>
-                <span class="tag">SHAP</span>
-              </div>
-            </div>
-      
-            <div class="skill-group">
-              <div class="skill-group-header">
-                <div class="skill-dot"></div>
-                <h3>Network & Systems Analysis</h3>
-              </div>
-              <div class="skill-tags">
-                <span class="tag">PANDA</span>
-                <span class="tag">LIONESS</span>
-                <span class="tag">PyPanda</span>
-                <span class="tag">NetZooPy</span>
-                <span class="tag">GRN Inference</span>
-              </div>
-            </div>
-      
-            <div class="skill-group">
-              <div class="skill-group-header">
-                <div class="skill-dot"></div>
-                <h3>Infrastructure & Reproducibility</h3>
-              </div>
-              <div class="skill-tags">
-                <span class="tag highlight">Linux</span>
-                <span class="tag highlight">SLURM</span>
-                <span class="tag highlight">Snakemake</span>
-                <span class="tag">Docker</span>
-                <span class="tag">Singularity</span>
-                <span class="tag">Git</span>
-                <span class="tag">GCP</span>
-              </div>
-            </div>
-      
-            <div class="skill-group">
-              <div class="skill-group-header">
-                <div class="skill-dot"></div>
-                <h3>Functional & Multi-omics Analysis</h3>
-              </div>
-              <div class="skill-tags">
-                <span class="tag">GSEA</span>
-                <span class="tag">KEGG</span>
-                <span class="tag">Reactome</span>
-                <span class="tag">TCGA</span>
-                <span class="tag">GTEx</span>
-                <span class="tag">Multi-omics</span>
-              </div>
-            </div>
-      
+      <h2>Toolkit for symbiosis & deep evolution</h2>
+      <p class="section-intro">Every method is chosen to address questions about microbial interdependence, genome
+        erosion, and the timing of evolutionary transitions.</p>
+      <div class="skills-grid">
+        <div class="skill-group">
+          <div class="skill-group-header">
+            <div class="skill-dot"></div>
+            <h3>Phylogenomics & Molecular Dating</h3>
           </div>
-          
-      
+          <div class="skill-tags">
+            <span class="tag highlight">RAxML</span><span class="tag highlight">IQ-TREE2</span>
+            <span class="tag highlight">BEAST</span><span class="tag">MrBayes</span><span class="tag">FastTree</span>
+            <span class="tag">MAFFT</span><span class="tag">MUSCLE</span><span class="tag">Relaxed clocks</span>
+          </div>
         </div>
-      </section>
-
+        <div class="skill-group">
+          <div class="skill-group-header">
+            <div class="skill-dot"></div>
+            <h3>Metagenomics & MAGs</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="tag highlight">Metagenomic profiling</span><span class="tag">MAG assembly</span>
+            <span class="tag">CheckM</span><span class="tag">GTDB-Tk</span><span class="tag">Viromics</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <div class="skill-group-header">
+            <div class="skill-dot"></div>
+            <h3>Comparative & Host‑Dependent Genomics</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="tag highlight">Genome reduction</span><span class="tag">GC skew</span>
+            <span class="tag">Coding density</span><span class="tag">Hypothetical protein fraction</span>
+            <span class="tag">Metabolic pathway loss</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <div class="skill-group-header">
+            <div class="skill-dot"></div>
+            <h3>Machine Learning & Networks</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="tag highlight">PANDA/LIONESS</span><span class="tag">scikit‑learn</span>
+            <span class="tag">PyTorch</span><span class="tag">Graph neural networks</span><span class="tag">SHAP</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <div class="skill-group-header">
+            <div class="skill-dot"></div>
+            <h3>Infrastructure & Reproducibility</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="tag highlight">Snakemake</span><span class="tag">Docker</span><span
+              class="tag">Singularity</span>
+            <span class="tag">SLURM</span><span class="tag">GCP</span><span class="tag">Git</span>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Projects -->
   <section id="projects">
     <div class="container">
       <div class="section-label">Projects</div>
-      <h2>Selected work.</h2>
-      <p class="section-intro">Independent computational biology projects developed alongside formal academic training.
-        Most projects are designed as
-        modular and reproducible analytical frameworks rather than isolated scripts, with an emphasis on scalability,
-        biological
-        interpretability, and HPC-compatible deployment.
-      </p>
-
+      <h2>Designed for symbiosis research.</h2>
+      <p class="section-intro">Each repository builds methods directly applicable to studying DPANN, Asgard, and
+        host‑dependent genome evolution.</p>
       <div class="project-links">
-
-        <a href="https://github.com/Aridoge13/Kabosu" target="_blank" class="project-link-card">
-          <div class="project-tag-row">
-            <span class="project-pill pill-green">Multi-omics</span>
-            <span class="project-pill pill-warm">ML</span>
-            <span class="project-pill pill-green">Cancer</span>
-          </div>
-          <h3>Kabosu</h3>
-          <p>Computational framework for integrative analysis of heterogeneous genomic and multi-omics datasets. Focused
-            on modelling
-            interacting biological features across complex systems using machine learning and interpretable statistical
-            approaches.</p>
-          <div class="project-status">
-            <div class="status-dot status-active"></div>
-            Active development
-          </div>
-        </a>
-
         <a href="https://github.com/Aridoge13/Computational_Biology" target="_blank" class="project-link-card">
           <div class="project-tag-row">
-            <span class="project-pill pill-green">GRN</span>
-            <span class="project-pill pill-green">scRNA-seq</span>
-            <span class="project-pill pill-gray">Pipelines</span>
+            <span class="project-pill pill-green">Genome reduction</span>
+            <span class="project-pill pill-green">DPANN</span>
+            <span class="project-pill pill-gray">Phylogenomics</span>
           </div>
           <h3>Computational Biology Toolkit</h3>
-          <p>Modular computational biology toolkit spanning comparative genomics, phylogenetics, metagenomics,
-            transcriptomics, GC
-            skew analysis, genome reduction inference, regulatory motif detection, single-cell RNA-seq analysis, and
-            regulatory
-            network inference workflows. Designed for reproducibility, scalability, and deployment across HPC and cloud
-            environments.</p>
+          <p><strong>Key for Spang lab:</strong> Comparative genome reduction pipeline applied to <em>Nanoarchaeum
+              equitans</em>, Lokiarchaeota, and free‑living archaea. Calculates Genome Dependency Index, coding density,
+            and PCA‑based reduction landscapes. Also includes BEAST dating templates and metagenomic MAG QC.</p>
           <div class="project-status">
-            <div class="status-dot status-active"></div>
-            Active — Genome reduction inference pipeline in progress
+            <div class="status-dot status-active"></div>Active — expanding to 20+ DPANN MAGs
           </div>
         </a>
-
-        <a href="https://github.com/Aridoge13/Viromics" target="_blank" class="project-link-card">
+        <a href="https://github.com/Aridoge13/Evo-Genomics" target="_blank" class="project-link-card">
           <div class="project-tag-row">
-            <span class="project-pill pill-gray">Metagenomics</span>
-            <span class="project-pill pill-gray">Viromics</span>
+            <span class="project-pill pill-green">Transcriptome‑guided</span>
+            <span class="project-pill pill-warm">Annotation</span>
           </div>
-          <h3>Viromics Pipeline</h3>
-          <p>Scalable pipeline for viral genome discovery and characterisation from metagenomic sequencing data.
-            Designed for reproducible deployment on HPC environments.</p>
+          <h3>Evo‑Genomics pipeline</h3>
+          <p>Scalable workflow for non‑model organisms — directly relevant to uncultured archaea with fragmented
+            assemblies. Integrates HISAT2, StringTie, and EviAnn for genome refinement.</p>
           <div class="project-status">
-            <div class="status-dot status-done"></div>
-            Complete
+            <div class="status-dot status-active"></div>Extending for MAGs
           </div>
         </a>
-
-
-
+        <a href="https://github.com/Aridoge13/Kabosu" target="_blank" class="project-link-card">
+          <div class="project-tag-row">
+            <span class="project-pill pill-green">Multi‑omics</span>
+            <span class="project-pill pill-green">Network inference</span>
+          </div>
+          <h3>Kabosu</h3>
+          <p>Framework originally for cancer multi‑omics — being adapted to predict host‑symbiont metabolic interactions
+            using graph neural networks, directly supporting the Vici ML component.</p>
+          <div class="project-status">
+            <div class="status-dot status-active"></div>Adapting to microbial symbiosis
+          </div>
+        </a>
+        <a href="https://github.com/Aridoge13/Viromics" target="_blank" class="project-link-card">
+          <div class="project-tag-row"><span class="project-pill pill-gray">Metagenomics</span><span
+              class="project-pill pill-gray">Viruses</span></div>
+          <h3>Viromics pipeline</h3>
+          <p>Viral discovery from metagenomes — transferable to detecting symbiont‑associated viruses or mobile genetic
+            elements in archaeal genomes.</p>
+          <div class="project-status">
+            <div class="status-dot status-done"></div>Complete
+          </div>
+        </a>
       </div>
     </div>
   </section>
 
-  <!-- Contact -->
   <section id="contact">
     <div class="container">
       <div class="section-label">Contact</div>
-      <h2>Let's talk science.</h2>
-      <p class="section-intro">
-        Open to doctoral research positions, collaborations, and discussions involving comparative genomics, microbial
-        evolution, phylogenomics, metagenomics, and computational approaches to large-scale biological systems.
-      </p>
-
+      <h2>Discuss archaeal symbiosis & genome evolution</h2>
+      <p class="section-intro">I am actively pursuing a PhD in the Spang lab at NIOZ. Open to conversations about my fit
+        for the Vici project, my computational pipelines, or collaborative ideas.</p>
       <div class="contact-grid">
         <a href="mailto:aritra.mukherjee98@gmail.com" class="contact-item">
           <div class="contact-icon">📨</div>
@@ -1182,13 +986,6 @@
             <div class="contact-value">Aridoge13</div>
           </div>
         </a>
-        <a href="https://www.kaggle.com/aridoge13" target="_blank" class="contact-item">
-          <div class="contact-icon">🖥️</div>
-          <div>
-            <div class="contact-label">Kaggle</div>
-            <div class="contact-value">aridoge13</div>
-          </div>
-        </a>
         <a href="https://orcid.org/0000-0002-6061-611X" target="_blank" class="contact-item">
           <div class="contact-icon" style="background:rgba(166,206,57,0.12);color:#7aaa00;">ID</div>
           <div>
@@ -1196,23 +993,16 @@
             <div class="contact-value">0000-0002-6061-611X</div>
           </div>
         </a>
-        <a href="https://bsky.app/profile/aridoge13.bsky.social" target="_blank" class="contact-item">
-          <div class="contact-icon">🦋</div>
-          <div>
-            <div class="contact-label">Bluesky</div>
-            <div class="contact-value">@aridoge13.bsky.social</div>
-          </div>
-        </a>
       </div>
     </div>
   </section>
 
   <footer>
-    <p>Aritra Mukherjee · Kolkata, India · Built with curiosity and caffeine.</p>
+    <p>Aritra Mukherjee · Kolkata, India · Tailored for Prof. Dr. Anja Spang – NIOZ Marine Microbiology &
+      Biogeochemistry</p>
   </footer>
 
   <script>
-    // Theme toggle
     const btn = document.getElementById('themeBtn');
     let dark = false;
     function toggleTheme() {
@@ -1220,8 +1010,6 @@
       document.documentElement.setAttribute('data-theme', dark ? 'dark' : '');
       btn.innerHTML = dark ? '<span class="icon">☽</span> Dark' : '<span class="icon">☀</span> Light';
     }
-
-    // Scroll reveal
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(e => {
         if (e.isIntersecting) {
@@ -1230,7 +1018,6 @@
         }
       });
     }, { threshold: 0.08 });
-
     document.querySelectorAll('.about-card, .skill-group, .project-link-card, .contact-item').forEach(el => {
       el.style.opacity = '0';
       el.style.transform = 'translateY(18px)';
