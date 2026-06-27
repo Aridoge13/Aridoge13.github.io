@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Aritra Mukherjee — Evolutionary Genomics & Polyploidy</title>
+  <title>Aritra Mukherjee — Symbiosis, Archaeal Evolution & Microbial Genomics</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link
     href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap"
@@ -67,7 +67,6 @@
       overflow-x: hidden;
     }
 
-    /* ── Navigation ── */
     nav {
       position: fixed;
       top: 0;
@@ -196,7 +195,7 @@
     .hero-content {
       position: relative;
       z-index: 1;
-      max-width: 780px;
+      max-width: 800px;
       animation: fadeUp 0.8s ease both;
     }
 
@@ -239,7 +238,7 @@
     .hero-sub {
       font-size: 1.08rem;
       color: var(--text2);
-      max-width: 620px;
+      max-width: 680px;
       line-height: 1.75;
       margin-bottom: 2.2rem;
       font-weight: 300;
@@ -395,7 +394,7 @@
     }
 
     .pitch-box::before {
-      content: '🧬';
+      content: '🦠';
       position: absolute;
       right: 1.5rem;
       top: 1.2rem;
@@ -420,6 +419,11 @@
       color: var(--text2);
       line-height: 1.75;
       font-weight: 300;
+    }
+
+    .pitch-box p strong {
+      color: var(--text);
+      font-weight: 500;
     }
 
     #skills {
@@ -737,6 +741,22 @@
     .fade-in-4 {
       animation-delay: 0.4s;
     }
+
+    .research-highlight {
+      display: inline-block;
+      background: rgba(45, 106, 79, 0.08);
+      padding: 0.15rem 0.5rem;
+      border-radius: 4px;
+      font-family: 'DM Mono', monospace;
+      font-size: 0.82rem;
+      color: var(--accent);
+      border: 1px solid rgba(45, 106, 79, 0.1);
+    }
+
+    [data-theme="dark"] .research-highlight {
+      background: rgba(82, 183, 136, 0.12);
+      border-color: rgba(82, 183, 136, 0.15);
+    }
   </style>
 </head>
 
@@ -768,16 +788,22 @@
   <section class="hero">
     <div class="hero-bg"></div>
     <div class="hero-content">
-      <div class="hero-eyebrow fade-in">PhD applicant · Evolutionary Genomics & Polyploidy</div>
+      <div class="hero-eyebrow fade-in">PhD applicant · Evolutionary Genomics &amp; Microbial Symbiosis</div>
       <h1 class="fade-in fade-in-1">
-        Genome duplication, <em>polyploidy</em>,<br>and experimental evolution
+        Archaeal evolution, <em>symbiosis</em>,<br>and the deep history of life
       </h1>
       <p class="hero-sub fade-in fade-in-2">
-        I am a computational biologist investigating how genome duplication and polyploidy shape adaptation,
-        mutation processes, and evolutionary innovation. My work integrates comparative genomics, phylogenomics,
-        transcriptomics, and reproducible workflow development to understand how environmental change interacts
-        with genome dynamics. I am applying for a PhD position at the VIB-UGent Center for Plant Systems Biology
-        to study genome duplication in <em>Chlamydomonas reinhardtii</em> and volvocine algae.
+        I am a computational biologist investigating how obligate symbiosis reshapes genomes across
+        deep evolutionary time. My research integrates phylogenomics, comparative genomics, metagenomics,
+        and reproducible workflow development to understand genome streamlining, host dependence, and
+        the evolutionary transitions that shaped the Tree of Life — from the earliest archaeal lineages
+        to the origin of eukaryotic complexity.
+      </p>
+      <p class="hero-sub fade-in fade-in-2" style="font-size:0.92rem;margin-top:-1.2rem;">
+        <span class="research-highlight">DPANN</span>
+        <span class="research-highlight">Asgard archaea</span>
+        <span class="research-highlight">genome reduction</span>
+        <span class="research-highlight">eukaryogenesis</span>
       </p>
       <div class="hero-cta fade-in fade-in-3">
         <a href="#about" class="btn btn-primary">Research focus →</a>
@@ -789,58 +815,65 @@
   <section id="about">
     <div class="container">
       <div class="section-label">About</div>
-      <h2>Understanding how genome duplication drives evolution</h2>
+      <h2>Reconstructing the evolution of obligate symbionts</h2>
       <p class="section-intro">
-        Whole-genome duplication is one of the most consequential events in evolutionary history. It can
-        fundamentally alter evolutionary trajectories, generate evolutionary novelty, and enable organisms to
-        adapt to changing environments. My research integrates comparative genomics, experimental evolution, and
-        computational modelling to investigate why polyploids arise, how they persist, and under what conditions
-        they diversify.
+        Obligate symbiosis is one of the most powerful selective forces in evolution. The transition
+        from a free-living lifestyle to persistent host dependence drives progressive genome reduction,
+        metabolic outsourcing, and the erosion of genomic complexity toward highly streamlined coding
+        repertoires. These processes are deeply connected to the broader history of cellular life on
+        Earth — from the origin of the earliest cells to the emergence of eukaryotes.
       </p>
       <div class="about-grid">
         <div class="about-card">
           <span class="about-card-icon">🧬</span>
-          <h3>Evolutionary Genomics & Phylogenomics</h3>
-          <p>I use RAxML, IQ-TREE2, BEAST, and MrBayes to reconstruct evolutionary relationships and investigate
-            how genomic architecture shapes adaptation. My work spans comparative genomics, population structure
-            analysis, and molecular evolution across diverse biological systems.</p>
+          <h3>Phylogenomics &amp; Deep Evolution</h3>
+          <p>I use RAxML, IQ-TREE2, BEAST, and MrBayes to reconstruct evolutionary relationships
+            across archaeal and bacterial lineages, with a focus on resolving the placement of
+            DPANN archaea, Asgardarchaeota, and the origins of eukaryotic complexity through
+            symbiogenetic merger.</p>
         </div>
         <div class="about-card">
           <span class="about-card-icon">🔬</span>
-          <h3>Transcriptomics & Systems Biology</h3>
-          <p>Experience with bulk RNA-seq and single-cell RNA-seq analysis, differential expression, pathway
-            enrichment, and gene regulatory network inference using PANDA and LIONESS frameworks. These tools
-            are essential for characterising the molecular consequences of genome duplication.</p>
+          <h3>Comparative Genomics &amp; Genome Reduction</h3>
+          <p>I investigate how obligate host dependence reshapes genomic architecture — from
+            coding-density metrics and compositional features to the loss of biosynthetic pathways
+            and ATP synthase complexes. My work spans <em>Nanoarchaeum equitans</em>, DPANN,
+            CPR bacteria, and free-living archaeal outgroups.</p>
         </div>
         <div class="about-card">
           <span class="about-card-icon">⚙️</span>
-          <h3>Reproducible Computational Workflows</h3>
-          <p>I develop scalable, HPC-compatible pipelines using Snakemake, Docker, Singularity, and Conda. My
-            workflows integrate genome assembly, annotation, variant calling, and comparative analysis for
-            large-scale biological datasets.</p>
+          <h3>Scalable Computational Workflows</h3>
+          <p>I develop reproducible, HPC-compatible pipelines using Snakemake, Docker, Singularity,
+            and Conda. My workflows integrate genome assembly, annotation, comparative genomics,
+            metagenomic profiling, and phylogenomic reconstruction for large-scale biological
+            datasets.</p>
         </div>
         <div class="about-card">
           <span class="about-card-icon">🧪</span>
-          <h3>Experimental & Wet-Lab Biology</h3>
-          <p>I bring practical experience in microbial culturing, DNA/RNA extraction, PCR, and longitudinal
-            experimental design from my work on axolotl regeneration and microbial systems. I am committed to
-            integrating laboratory evolution experiments with computational genomics approaches.</p>
+          <h3>Molecular &amp; Experimental Biology</h3>
+          <p>I bring practical experience in DNA/RNA extraction, PCR, microbial culture techniques,
+            and molecular microbiology from my Master's and Bachelor's research. I am committed
+            to integrating wet-lab insights with computational evolutionary inference.</p>
         </div>
       </div>
 
       <div class="pitch-box">
-        <h3>🎯 Applying to the Van de Peer Lab at VIB-UGent</h3>
+        <h3>🎯 Applying to the Spang Lab at NIOZ</h3>
         <p>
-          <strong>I am applying for the PhD position investigating the impact of genome duplication on
-            volvocine algae, with a focus on <em>Chlamydomonas reinhardtii</em>.</strong>
-          My research interests align directly with the lab's holistic approach of combining comparative
-          genomics, experimental evolution, and computational modelling to understand why polyploids arise,
-          how they persist, and under what conditions they diversify. I am particularly drawn to the
-          opportunity to investigate how genome dynamics and environmental conditions interact to shape the
-          evolutionary success of polyploids, and to contribute to the development of resources such as the
-          <code>wgd</code> software suite. The collaborative environment between the Bioinformatics and
-          Evolutionary Genomics group and the UGent Phycology Research Group, together with connections to
-          the Polydiv2 and PI3 networks, provides an ideal setting for this research.
+          <strong>I am applying for the PhD position in the research group of Prof. Dr. Anja Spang
+            at the Netherlands Institute for Sea Research (NIOZ), focused on symbiosis, microbial
+            evolution, and the evolution of obligate archaeal and bacterial interactions.</strong>
+          The project integrates phylogenomics, metagenomics, ancestral reconstruction, machine learning,
+          and network approaches to investigate genome evolution, abundance, and diversity of obligate
+          prokaryotic symbionts throughout Earth history. My research interests align directly with
+          the group's work on archaeal symbionts, DPANN evolution, and eukaryogenesis. I am
+          particularly drawn to the opportunity to contribute to understanding how obligate symbiosis
+          drives reductive genome evolution across diverse branches of Archaea and Bacteria, and to
+          integrate novel phylogenetic, ancestral reconstruction, and network approaches within the
+          newly funded NWO Vici 2025 programme. The interdisciplinary environment between the
+          Department of Marine Microbiology and Biogeochemistry at NIOZ and the University of
+          Amsterdam provides exactly the kind of framework I believe questions about symbiosis and
+          microbial evolution across Earth history require.
         </p>
       </div>
     </div>
@@ -849,76 +882,88 @@
   <section id="skills">
     <div class="container">
       <div class="section-label">Skills</div>
-      <h2>Toolkit for genome evolution & polyploidy research</h2>
-      <p class="section-intro">Every method is chosen to address questions about genome duplication, adaptation,
-        and the evolutionary consequences of polyploidy across biological systems.</p>
+      <h2>Toolkit for symbiosis &amp; microbial evolution research</h2>
+      <p class="section-intro">Every method is chosen to address questions about genome streamlining,
+        host dependence, archaeal evolution, and the deep evolutionary history of life.</p>
       <div class="skills-grid">
         <div class="skill-group">
           <div class="skill-group-header">
             <div class="skill-dot"></div>
-            <h3>Evolutionary Genomics & Phylogenomics</h3>
+            <h3>Phylogenomics &amp; Evolutionary Inference</h3>
           </div>
           <div class="skill-tags">
             <span class="tag highlight">RAxML</span><span class="tag highlight">IQ-TREE2</span>
-            <span class="tag highlight">BEAST</span><span class="tag">MrBayes</span><span class="tag">FastTree</span>
-            <span class="tag">MAFFT</span><span class="tag">MUSCLE</span><span class="tag">ADMIXTURE</span>
+            <span class="tag highlight">BEAST</span><span class="tag">MrBayes</span>
+            <span class="tag">FastTree</span><span class="tag">MAFFT</span>
+            <span class="tag">MUSCLE</span><span class="tag">ADMIXTURE</span>
             <span class="tag">PLINK</span><span class="tag">PCA</span>
           </div>
         </div>
         <div class="skill-group">
           <div class="skill-group-header">
             <div class="skill-dot"></div>
-            <h3>Genome & Sequencing Data Analysis</h3>
+            <h3>Comparative &amp; Microbial Genomics</h3>
           </div>
           <div class="skill-tags">
-            <span class="tag highlight">NGS QC</span><span class="tag highlight">Read alignment</span>
-            <span class="tag highlight">Genome assembly</span><span class="tag">Variant calling</span>
-            <span class="tag">SNP annotation</span><span class="tag">Transcriptomics</span>
-            <span class="tag">Long-read sequencing</span>
+            <span class="tag highlight">Genome assembly</span>
+            <span class="tag highlight">Genome reduction analysis</span>
+            <span class="tag">GC skew</span>
+            <span class="tag">Coding-density metrics</span>
+            <span class="tag">Metagenomic profiling</span>
+            <span class="tag">Variant calling</span>
+            <span class="tag">Comparative sequence analysis</span>
           </div>
         </div>
         <div class="skill-group">
           <div class="skill-group-header">
             <div class="skill-dot"></div>
-            <h3>Computational Biology & Programming</h3>
+            <h3>Computational Biology &amp; Programming</h3>
           </div>
           <div class="skill-tags">
             <span class="tag highlight">Python</span><span class="tag highlight">R</span>
             <span class="tag highlight">Bash</span><span class="tag">SQL</span>
-            <span class="tag">Statistical modelling</span><span class="tag">Data visualisation</span>
+            <span class="tag">Statistical modelling</span>
+            <span class="tag">Data visualisation</span>
+            <span class="tag">Machine learning</span>
           </div>
         </div>
         <div class="skill-group">
           <div class="skill-group-header">
             <div class="skill-dot"></div>
-            <h3>Workflow Development & Reproducibility</h3>
+            <h3>Workflow Development &amp; Reproducibility</h3>
           </div>
           <div class="skill-tags">
             <span class="tag highlight">Snakemake</span><span class="tag highlight">Docker</span>
             <span class="tag highlight">Singularity</span><span class="tag">Conda</span>
             <span class="tag">Git/GitHub</span><span class="tag">HPC (SLURM)</span>
+            <span class="tag">Google Cloud Platform</span>
           </div>
         </div>
         <div class="skill-group">
           <div class="skill-group-header">
             <div class="skill-dot"></div>
-            <h3>Transcriptomics & Systems Biology</h3>
+            <h3>Transcriptomics &amp; Systems Biology</h3>
           </div>
           <div class="skill-tags">
-            <span class="tag highlight">Bulk RNA-seq</span><span class="tag highlight">Single-cell RNA-seq</span>
-            <span class="tag">Differential expression</span><span class="tag">Pathway enrichment</span>
+            <span class="tag highlight">Bulk RNA-seq</span>
+            <span class="tag highlight">Single-cell RNA-seq</span>
+            <span class="tag">Differential expression</span>
+            <span class="tag">Pathway enrichment</span>
             <span class="tag">PANDA</span><span class="tag">LIONESS</span>
           </div>
         </div>
         <div class="skill-group">
           <div class="skill-group-header">
             <div class="skill-dot"></div>
-            <h3>Wet Lab & Molecular Biology</h3>
+            <h3>Wet Lab &amp; Molecular Biology</h3>
           </div>
           <div class="skill-tags">
-            <span class="tag highlight">Microbial culturing</span><span class="tag">DNA/RNA extraction</span>
+            <span class="tag highlight">Microbial culturing</span>
+            <span class="tag">DNA/RNA extraction</span>
             <span class="tag">PCR</span><span class="tag">cDNA synthesis</span>
-            <span class="tag">Gene expression</span><span class="tag">Recombinant cloning</span>
+            <span class="tag">Gene expression</span>
+            <span class="tag">Recombinant cloning</span>
+            <span class="tag">Protein purification</span>
           </div>
         </div>
       </div>
@@ -928,36 +973,42 @@
   <section id="projects">
     <div class="container">
       <div class="section-label">Projects</div>
-      <h2>Designed for genome evolution research.</h2>
-      <p class="section-intro">Each repository builds methods directly applicable to studying genome duplication,
-        polyploidy, and evolutionary genomics across diverse biological systems.</p>
+      <h2>Designed for symbiosis &amp; archaeal evolution research.</h2>
+      <p class="section-intro">Each repository builds methods directly applicable to studying obligate
+        symbiont evolution, genome reduction, and deep phylogenomic reconstruction across archaeal
+        and bacterial lineages.</p>
       <div class="project-links">
         <a href="https://github.com/Aridoge13/Computational_Biology" target="_blank" class="project-link-card">
           <div class="project-tag-row">
             <span class="project-pill pill-green">Comparative genomics</span>
             <span class="project-pill pill-green">Phylogenomics</span>
-            <span class="project-pill pill-gray">Workflow development</span>
+            <span class="project-pill pill-gray">Genome reduction</span>
           </div>
           <h3>Computational Biology Toolkit</h3>
-          <p><strong>Key for genome evolution:</strong> Modular, reproducible workflows for comparative genomics,
-            phylogenomics, metagenomic profiling, and transcriptomics. Includes pipelines for phylogenetic
-            reconstruction, multi-genome comparison, GC skew analysis, genome organisation assessment, and
-            evolutionary analysis across microbial and archaeal systems.</p>
+          <p><strong>Key for symbiont evolution:</strong> Modular, reproducible workflows for comparative
+            genomics, phylogenomics, metagenomic profiling, and transcriptomics. Includes a dedicated
+            <strong>genome reduction inference pipeline</strong> comparing obligate symbionts
+            (<em>Nanoarchaeum equitans</em>) with free-living archaea (<em>Sulfolobus solfataricus</em>,
+            <em>Lokiarchaeota</em>) and bacterial outgroups using coding-density metrics,
+            compositional features, and Genome Dependency Index calculations.
+          </p>
           <div class="project-status">
-            <div class="status-dot status-active"></div>Active — expanding to polyploid genomes
+            <div class="status-dot status-active"></div>Active — extending to DPANN &amp; CPR
           </div>
         </a>
         <a href="https://github.com/Aridoge13/Evo-Genomics" target="_blank" class="project-link-card">
           <div class="project-tag-row">
             <span class="project-pill pill-green">Transcriptome-guided</span>
             <span class="project-pill pill-warm">Genome annotation</span>
+            <span class="project-pill pill-gray">Non-model organisms</span>
           </div>
           <h3>Evo‑Genomics pipeline</h3>
-          <p>Scalable transcriptome-guided genome annotation and comparative assembly extension pipeline for
-            non-model organisms. Integrates HISAT2, SAMtools, StringTie, and EviAnn for transcriptome-informed
-            genome refinement and comparative genomic analysis — directly applicable to algal and plant genomics.</p>
+          <p>Scalable transcriptome-guided genome annotation and comparative assembly extension pipeline
+            for non-model organisms. Integrates HISAT2, SAMtools, StringTie, and EviAnn —
+            directly applicable to fragmented MAGs and uncultured microbial systems such as DPANN
+            archaea and CPR bacteria with limited reference resources.</p>
           <div class="project-status">
-            <div class="status-dot status-active"></div>Extending for algal genomes
+            <div class="status-dot status-active"></div>Adapting for MAG datasets
           </div>
         </a>
         <a href="https://github.com/Aridoge13/Kabosu" target="_blank" class="project-link-card">
@@ -966,25 +1017,28 @@
             <span class="project-pill pill-green">Network inference</span>
           </div>
           <h3>Kabosu</h3>
-          <p>Computational framework for integrative analysis of individual genomic and multi-omics profiles to
-            identify phenotypes and estimate disease susceptibility. Exploring statistical learning and machine
-            learning approaches for integrating heterogeneous biological datasets — methods transferable to
-            understanding polyploid adaptation.</p>
+          <p>Computational framework for integrative analysis of heterogeneous genomic and multi-omics
+            datasets. Includes gene regulatory network inference using PANDA and LIONESS on Google
+            Cloud Platform. The underlying computational problem of inferring interaction structure
+            from incomplete data is conceptually transferable to microbial dependency networks
+            reconstructed from metagenomic data.</p>
           <div class="project-status">
-            <div class="status-dot status-active"></div>Adapting to evolutionary genomics
+            <div class="status-dot status-active"></div>Adapting to microbial networks
           </div>
         </a>
-        <a href="#" target="_blank" class="project-link-card">
+        <a href="https://github.com/Aridoge13" target="_blank" class="project-link-card">
           <div class="project-tag-row">
-            <span class="project-pill pill-green">Evolutionary genomics</span>
-            <span class="project-pill pill-gray">Phylogenetics</span>
+            <span class="project-pill pill-green">GC skew analysis</span>
+            <span class="project-pill pill-green">Genome organisation</span>
           </div>
-          <h3>Master's Thesis: Indian Gaur</h3>
-          <p>End-to-end evolutionary genomics study involving 131 Indian gaur samples. Integrated field sampling,
-            molecular laboratory methods (DNA extraction, PCR), and computational analyses (PCA, MDS, phylogenetic
-            inference) to investigate genetic diversity and population structure.</p>
+          <h3>GC Skew &amp; Replication Dynamics</h3>
+          <p>Comparative GC skew analysis across archaeal and bacterial genomes spanning Asgard,
+            TACK, Euryarchaeota, and bacterial outgroups. Revealed variation in replication
+            symmetry consistent with multiple origin usage in certain lineages — connecting
+            genome organisation to broader questions about how structural genomic principles
+            are modified under host dependence and reductive evolution.</p>
           <div class="project-status">
-            <div class="status-dot status-done"></div>Complete
+            <div class="status-dot status-active"></div>Extending to symbiont lineages
           </div>
         </a>
       </div>
@@ -994,10 +1048,11 @@
   <section id="contact">
     <div class="container">
       <div class="section-label">Contact</div>
-      <h2>Discuss genome evolution & polyploidy research</h2>
-      <p class="section-intro">I am actively pursuing a PhD position at the VIB-UGent Center for Plant Systems
-        Biology. Open to conversations about my fit for the genome duplication project, my computational pipelines,
-        or collaborative ideas in evolutionary genomics.</p>
+      <h2>Discuss symbiosis, archaeal evolution &amp; deep-time genomics</h2>
+      <p class="section-intro">I am actively pursuing a PhD position at the NIOZ Department of Marine
+        Microbiology and Biogeochemistry in the Spang Lab. Open to conversations about my fit for the
+        obligate symbiont evolution project, my computational pipelines, or collaborative ideas in
+        microbial evolutionary genomics.</p>
       <div class="contact-grid">
         <a href="mailto:aritra.mukherjee98@gmail.com" class="contact-item">
           <div class="contact-icon">📨</div>
@@ -1032,17 +1087,19 @@
   </section>
 
   <footer>
-    <p>Aritra Mukherjee · Kolkata, India · Evolutionary Genomics & Polyploidy</p>
+    <p>Aritra Mukherjee · Kolkata, India · Symbiosis, Archaeal Evolution &amp; Microbial Genomics</p>
   </footer>
 
   <script>
     const btn = document.getElementById('themeBtn');
     let dark = false;
+
     function toggleTheme() {
       dark = !dark;
       document.documentElement.setAttribute('data-theme', dark ? 'dark' : '');
       btn.innerHTML = dark ? '<span class="icon">☽</span> Dark' : '<span class="icon">☀</span> Light';
     }
+
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(e => {
         if (e.isIntersecting) {
@@ -1058,6 +1115,7 @@
       observer.observe(el);
     });
   </script>
+
 </body>
 
 </html>
