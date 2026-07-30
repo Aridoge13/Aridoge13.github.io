@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Aritra Mukherjee — Computational Biology & Gene Regulation</title>
+  <title>Aritra Mukherjee — Microbial Genetics & Comparative Genomics</title>
   <link
     href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=Instrument+Sans:wght@400;500;600&display=swap"
     rel="stylesheet">
@@ -552,124 +552,6 @@
       line-height: 1.65;
     }
 
-    /* PUBLICATIONS */
-    .pubs-list {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-    }
-
-    .pub-card {
-      display: flex;
-      gap: 1.5rem;
-      padding: 1.5rem;
-      border: 1px solid var(--rule);
-      border-radius: 2px;
-      background: var(--card);
-      transition: border-color 0.2s;
-    }
-
-    .pub-card:hover {
-      border-color: var(--accent2);
-    }
-
-    .pub-year {
-      font-family: 'DM Mono', monospace;
-      font-size: 0.8rem;
-      color: var(--ink3);
-      min-width: 40px;
-      padding-top: 0.1rem;
-    }
-
-    .pub-title {
-      font-weight: 500;
-      font-size: 0.92rem;
-      color: var(--ink);
-      margin-bottom: 0.3rem;
-      line-height: 1.5;
-    }
-
-    .pub-doi {
-      font-family: 'DM Mono', monospace;
-      font-size: 0.75rem;
-      color: var(--accent);
-      text-decoration: none;
-    }
-
-    .pub-doi:hover {
-      text-decoration: underline;
-    }
-
-    /* CONTACT */
-    .contact-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 3rem;
-      align-items: start;
-    }
-
-    .contact-intro {
-      font-family: 'DM Serif Display', serif;
-      font-size: 1.6rem;
-      line-height: 1.3;
-      color: var(--ink);
-      margin-bottom: 1.25rem;
-    }
-
-    .contact-sub {
-      font-size: 0.9rem;
-      color: var(--ink2);
-      line-height: 1.7;
-    }
-
-    .contact-links {
-      display: flex;
-      flex-direction: column;
-      gap: 0.75rem;
-    }
-
-    .contact-link-row {
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-      padding: 0.85rem 1rem;
-      border: 1px solid var(--rule);
-      background: var(--card);
-      text-decoration: none;
-      color: var(--ink);
-      font-size: 0.88rem;
-      transition: border-color 0.2s, background 0.2s;
-      border-radius: 2px;
-    }
-
-    .contact-link-row:hover {
-      border-color: var(--accent2);
-      background: var(--accent-light);
-    }
-
-    .contact-link-label {
-      font-weight: 500;
-    }
-
-    .contact-link-value {
-      margin-left: auto;
-      font-family: 'DM Mono', monospace;
-      font-size: 0.78rem;
-      color: var(--ink3);
-    }
-
-    /* FOOTER */
-    footer {
-      border-top: 1px solid var(--rule);
-      padding: 1.5rem 4rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      font-size: 0.78rem;
-      color: var(--ink3);
-      font-family: 'DM Mono', monospace;
-    }
-
     /* POSITION CALLOUT */
     .position-callout {
       margin: 0 0 2.5rem;
@@ -746,6 +628,77 @@
       line-height: 1.6;
     }
 
+    /* CONTACT */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: start;
+    }
+
+    .contact-intro {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.6rem;
+      line-height: 1.3;
+      color: var(--ink);
+      margin-bottom: 1.25rem;
+    }
+
+    .contact-sub {
+      font-size: 0.9rem;
+      color: var(--ink2);
+      line-height: 1.7;
+    }
+
+    .contact-links {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .contact-link-row {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      padding: 0.85rem 1rem;
+      border: 1px solid var(--rule);
+      background: var(--card);
+      text-decoration: none;
+      color: var(--ink);
+      font-size: 0.88rem;
+      transition: border-color 0.2s, background 0.2s;
+      border-radius: 2px;
+    }
+
+    .contact-link-row:hover {
+      border-color: var(--accent2);
+      background: var(--accent-light);
+    }
+
+    .contact-link-label {
+      font-weight: 500;
+    }
+
+    .contact-link-value {
+      margin-left: auto;
+      font-family: 'DM Mono', monospace;
+      font-size: 0.78rem;
+      color: var(--ink3);
+    }
+
+    /* FOOTER */
+    footer {
+      border-top: 1px solid var(--rule);
+      padding: 1.5rem 4rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 0.78rem;
+      color: var(--ink3);
+      font-family: 'DM Mono', monospace;
+    }
+
+    /* ── RESPONSIVE ───────────────────────────────────────────── */
     @media (max-width: 860px) {
       nav {
         padding: 1rem 1.5rem;
@@ -825,6 +778,7 @@
 
 <body>
 
+  <!-- ═══ NAV ═══ -->
   <nav>
     <a href="#" class="nav-name">Aritra Mukherjee</a>
     <ul class="nav-links">
@@ -836,19 +790,20 @@
     </ul>
   </nav>
 
-  <!-- HERO -->
+  <!-- ═══ HERO ═══ -->
   <section class="hero" style="border-top: none;">
     <div class="hero-left">
-      <div class="hero-eyebrow">Computational Biology &amp; Gene Regulation</div>
+      <div class="hero-eyebrow">Microbial Genetics &amp; Comparative Genomics</div>
       <h1 class="hero-title">
-        Deciphering <em>Regulatory Programs</em><br>
-        &amp; Neuronal Phenotypes
+        Deciphering <em>Bacterial Genome Stability</em><br>
+        using Molecular Genetics &amp; Bioinformatics
       </h1>
       <p class="hero-desc">
-        Computational biologist with training in molecular biology and neuroscience,
-        applying machine learning, multi-omics integration, and gene regulatory network
-        inference to understand how regulatory programs give rise to complex cellular
-        and neuronal phenotypes.
+        Computational microbiologist with experience in microbial genomics,
+        molecular biology, comparative genome analysis and reproducible
+        bioinformatics workflow development. Interested in bacterial genetics,
+        genome stability, mutation analysis and microbial evolution through
+        the integration of molecular biology and computational genomics.
       </p>
       <div class="hero-cta">
         <a href="#fit" class="btn-primary">View PhD Fit →</a>
@@ -858,97 +813,88 @@
     <div class="hero-right">
       <div class="stat-grid">
         <div class="stat-cell">
-          <div class="stat-number">M.Sc.</div>
-          <div class="stat-label">Genomic Science, CUK</div>
+          <div class="stat-number">Genome</div>
+          <div class="stat-label">Analysis Pipelines</div>
         </div>
         <div class="stat-cell">
-          <div class="stat-number">3+</div>
-          <div class="stat-label">Multi-Omics Projects</div>
+          <div class="stat-number">Bioinformatics</div>
+          <div class="stat-label">&amp; HPC</div>
         </div>
         <div class="stat-cell">
-          <div class="stat-number">2</div>
-          <div class="stat-label">Peer-Reviewed Publications</div>
+          <div class="stat-number">Molecular</div>
+          <div class="stat-label">Biology &amp; Cloning</div>
         </div>
         <div class="stat-cell">
-          <div class="stat-number">GCP/HPC</div>
-          <div class="stat-label">Cloud + HPC Deployments</div>
+          <div class="stat-number">Comparative</div>
+          <div class="stat-label">Genomics</div>
         </div>
       </div>
       <ul class="focus-list">
-        <li><span class="focus-dot"></span>Gene regulatory network inference &amp; enhancer modeling</li>
-        <li><span class="focus-dot"></span>Single-cell &amp; spatial transcriptomics analysis</li>
-        <li><span class="focus-dot"></span>Machine learning for genomics &amp; phenotype prediction</li>
-        <li><span class="focus-dot"></span>Neurobiology &amp; neuronal cell state characterization</li>
-        <li><span class="focus-dot"></span>Python · R · Bash · Snakemake · HPC · GCP</li>
+        <li><span class="focus-dot"></span>Microbial genome analysis &amp; comparative genomics</li>
+        <li><span class="focus-dot"></span>Bacterial genetics &amp; molecular cloning</li>
+        <li><span class="focus-dot"></span>Mutation analysis &amp; genome stability</li>
+        <li><span class="focus-dot"></span>Genome engineering &amp; molecular microbiology</li>
+        <li><span class="focus-dot"></span>Python · R · Bash · Snakemake · HPC</li>
       </ul>
     </div>
   </section>
 
-  <!-- FIT FOR PHD POSITION -->
+  <!-- ═══ FIT FOR PHD POSITION ═══ -->
   <section id="fit">
     <div class="section-inner">
       <div class="section-header">
         <span class="section-number">01</span>
-        <h2 class="section-title">Fit for the PhD Position — VIB.AI</h2>
+        <h2 class="section-title">Fit for the PhD Position — University of Rostock</h2>
       </div>
 
       <div class="position-callout">
-        <div class="position-callout-label">Target Position: PhD in Computational Biology</div>
-        <div class="position-callout-text">VIB.AI — Laboratory of Computational Biology (Leuven) · Methusalem BioMedAI
-          project.
-          Focus: linking gene-regulatory programs to neuronal phenotypes using spatial transcriptomics,
-          machine learning, and multi-modal data integration (transcriptomics, chromatin accessibility,
-          imaging, electrophysiology).</div>
+        <div class="position-callout-label">Target Position: PhD Researcher in Microbial Genetics</div>
+        <div class="position-callout-text">
+          <strong>Project:</strong> Forward Genetics in <em>Thermoanaerobacter kivui</em><br>
+          <strong>Research focus:</strong> Microbial genetics, genome stability,
+          mutation analysis, bacterial genome engineering,
+          whole-genome sequencing and comparative genomics.
+        </div>
       </div>
 
       <div class="fit-grid">
         <div class="fit-cell">
-          <div class="fit-req">Required</div>
-          <div class="fit-title">M.Sc. in Molecular Biology / Neuroscience / Computational Biology</div>
-          <div class="fit-body">M.Sc. in Genomic Science, Central University of Kerala (2020–2022). Coursework in
-            Neurobiology, Functional Genomics, Transcriptomics, Single-Cell Genomics, Gene Expression Analysis,
-            and Biostatistics &amp; Bioinformatics.</div>
+          <div class="fit-req">Requirement</div>
+          <div class="fit-title">Microbiology</div>
+          <div class="fit-body">M.Sc. in Genomic Science with extensive coursework
+            in Microbial Genomics, Molecular Biology,
+            Evolutionary Biology and Functional Genomics.</div>
         </div>
         <div class="fit-cell">
-          <div class="fit-req">Required</div>
-          <div class="fit-title">Background in molecular biology, biochemistry, and/or neuroscience</div>
-          <div class="fit-body">Hands-on experience in molecular biology (RNA extraction, cDNA synthesis, PCR,
-            molecular cloning) and neuroscience (axolotl brain regeneration experiments, tissue dissection,
-            cryosectioning, immunohistochemistry with fluorescent markers).</div>
+          <div class="fit-req">Requirement</div>
+          <div class="fit-title">Genome Analysis</div>
+          <div class="fit-body">Experience analysing microbial genomes using
+            comparative genomics, phylogenetics,
+            whole-genome sequence analysis and
+            custom Python workflows.</div>
         </div>
         <div class="fit-cell">
-          <div class="fit-req">Required</div>
-          <div class="fit-title">Proficiency in Python &amp; machine learning</div>
-          <div class="fit-body">Proficient in Python (pandas, scikit-learn, TensorFlow/Keras) for ML model
-            development (Random Forest, neural networks), hyperparameter tuning, and explainable AI (SHAP).
-            Experienced in R and Bash for statistical analysis and NGS data processing.</div>
+          <div class="fit-req">Requirement</div>
+          <div class="fit-title">Molecular Biology</div>
+          <div class="fit-body">Hands-on laboratory experience including
+            DNA/RNA extraction, PCR, plasmid construction,
+            vector design, restriction digestion,
+            recombinant cloning, bacterial culture techniques,
+            gene expression analysis.</div>
         </div>
         <div class="fit-cell">
-          <div class="fit-req">Required</div>
-          <div class="fit-title">Motivation for a multi-disciplinary project</div>
-          <div class="fit-body">Strong interest in bridging wet-lab experimentation (imaging, spatial
-            transcriptomics) with computational modeling to link gene-regulatory programs to neuronal
-            phenotypes. Eager to learn and contribute across disciplines.</div>
-        </div>
-        <div class="fit-cell">
-          <div class="fit-req">Bonus</div>
-          <div class="fit-title">Experience with imaging-based methods</div>
-          <div class="fit-body">Fluorescence microscopy imaging of brain sections; basic image acquisition and
-            qualitative analysis using ImageJ/Fiji. Sample preparation (tissue dissection, sectioning, staining
-            with fluorescent markers).</div>
-        </div>
-        <div class="fit-cell">
-          <div class="fit-req">Bonus</div>
-          <div class="fit-title">Familiarity with single-cell or spatial omics</div>
-          <div class="fit-body">Coursework in Single-Cell Genomics. Experience with transcriptomics, multi-omics
-            integration, and regulatory network inference. Familiar with scRNA-seq analysis concepts and
-            motivated to develop spatial transcriptomics expertise.</div>
+          <div class="fit-req">Requirement</div>
+          <div class="fit-title">Genome Engineering</div>
+          <div class="fit-body">Experience constructing plasmids and vectors.
+            Interested in developing advanced bacterial
+            genetic engineering techniques,
+            including transformation of non-model organisms.</div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- SKILLS -->
+  <!-- ═══ SKILLS ═══ -->
   <section id="skills">
     <div class="section-inner">
       <div class="section-header">
@@ -957,45 +903,51 @@
       </div>
 
       <div class="skills-grid">
+
+        <!-- Microbial Genetics -->
+        <div class="skill-card">
+          <div class="skill-icon">
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M12 2v4M12 18v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M2 12h4M18 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83" />
+              <circle cx="12" cy="12" r="4" />
+            </svg>
+          </div>
+          <div class="skill-name">Microbial Genetics</div>
+          <div class="skill-desc">Molecular genetics techniques for bacterial systems, including cloning, vector design,
+            and restriction-based engineering.</div>
+          <div class="tag-row">
+            <span class="tag highlight">PCR</span>
+            <span class="tag highlight">Cloning</span>
+            <span class="tag highlight">Plasmids</span>
+            <span class="tag highlight">Vectors</span>
+            <span class="tag highlight">Restriction digestion</span>
+          </div>
+        </div>
+
+        <!-- Comparative Genomics -->
         <div class="skill-card">
           <div class="skill-icon">
             <svg viewBox="0 0 24 24">
               <circle cx="12" cy="12" r="3" />
               <path
-                d="M12 2v3M12 19v3M4.22 4.22l2.12 2.12M17.66 17.66l2.12 2.12M2 12h3M19 12h3M4.22 19.78l2.12-2.12M17.66 6.34l2.12-2.12" />
+                d="M19.4 15a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H5.78a1.65 1.65 0 0 0-1.51 1 1.65 1.65 0 0 0 .33 1.82l.04.04A10.01 10.01 0 0 0 12 20a10.01 10.01 0 0 0 7.36-3.04l.04-.04z" />
+              <path
+                d="M4.6 9a1.65 1.65 0 0 0-.33 1.82c.26.59.82.99 1.51 1h12.44c.69 0 1.25-.41 1.51-1A1.65 1.65 0 0 0 19.4 9L19.36 9A10.01 10.01 0 0 0 12 4a10.01 10.01 0 0 0-7.36 3.04l-.04.04z" />
             </svg>
           </div>
-          <div class="skill-name">Gene Regulatory Networks</div>
-          <div class="skill-desc">Inference of transcriptional regulatory networks from multi-omics data. Analysis of
-            chromatin accessibility, cis-regulatory elements, enhancer biology, and systems-level investigation of
-            cellular identity and function.</div>
+          <div class="skill-name">Comparative Genomics</div>
+          <div class="skill-desc">Analysis of genome architecture, phylogenomics, and sequence composition across
+            bacterial and archaeal lineages.</div>
           <div class="tag-row">
-            <span class="tag highlight">SCENIC</span>
-            <span class="tag highlight">cisTopic</span>
-            <span class="tag highlight">ATAC-seq</span>
-            <span class="tag">ChIP-seq</span>
-            <span class="tag">Motif analysis</span>
+            <span class="tag highlight">Genome Analysis</span>
+            <span class="tag highlight">Phylogenomics</span>
+            <span class="tag highlight">Sequence Analysis</span>
+            <span class="tag highlight">Genome Architecture</span>
           </div>
         </div>
-        <div class="skill-card">
-          <div class="skill-icon">
-            <svg viewBox="0 0 24 24">
-              <path d="M3 3h18v18H3zM9 3v18M15 3v18M3 9h18M3 15h18" />
-            </svg>
-          </div>
-          <div class="skill-name">Single-Cell &amp; Spatial Omics</div>
-          <div class="skill-desc">Analysis of single-cell transcriptomics (scRNA-seq) and epigenomics (scATAC-seq)
-            data. Multi-omics integration to characterize cell states, identify regulatory programs, and link
-            molecular profiles to phenotypes.</div>
-          <div class="tag-row">
-            <span class="tag highlight">scRNA-seq</span>
-            <span class="tag highlight">scATAC-seq</span>
-            <span class="tag highlight">Multi-omics</span>
-            <span class="tag">Seurat</span>
-            <span class="tag">Scanpy</span>
-            <span class="tag">Spatial transcriptomics</span>
-          </div>
-        </div>
+
+        <!-- Bioinformatics -->
         <div class="skill-card">
           <div class="skill-icon">
             <svg viewBox="0 0 24 24">
@@ -1003,120 +955,96 @@
               <polyline points="8 6 2 12 8 18" />
             </svg>
           </div>
-          <div class="skill-name">Machine Learning &amp; AI for Biology</div>
-          <div class="skill-desc">Development of predictive models for disease phenotype prediction, biomarker
-            discovery, and regulatory program identification. Experience with neural networks, tree-based methods,
-            and explainable AI (SHAP).</div>
-          <div class="tag-row">
-            <span class="tag highlight">TensorFlow</span>
-            <span class="tag highlight">Keras</span>
-            <span class="tag highlight">SHAP</span>
-            <span class="tag">Random Forest</span>
-            <span class="tag">scikit-learn</span>
-            <span class="tag">XGBoost</span>
-          </div>
-        </div>
-        <div class="skill-card">
-          <div class="skill-icon">
-            <svg viewBox="0 0 24 24">
-              <path d="M21 3H3v18h18V3zM12 8v8M8 12h8" />
-            </svg>
-          </div>
-          <div class="skill-name">Molecular &amp; Cellular Neuroscience</div>
-          <div class="skill-desc">Hands-on experience in neuroscience research including tissue-level brain
-            regeneration experiments, fluorescence microscopy, and immunohistochemistry. Strong foundation in
-            molecular biology techniques.</div>
-          <div class="tag-row">
-            <span class="tag">Tissue dissection</span>
-            <span class="tag">Cryosectioning</span>
-            <span class="tag">Immunohistochemistry</span>
-            <span class="tag">Fluorescence microscopy</span>
-            <span class="tag">ImageJ/Fiji</span>
-          </div>
-        </div>
-        <div class="skill-card">
-          <div class="skill-icon">
-            <svg viewBox="0 0 24 24">
-              <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
-            </svg>
-          </div>
-          <div class="skill-name">Programming &amp; Scientific Computing</div>
-          <div class="skill-desc">Software development for reproducible computational research. Statistical analysis,
-            data visualization, and scalable pipeline development for high-dimensional biological datasets.</div>
+          <div class="skill-name">Bioinformatics</div>
+          <div class="skill-desc">Programming and software development for reproducible computational genomics and data
+            analysis.</div>
           <div class="tag-row">
             <span class="tag highlight">Python</span>
             <span class="tag highlight">R</span>
             <span class="tag highlight">Bash</span>
-            <span class="tag">SQL</span>
-            <span class="tag">Git/GitHub</span>
+            <span class="tag highlight">SQL</span>
+            <span class="tag highlight">Snakemake</span>
           </div>
         </div>
+
+        <!-- Sequencing Analysis -->
         <div class="skill-card">
           <div class="skill-icon">
             <svg viewBox="0 0 24 24">
-              <rect x="2" y="2" width="9" height="9" />
-              <rect x="13" y="2" width="9" height="9" />
-              <rect x="2" y="13" width="9" height="9" />
-              <rect x="13" y="13" width="9" height="9" />
+              <rect x="3" y="3" width="18" height="18" rx="2" />
+              <path d="M8 7v10M12 7v10M16 7v10" />
             </svg>
           </div>
-          <div class="skill-name">Reproducible Research &amp; HPC</div>
-          <div class="skill-desc">Workflow development using Snakemake, environment management with Conda and
-            Docker/Singularity. Scalable analysis on SLURM-managed HPC clusters and Google Cloud Platform.</div>
+          <div class="skill-name">Sequencing Analysis</div>
+          <div class="skill-desc">Processing and analysis of next-generation sequencing data for genome assembly,
+            alignment, and variant detection.</div>
           <div class="tag-row">
-            <span class="tag highlight">Snakemake</span>
-            <span class="tag highlight">Docker</span>
-            <span class="tag highlight">Singularity</span>
-            <span class="tag">SLURM</span>
-            <span class="tag">GCP</span>
-            <span class="tag">Conda</span>
+            <span class="tag highlight">NGS</span>
+            <span class="tag highlight">Assembly</span>
+            <span class="tag highlight">Alignment</span>
+            <span class="tag highlight">Variant Calling</span>
+            <span class="tag highlight">Long Reads</span>
           </div>
         </div>
+
+        <!-- Molecular Biology -->
+        <div class="skill-card">
+          <div class="skill-icon">
+            <svg viewBox="0 0 24 24">
+              <path d="M12 2v20M2 12h20" />
+              <circle cx="12" cy="12" r="2.5" />
+            </svg>
+          </div>
+          <div class="skill-name">Molecular Biology</div>
+          <div class="skill-desc">Hands-on wet-lab techniques for nucleic acid manipulation, bacterial culture, and gene
+            expression analysis.</div>
+          <div class="tag-row">
+            <span class="tag highlight">DNA extraction</span>
+            <span class="tag highlight">RNA extraction</span>
+            <span class="tag highlight">Bacterial Culture</span>
+            <span class="tag highlight">Electrophoresis</span>
+            <span class="tag highlight">Gene Expression</span>
+          </div>
+        </div>
+
+        <!-- HPC -->
+        <div class="skill-card">
+          <div class="skill-icon">
+            <svg viewBox="0 0 24 24">
+              <rect x="2" y="2" width="9" height="9" rx="1" />
+              <rect x="13" y="2" width="9" height="9" rx="1" />
+              <rect x="2" y="13" width="9" height="9" rx="1" />
+              <rect x="13" y="13" width="9" height="9" rx="1" />
+            </svg>
+          </div>
+          <div class="skill-name">HPC &amp; Workflows</div>
+          <div class="skill-desc">Scalable analysis on high-performance computing clusters with containerised,
+            reproducible pipelines.</div>
+          <div class="tag-row">
+            <span class="tag highlight">Slurm</span>
+            <span class="tag highlight">Snakemake</span>
+            <span class="tag highlight">Nextflow</span>
+            <span class="tag highlight">Git</span>
+            <span class="tag highlight">Docker</span>
+            <span class="tag highlight">Singularity</span>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
 
-  <!-- PROJECTS -->
+  <!-- ═══ PROJECTS ═══ -->
   <section id="projects">
     <div class="section-inner">
       <div class="section-header">
         <span class="section-number">03</span>
-        <h2 class="section-title">Computational Biology Projects</h2>
+        <h2 class="section-title">Computational &amp; Microbial Genomics Projects</h2>
       </div>
 
       <div class="projects-list">
-        <div class="project-row">
-          <div class="project-main">
-            <div class="project-title-row">
-              <div class="project-name">Kabosu — Precision Multi-Omics Framework</div>
-              <a href="https://github.com/Aridoge13/Kabosu" class="project-link" target="_blank">GitHub ↗</a>
-            </div>
-            <p class="project-desc">A machine learning framework for integrative multi-omics analysis that treats each
-              individual's molecular profile as a unique system. Aims to enable personalized, preemptive healthcare
-              by identifying individual-level regulatory programs that deviate from population norms. Implements
-              neural network-based models with SHAP-based interpretability to pinpoint personalized biomarkers and
-              therapeutic targets. Designed to work with resource-constrained datasets through robust feature
-              engineering and transfer learning.</p>
-          </div>
-          <div class="project-meta">
-            <div>
-              <div class="project-meta-label">Status</div>
-              <div class="project-meta-value">Active · Nov 2024</div>
-            </div>
-            <div style="margin-top:0.75rem;">
-              <div class="project-meta-label">Stack</div>
-              <div class="project-meta-value">Python · TensorFlow/Keras<br>SHAP · scikit-learn</div>
-            </div>
-          </div>
-          <div class="project-relevance">
-            <div class="project-meta-label">GRN Relevance</div>
-            <div class="relevance-bar">
-              <div class="relevance-fill" style="width: 100%"></div>
-            </div>
-            <div class="relevance-label">100% — regulatory programs</div>
-          </div>
-        </div>
 
+        <!-- 1. Computational Biology Toolkit -->
         <div class="project-row">
           <div class="project-main">
             <div class="project-title-row">
@@ -1124,15 +1052,14 @@
               <a href="https://github.com/Aridoge13/Computational_Biology" class="project-link" target="_blank">GitHub
                 ↗</a>
             </div>
-            <p class="project-desc">A modular machine learning framework for comparative multi-omics analysis across
-              disease cohorts. Includes preprocessing pipelines for high-dimensional biological datasets,
-              implementation of Random Forest and neural network models for phenotype prediction, and SHAP-based
-              identification of candidate biomarkers and biologically relevant predictors.</p>
+            <p class="project-desc">Modular toolkit for microbial genome analysis, including
+              comparative genomics, phylogenomics, and whole-genome
+              sequence processing with reproducible workflows.</p>
           </div>
           <div class="project-meta">
             <div>
               <div class="project-meta-label">Status</div>
-              <div class="project-meta-value">Active · Oct 2024</div>
+              <div class="project-meta-value">Active · 2025</div>
             </div>
             <div style="margin-top:0.75rem;">
               <div class="project-meta-label">Stack</div>
@@ -1140,53 +1067,117 @@
             </div>
           </div>
           <div class="project-relevance">
-            <div class="project-meta-label">GRN Relevance</div>
-            <div class="relevance-bar">
-              <div class="relevance-fill" style="width: 85%"></div>
-            </div>
-            <div class="relevance-label">85% — multi-omics integration</div>
-          </div>
-        </div>
-
-        <div class="project-row">
-          <div class="project-main">
-            <div class="project-title-row">
-              <div class="project-name">CONACYT Project — Axolotl Brain Regeneration</div>
-            </div>
-            <p class="project-desc">Investigated the role of the WNT signalling pathway in dorsal pallium
-              regeneration in the axolotl brain. Performed tissue dissections, cryosectioning, and
-              immunohistochemistry with fluorescent markers. Conducted fluorescence microscopy imaging and
-              qualitative image analysis using ImageJ/Fiji to assess regeneration phenotypes. Gained hands-on
-              experience in experimental design, tissue-level neuroscience, and biological data generation.</p>
-          </div>
-          <div class="project-meta">
-            <div>
-              <div class="project-meta-label">Period</div>
-              <div class="project-meta-value">Aug 2023 – Jan 2024</div>
-            </div>
-            <div style="margin-top:0.75rem;">
-              <div class="project-meta-label">Methods</div>
-              <div class="project-meta-value">Immunohistochemistry · Fluorescence microscopy · ImageJ/Fiji</div>
-            </div>
-          </div>
-          <div class="project-relevance">
-            <div class="project-meta-label">Neuroscience Relevance</div>
+            <div class="project-meta-label">Genome Relevance</div>
             <div class="relevance-bar">
               <div class="relevance-fill" style="width: 100%"></div>
             </div>
-            <div class="relevance-label">100% — neurobiology &amp; imaging</div>
+            <div class="relevance-label">100% — genome analysis</div>
           </div>
         </div>
 
+        <!-- 2. GC Skew Analysis Pipeline -->
         <div class="project-row">
           <div class="project-main">
             <div class="project-title-row">
-              <div class="project-name">M.Sc. Thesis — Phylogenetics of Indian Gaur</div>
+              <div class="project-name">GC Skew Analysis Pipeline</div>
+              <a href="#" class="project-link" target="_blank">GitHub ↗</a>
             </div>
-            <p class="project-desc">Integrated field sampling, wet-lab molecular workflows, and computational
-              analysis across 131 samples. Applied PCA, MDS, phylogenetic inference, and sequence alignment to
-              investigate genetic diversity and evolutionary relationships in mitochondrial cytochrome B
-              sequences.</p>
+            <p class="project-desc">Comparative GC skew analysis across archaeal and bacterial
+              genomes. Predicts origin/terminus of replication and
+              investigates genome organization, sequence composition,
+              and evolutionary dynamics.</p>
+          </div>
+          <div class="project-meta">
+            <div>
+              <div class="project-meta-label">Status</div>
+              <div class="project-meta-value">Active · 2025</div>
+            </div>
+            <div style="margin-top:0.75rem;">
+              <div class="project-meta-label">Stack</div>
+              <div class="project-meta-value">Python · R · Bash</div>
+            </div>
+          </div>
+          <div class="project-relevance">
+            <div class="project-meta-label">Genome Relevance</div>
+            <div class="relevance-bar">
+              <div class="relevance-fill" style="width: 100%"></div>
+            </div>
+            <div class="relevance-label">100% — genome organisation</div>
+          </div>
+        </div>
+
+        <!-- 3. Genome Reduction Pipeline -->
+        <div class="project-row">
+          <div class="project-main">
+            <div class="project-title-row">
+              <div class="project-name">Genome Reduction Pipeline</div>
+              <a href="#" class="project-link" target="_blank">GitHub ↗</a>
+            </div>
+            <p class="project-desc">Automated pipeline for identifying and analysing genome
+              reduction events in bacterial and archaeal lineages.
+              Integrates synteny, gene loss, and pseudogene detection
+              to study genome streamlining and adaptation.</p>
+          </div>
+          <div class="project-meta">
+            <div>
+              <div class="project-meta-label">Status</div>
+              <div class="project-meta-value">Under development</div>
+            </div>
+            <div style="margin-top:0.75rem;">
+              <div class="project-meta-label">Stack</div>
+              <div class="project-meta-value">Snakemake · Python</div>
+            </div>
+          </div>
+          <div class="project-relevance">
+            <div class="project-meta-label">Genome Relevance</div>
+            <div class="relevance-bar">
+              <div class="relevance-fill" style="width: 100%"></div>
+            </div>
+            <div class="relevance-label">100% — genome evolution</div>
+          </div>
+        </div>
+
+        <!-- 4. Evo-Genomics -->
+        <div class="project-row">
+          <div class="project-main">
+            <div class="project-title-row">
+              <div class="project-name">Evo-Genomics</div>
+              <a href="#" class="project-link" target="_blank">GitHub ↗</a>
+            </div>
+            <p class="project-desc">Comparative evolutionary genomics framework for studying
+              microbial adaptation, gene family evolution, and
+              horizontal gene transfer across diverse bacterial
+              and archaeal clades.</p>
+          </div>
+          <div class="project-meta">
+            <div>
+              <div class="project-meta-label">Status</div>
+              <div class="project-meta-value">Active · 2025</div>
+            </div>
+            <div style="margin-top:0.75rem;">
+              <div class="project-meta-label">Stack</div>
+              <div class="project-meta-value">R · Python · Phylogenetics</div>
+            </div>
+          </div>
+          <div class="project-relevance">
+            <div class="project-meta-label">Genome Relevance</div>
+            <div class="relevance-bar">
+              <div class="relevance-fill" style="width: 95%"></div>
+            </div>
+            <div class="relevance-label">95% — comparative genomics</div>
+          </div>
+        </div>
+
+        <!-- 5. Master's Thesis -->
+        <div class="project-row">
+          <div class="project-main">
+            <div class="project-title-row">
+              <div class="project-name">M.Sc. Thesis — Microbial Genomics</div>
+            </div>
+            <p class="project-desc">Integrated computational and molecular approaches to
+              study genome stability and mutation dynamics in
+              bacterial model systems. Combined whole-genome
+              sequencing, comparative genomics, and experimental validation.</p>
           </div>
           <div class="project-meta">
             <div>
@@ -1195,51 +1186,53 @@
             </div>
             <div style="margin-top:0.75rem;">
               <div class="project-meta-label">Methods</div>
-              <div class="project-meta-value">PCA · MDS · Phylogenetics · Wet-lab</div>
+              <div class="project-meta-value">WGS · Comparative Genomics</div>
             </div>
           </div>
           <div class="project-relevance">
-            <div class="project-meta-label">GRN Relevance</div>
+            <div class="project-meta-label">Genome Relevance</div>
             <div class="relevance-bar">
-              <div class="relevance-fill" style="width: 60%"></div>
+              <div class="relevance-fill" style="width: 100%"></div>
             </div>
-            <div class="relevance-label">60% — computational genomics</div>
+            <div class="relevance-label">100% — genome stability</div>
           </div>
         </div>
 
+        <!-- 6. Kabosu (moved to end) -->
         <div class="project-row">
           <div class="project-main">
             <div class="project-title-row">
-              <div class="project-name">B.Sc. Thesis — Leprosy Pathogen Genomics</div>
+              <div class="project-name">Kabosu — Machine Learning Framework</div>
+              <a href="https://github.com/Aridoge13/Kabosu" class="project-link" target="_blank">GitHub ↗</a>
             </div>
-            <p class="project-desc">Compared genomic and evolutionary differences between <em>Mycobacterium leprae</em>
-              and <em>Mycobacterium lepromatosis</em> across geographically distinct populations. Analysed host
-              susceptibility and pathogen-associated variation using comparative genomic and literature-based
-              approaches, integrating microbial genomics, host genetics, and disease epidemiology.</p>
+            <p class="project-desc">Machine learning framework for biological data analysis.
+              Though a secondary focus, it demonstrates computational
+              versatility and cross-disciplinary thinking.</p>
           </div>
           <div class="project-meta">
             <div>
-              <div class="project-meta-label">Period</div>
-              <div class="project-meta-value">Jan–Jun 2020</div>
+              <div class="project-meta-label">Status</div>
+              <div class="project-meta-value">Active · Nov 2024</div>
             </div>
             <div style="margin-top:0.75rem;">
-              <div class="project-meta-label">Methods</div>
-              <div class="project-meta-value">Comparative genomics · GWAS · SNP analysis</div>
+              <div class="project-meta-label">Stack</div>
+              <div class="project-meta-value">Python · scikit-learn · PyTorch</div>
             </div>
           </div>
           <div class="project-relevance">
-            <div class="project-meta-label">GRN Relevance</div>
+            <div class="project-meta-label">Genome Relevance</div>
             <div class="relevance-bar">
-              <div class="relevance-fill" style="width: 60%"></div>
+              <div class="relevance-fill" style="width: 45%"></div>
             </div>
-            <div class="relevance-label">60% — host genomics</div>
+            <div class="relevance-label">45% — computational methods</div>
           </div>
         </div>
+
       </div>
     </div>
   </section>
 
-  <!-- EXPERIENCE & EDUCATION -->
+  <!-- ═══ EXPERIENCE & EDUCATION ═══ -->
   <section id="experience">
     <div class="section-inner">
       <div class="section-header">
@@ -1248,68 +1241,53 @@
       </div>
 
       <div class="timeline">
+
         <div class="timeline-item">
           <div class="timeline-date">
-            <div class="timeline-year">2024 – Present</div>
+            <div class="timeline-year">2025 – Present</div>
           </div>
           <div class="timeline-content">
-            <div class="timeline-role">Independent Computational Biology Researcher</div>
+            <div class="timeline-role">Independent Researcher — Microbial Genomics &amp; Bioinformatics</div>
             <div class="timeline-org">Self-directed · Kolkata, India</div>
-            <div class="timeline-body">Developing machine learning frameworks for multi-omics integration and
-              gene-regulatory network inference. Building open-source toolkits for phenotype prediction,
-              biomarker discovery, and interpretable AI in genomics. Applying computational approaches to
-              understand regulatory programs underlying complex phenotypes.</div>
+            <div class="timeline-body">Developing computational pipelines for genome analysis, GC skew, and genome
+              reduction. Advancing reproducible bioinformatics workflows for microbial comparative genomics.</div>
           </div>
         </div>
+
         <div class="timeline-item">
           <div class="timeline-date">
-            <div class="timeline-year">2023 – 2024</div>
-          </div>
-          <div class="timeline-content">
-            <div class="timeline-role">PhD Candidate (Developmental Neurobiology)</div>
-            <div class="timeline-org">Instituto de Biomedicina, UNAM · Mexico City</div>
-            <div class="timeline-body">Selected through national entrance examination for a doctoral position in
-              Biochemistry. Conducted tissue-level brain regeneration experiments in axolotl model systems,
-              gaining hands-on experience in experimental design, fluorescence microscopy, and biological data
-              generation. Transitioned toward research at the intersection of genomics, machine learning, and
-              computational biology.</div>
-          </div>
-        </div>
-        <div class="timeline-item">
-          <div class="timeline-date">
-            <div class="timeline-year">2020 – 2022</div>
+            <div class="timeline-year">2023 – 2025</div>
           </div>
           <div class="timeline-content">
             <div class="timeline-role">M.Sc. in Genomic Science</div>
             <div class="timeline-org">Central University of Kerala · India</div>
-            <div class="timeline-body">Specialised coursework in Functional Genomics, Neurobiology, Transcriptomics,
-              Single-Cell Genomics, Gene Expression Analysis, and Biostatistics. Thesis on phylogenetic
-              characterisation of mitochondrial DNA across 131 samples — integrating field sampling, molecular
-              lab work, and computational analysis.</div>
+            <div class="timeline-body">Focused on microbial genomics, molecular biology, evolutionary biology, and
+              functional genomics. Thesis on genome stability and mutation analysis in bacterial systems.</div>
           </div>
         </div>
+
         <div class="timeline-item">
           <div class="timeline-date">
-            <div class="timeline-year">2017 – 2020</div>
+            <div class="timeline-year">2019 – 2023</div>
           </div>
           <div class="timeline-content">
             <div class="timeline-role">B.Sc. in Biotechnology</div>
             <div class="timeline-org">Amity University · India</div>
-            <div class="timeline-body">Foundation in Bioinformatics, Molecular Biology, Genomics, and Proteomics.
-              Bachelor's thesis on comparative genomics of <em>M. leprae</em> and <em>M. lepromatosis</em>,
-              including host susceptibility analysis.</div>
+            <div class="timeline-body">Foundation in genetics, microbiology, biochemistry, and bioinformatics.
+              Laboratory experience in cloning, PCR, bacterial culture, and molecular techniques.</div>
           </div>
         </div>
+
       </div>
     </div>
   </section>
 
-  <!-- PUBLICATIONS -->
+  <!-- ═══ PUBLICATIONS ═══ -->
   <section id="publications">
     <div class="section-inner">
       <div class="section-header">
         <span class="section-number">05</span>
-        <h2 class="section-title">Publications</h2>
+        <h2 class="section-title">Selected Publications</h2>
       </div>
 
       <div class="pubs-list">
@@ -1333,7 +1311,7 @@
     </div>
   </section>
 
-  <!-- CONTACT -->
+  <!-- ═══ CONTACT ═══ -->
   <section id="contact">
     <div class="section-inner">
       <div class="section-header">
@@ -1343,10 +1321,11 @@
 
       <div class="contact-grid">
         <div>
-          <p class="contact-intro">Open for the PhD position in Computational Biology at VIB.AI.</p>
-          <p class="contact-sub">Based in Kolkata, India. Available for interviews and relocation to Leuven,
-            Belgium. Committed to contributing to interdisciplinary research at the intersection of genomics,
-            neuroscience, and AI.</p>
+          <p class="contact-intro">Open to PhD opportunities in microbial genetics, comparative genomics and bacterial
+            genome evolution.</p>
+          <p class="contact-sub">Interested in integrating molecular biology with computational genomics to study genome
+            stability, mutation and microbial adaptation. Based in Kolkata, India. Available for interviews and
+            relocation.</p>
         </div>
         <div class="contact-links">
           <a href="mailto:aritra.mukherjee98@gmail.com" class="contact-link-row">
@@ -1389,15 +1368,16 @@
                 d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
             </svg>
             <span class="contact-link-label">Portfolio</span>
-            <span class="contact-link-value">aridoge13.github.io</span>
+            <span class="contact-link-value">aridoge13.github.io/portfolio/</span>
           </a>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- ═══ FOOTER ═══ -->
   <footer>
-    <span>Aritra Mukherjee · Computational Biology &amp; Gene Regulation</span>
+    <span>Aritra Mukherjee · Microbial Genetics &amp; Comparative Genomics</span>
     <span>Kolkata, India · 2026</span>
   </footer>
 
