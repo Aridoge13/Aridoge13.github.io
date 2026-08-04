@@ -1,10 +1,9 @@
-<!DOCTYPE html>
 <html lang="en">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Aritra Mukherjee — Symbiosis, Archaeal Evolution & Microbial Genomics</title>
+  <title>Aritra Mukherjee — Statistical Genomics &amp; Host-Pathogen Genetics</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link
     href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap"
@@ -394,7 +393,7 @@
     }
 
     .pitch-box::before {
-      content: '🦠';
+      content: '🦟';
       position: absolute;
       right: 1.5rem;
       top: 1.2rem;
@@ -788,22 +787,22 @@
   <section class="hero">
     <div class="hero-bg"></div>
     <div class="hero-content">
-      <div class="hero-eyebrow fade-in">PhD applicant · Evolutionary Genomics &amp; Microbial Symbiosis</div>
+      <div class="hero-eyebrow fade-in">PhD applicant · Statistical Genomics &amp; Host–Pathogen Genetics</div>
       <h1 class="fade-in fade-in-1">
-        Archaeal evolution, <em>symbiosis</em>,<br>and the deep history of life
+        Statistical genomics of <em>host–pathogen</em><br>interactions and infectious disease
       </h1>
       <p class="hero-sub fade-in fade-in-2">
-        I am a computational biologist investigating how obligate symbiosis reshapes genomes across
-        deep evolutionary time. My research integrates phylogenomics, comparative genomics, metagenomics,
-        and reproducible workflow development to understand genome streamlining, host dependence, and
-        the evolutionary transitions that shaped the Tree of Life — from the earliest archaeal lineages
-        to the origin of eukaryotic complexity.
+        I am a computational biologist investigating how host and pathogen genetic variation jointly
+        shape infectious disease outcomes. My research integrates GWAS, population genetics, machine
+        learning, and reproducible workflow development to understand the genetic architecture of
+        disease susceptibility and severity — from immune-associated host loci such as the HLA region
+        to the pathogen genomes they interact with.
       </p>
       <p class="hero-sub fade-in fade-in-2" style="font-size:0.92rem;margin-top:-1.2rem;">
-        <span class="research-highlight">DPANN</span>
-        <span class="research-highlight">Asgard archaea</span>
-        <span class="research-highlight">genome reduction</span>
-        <span class="research-highlight">eukaryogenesis</span>
+        <span class="research-highlight">GWAS</span>
+        <span class="research-highlight">Host–pathogen genomics</span>
+        <span class="research-highlight">HLA region</span>
+        <span class="research-highlight">Viral genomics</span>
       </p>
       <div class="hero-cta fade-in fade-in-3">
         <a href="#about" class="btn btn-primary">Research focus →</a>
@@ -815,65 +814,61 @@
   <section id="about">
     <div class="container">
       <div class="section-label">About</div>
-      <h2>Reconstructing the evolution of obligate symbionts</h2>
+      <h2>Decoding the genetics of infectious disease severity</h2>
       <p class="section-intro">
-        Obligate symbiosis is one of the most powerful selective forces in evolution. The transition
-        from a free-living lifestyle to persistent host dependence drives progressive genome reduction,
-        metabolic outsourcing, and the erosion of genomic complexity toward highly streamlined coding
-        repertoires. These processes are deeply connected to the broader history of cellular life on
-        Earth — from the origin of the earliest cells to the emergence of eukaryotes.
+        Infectious disease outcomes emerge from the interaction of two genomes at once: the host's and
+        the pathogen's. Studying either in isolation misses the genotype-by-genotype effects that
+        often determine who develops severe disease. My work applies statistical genomics, population
+        genetics, and machine learning to large-scale genomic and clinical datasets to identify the
+        host and pathogen variants, and their interactions, that drive susceptibility and severity.
       </p>
       <div class="about-grid">
         <div class="about-card">
           <span class="about-card-icon">🧬</span>
-          <h3>Phylogenomics &amp; Deep Evolution</h3>
-          <p>I use RAxML, IQ-TREE2, BEAST, and MrBayes to reconstruct evolutionary relationships
-            across archaeal and bacterial lineages, with a focus on resolving the placement of
-            DPANN archaea, Asgardarchaeota, and the origins of eukaryotic complexity through
-            symbiogenetic merger.</p>
+          <h3>Statistical Genomics &amp; GWAS</h3>
+          <p>I run GWAS, case–control association analysis, and genetic risk score frameworks on
+            large genomic datasets, using population structure correction, PCA, cross-validation,
+            bootstrapping, and permutation testing to identify robust host genetic associations.</p>
         </div>
         <div class="about-card">
-          <span class="about-card-icon">🔬</span>
-          <h3>Comparative Genomics &amp; Genome Reduction</h3>
-          <p>I investigate how obligate host dependence reshapes genomic architecture — from
-            coding-density metrics and compositional features to the loss of biosynthetic pathways
-            and ATP synthase complexes. My work spans <em>Nanoarchaeum equitans</em>, DPANN,
-            CPR bacteria, and free-living archaeal outgroups.</p>
+          <span class="about-card-icon">🦠</span>
+          <h3>Host–Pathogen &amp; Infection Genomics</h3>
+          <p>I study how host genetic variation, particularly in immune-associated loci such as the
+            HLA region, interacts with pathogen genomic variation to shape disease outcomes —
+            work that spans comparative pathogen genomics, viral genome analysis, and virus–host
+            association testing.</p>
+        </div>
+        <div class="about-card">
+          <span class="about-card-icon">🤖</span>
+          <h3>Machine Learning for Disease Risk</h3>
+          <p>I build calibrated machine learning models — gradient boosting, random forests, neural
+            networks — that integrate genomic variation with clinical and phenotypic data to model
+            disease susceptibility and interpret complex genotype–phenotype relationships.</p>
         </div>
         <div class="about-card">
           <span class="about-card-icon">⚙️</span>
-          <h3>Scalable Computational Workflows</h3>
-          <p>I develop reproducible, HPC-compatible pipelines using Snakemake, Docker, Singularity,
-            and Conda. My workflows integrate genome assembly, annotation, comparative genomics,
-            metagenomic profiling, and phylogenomic reconstruction for large-scale biological
-            datasets.</p>
-        </div>
-        <div class="about-card">
-          <span class="about-card-icon">🧪</span>
-          <h3>Molecular &amp; Experimental Biology</h3>
-          <p>I bring practical experience in DNA/RNA extraction, PCR, microbial culture techniques,
-            and molecular microbiology from my Master's and Bachelor's research. I am committed
-            to integrating wet-lab insights with computational evolutionary inference.</p>
+          <h3>Reproducible &amp; Scalable Workflows</h3>
+          <p>I develop reproducible bioinformatics pipelines using Snakemake and Nextflow, deployed
+            in Linux/HPC (SLURM) and cloud (GCP) environments, with Git, Conda, and Docker for
+            fully reproducible computational research.</p>
         </div>
       </div>
 
       <div class="pitch-box">
-        <h3>🎯 Applying to the Spang Lab at NIOZ</h3>
+        <h3>🎯 Applying to MIVEGEC, CNRS</h3>
         <p>
-          <strong>I am applying for the PhD position in the research group of Prof. Dr. Anja Spang
-            at the Netherlands Institute for Sea Research (NIOZ), focused on symbiosis, microbial
-            evolution, and the evolution of obligate archaeal and bacterial interactions.</strong>
-          The project integrates phylogenomics, metagenomics, ancestral reconstruction, machine learning,
-          and network approaches to investigate genome evolution, abundance, and diversity of obligate
-          prokaryotic symbionts throughout Earth history. My research interests align directly with
-          the group's work on archaeal symbionts, DPANN evolution, and eukaryogenesis. I am
-          particularly drawn to the opportunity to contribute to understanding how obligate symbiosis
-          drives reductive genome evolution across diverse branches of Archaea and Bacteria, and to
-          integrate novel phylogenetic, ancestral reconstruction, and network approaches within the
-          newly funded NWO Vici 2025 programme. The interdisciplinary environment between the
-          Department of Marine Microbiology and Biogeochemistry at NIOZ and the University of
-          Amsterdam provides exactly the kind of framework I believe questions about symbiosis and
-          microbial evolution across Earth history require.
+          <strong>I am applying for the PhD position in Statistical Genomics in the group of
+            Dr. Vincent Pedergnana at MIVEGEC (CNRS), Montpellier, focused on host–pathogen
+            genome-to-genome (G×G) interactions in dengue virus disease severity.</strong>
+          The project uses G×G regression models, mixed-effects and Bayesian approaches, and viral
+          GWAS across paired human and dengue viral genomic data from 1,400 patients to identify how
+          interactions at the human HLA region and viral proteins such as NS3 and NS5 shape clinical
+          outcomes. This directly extends the host–pathogen genomics I began with HLA-region
+          association testing during my bachelor's thesis, and the statistical genomics and
+          machine-learning integration I have since built through my GWAS, PRS, and predictive
+          modelling work. I am especially drawn to MIVEGEC's interdisciplinary environment, where
+          statistical genomics, evolutionary genetics, and infectious disease biology converge to
+          translate genomic variation into biological mechanism.
         </p>
       </div>
     </div>
@@ -882,74 +877,68 @@
   <section id="skills">
     <div class="container">
       <div class="section-label">Skills</div>
-      <h2>Toolkit for symbiosis &amp; microbial evolution research</h2>
-      <p class="section-intro">Every method is chosen to address questions about genome streamlining,
-        host dependence, archaeal evolution, and the deep evolutionary history of life.</p>
+      <h2>Toolkit for statistical genomics &amp; host–pathogen research</h2>
+      <p class="section-intro">Every method is chosen to address questions about disease susceptibility,
+        host–pathogen genetic interaction, and the statistical genomics of infectious disease.</p>
       <div class="skills-grid">
         <div class="skill-group">
           <div class="skill-group-header">
             <div class="skill-dot"></div>
-            <h3>Phylogenomics &amp; Evolutionary Inference</h3>
+            <h3>Statistical Genomics &amp; Population Genetics</h3>
           </div>
           <div class="skill-tags">
-            <span class="tag highlight">RAxML</span><span class="tag highlight">IQ-TREE2</span>
-            <span class="tag highlight">BEAST</span><span class="tag">MrBayes</span>
-            <span class="tag">FastTree</span><span class="tag">MAFFT</span>
-            <span class="tag">MUSCLE</span><span class="tag">ADMIXTURE</span>
-            <span class="tag">PLINK</span><span class="tag">PCA</span>
+            <span class="tag highlight">GWAS</span><span class="tag highlight">PLINK</span>
+            <span class="tag highlight">Case–control association</span><span class="tag">PCA</span>
+            <span class="tag">Population structure</span><span class="tag">Bootstrapping</span>
+            <span class="tag">Permutation testing</span><span class="tag">Mixed-effects models</span>
           </div>
         </div>
         <div class="skill-group">
           <div class="skill-group-header">
             <div class="skill-dot"></div>
-            <h3>Comparative &amp; Microbial Genomics</h3>
+            <h3>Host–Pathogen &amp; Infection Genomics</h3>
           </div>
           <div class="skill-tags">
-            <span class="tag highlight">Genome assembly</span>
-            <span class="tag highlight">Genome reduction analysis</span>
-            <span class="tag">GC skew</span>
-            <span class="tag">Coding-density metrics</span>
-            <span class="tag">Metagenomic profiling</span>
-            <span class="tag">Variant calling</span>
-            <span class="tag">Comparative sequence analysis</span>
+            <span class="tag highlight">HLA region analysis</span>
+            <span class="tag highlight">Viral genomics</span>
+            <span class="tag">Comparative pathogen genomics</span>
+            <span class="tag">Virus–host association</span>
+            <span class="tag">RNA-seq</span>
+            <span class="tag">Metatranscriptomics</span>
           </div>
         </div>
         <div class="skill-group">
           <div class="skill-group-header">
             <div class="skill-dot"></div>
-            <h3>Computational Biology &amp; Programming</h3>
+            <h3>Machine Learning &amp; Predictive Modelling</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="tag highlight">Random Forest</span><span class="tag highlight">LightGBM / GBDT</span>
+            <span class="tag highlight">Neural networks</span><span class="tag">Polygenic risk scores</span>
+            <span class="tag">scikit-learn</span><span class="tag">Predictive modelling</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <div class="skill-group-header">
+            <div class="skill-dot"></div>
+            <h3>Computational Genomics &amp; Programming</h3>
           </div>
           <div class="skill-tags">
             <span class="tag highlight">Python</span><span class="tag highlight">R</span>
-            <span class="tag highlight">Bash</span><span class="tag">SQL</span>
-            <span class="tag">Statistical modelling</span>
-            <span class="tag">Data visualisation</span>
-            <span class="tag">Machine learning</span>
+            <span class="tag highlight">Bash</span><span class="tag">Biopython</span>
+            <span class="tag">NumPy / Pandas</span><span class="tag">NGS analysis</span>
+            <span class="tag">Phylogenomics</span>
           </div>
         </div>
         <div class="skill-group">
           <div class="skill-group-header">
             <div class="skill-dot"></div>
-            <h3>Workflow Development &amp; Reproducibility</h3>
+            <h3>HPC &amp; Reproducible Computing</h3>
           </div>
           <div class="skill-tags">
-            <span class="tag highlight">Snakemake</span><span class="tag highlight">Docker</span>
-            <span class="tag highlight">Singularity</span><span class="tag">Conda</span>
-            <span class="tag">Git/GitHub</span><span class="tag">HPC (SLURM)</span>
-            <span class="tag">Google Cloud Platform</span>
-          </div>
-        </div>
-        <div class="skill-group">
-          <div class="skill-group-header">
-            <div class="skill-dot"></div>
-            <h3>Transcriptomics &amp; Systems Biology</h3>
-          </div>
-          <div class="skill-tags">
-            <span class="tag highlight">Bulk RNA-seq</span>
-            <span class="tag highlight">Single-cell RNA-seq</span>
-            <span class="tag">Differential expression</span>
-            <span class="tag">Pathway enrichment</span>
-            <span class="tag">PANDA</span><span class="tag">LIONESS</span>
+            <span class="tag highlight">Snakemake</span><span class="tag highlight">Nextflow</span>
+            <span class="tag">SLURM / HPC</span><span class="tag">Google Cloud Platform</span>
+            <span class="tag">Git/GitHub</span><span class="tag">Docker</span><span class="tag">Conda</span>
           </div>
         </div>
         <div class="skill-group">
@@ -958,12 +947,10 @@
             <h3>Wet Lab &amp; Molecular Biology</h3>
           </div>
           <div class="skill-tags">
-            <span class="tag highlight">Microbial culturing</span>
             <span class="tag">DNA/RNA extraction</span>
             <span class="tag">PCR</span><span class="tag">cDNA synthesis</span>
+            <span class="tag">Microbial culturing</span>
             <span class="tag">Gene expression</span>
-            <span class="tag">Recombinant cloning</span>
-            <span class="tag">Protein purification</span>
           </div>
         </div>
       </div>
@@ -973,72 +960,65 @@
   <section id="projects">
     <div class="container">
       <div class="section-label">Projects</div>
-      <h2>Designed for symbiosis &amp; archaeal evolution research.</h2>
-      <p class="section-intro">Each repository builds methods directly applicable to studying obligate
-        symbiont evolution, genome reduction, and deep phylogenomic reconstruction across archaeal
-        and bacterial lineages.</p>
+      <h2>Designed for statistical genomics &amp; host–pathogen research.</h2>
+      <p class="section-intro">Each project builds methods directly applicable to studying host genetic
+        susceptibility, pathogen genomic variation, and the statistical integration of genomic and
+        clinical data.</p>
       <div class="project-links">
-        <a href="https://github.com/Aridoge13/Computational_Biology" target="_blank" class="project-link-card">
-          <div class="project-tag-row">
-            <span class="project-pill pill-green">Comparative genomics</span>
-            <span class="project-pill pill-green">Phylogenomics</span>
-            <span class="project-pill pill-gray">Genome reduction</span>
-          </div>
-          <h3>Computational Biology Toolkit</h3>
-          <p><strong>Key for symbiont evolution:</strong> Modular, reproducible workflows for comparative
-            genomics, phylogenomics, metagenomic profiling, and transcriptomics. Includes a dedicated
-            <strong>genome reduction inference pipeline</strong> comparing obligate symbionts
-            (<em>Nanoarchaeum equitans</em>) with free-living archaea (<em>Sulfolobus solfataricus</em>,
-            <em>Lokiarchaeota</em>) and bacterial outgroups using coding-density metrics,
-            compositional features, and Genome Dependency Index calculations.
-          </p>
-          <div class="project-status">
-            <div class="status-dot status-active"></div>Active — extending to DPANN &amp; CPR
-          </div>
-        </a>
-        <a href="https://github.com/Aridoge13/Evo-Genomics" target="_blank" class="project-link-card">
-          <div class="project-tag-row">
-            <span class="project-pill pill-green">Transcriptome-guided</span>
-            <span class="project-pill pill-warm">Genome annotation</span>
-            <span class="project-pill pill-gray">Non-model organisms</span>
-          </div>
-          <h3>Evo‑Genomics pipeline</h3>
-          <p>Scalable transcriptome-guided genome annotation and comparative assembly extension pipeline
-            for non-model organisms. Integrates HISAT2, SAMtools, StringTie, and EviAnn —
-            directly applicable to fragmented MAGs and uncultured microbial systems such as DPANN
-            archaea and CPR bacteria with limited reference resources.</p>
-          <div class="project-status">
-            <div class="status-dot status-active"></div>Adapting for MAG datasets
-          </div>
-        </a>
         <a href="https://github.com/Aridoge13/Kabosu" target="_blank" class="project-link-card">
           <div class="project-tag-row">
-            <span class="project-pill pill-green">Multi‑omics</span>
-            <span class="project-pill pill-green">Network inference</span>
+            <span class="project-pill pill-green">GWAS / PRS</span>
+            <span class="project-pill pill-green">Machine learning</span>
           </div>
           <h3>Kabosu</h3>
-          <p>Computational framework for integrative analysis of heterogeneous genomic and multi-omics
-            datasets. Includes gene regulatory network inference using PANDA and LIONESS on Google
-            Cloud Platform. The underlying computational problem of inferring interaction structure
-            from incomplete data is conceptually transferable to microbial dependency networks
-            reconstructed from metagenomic data.</p>
+          <p><strong>Key for statistical genomics:</strong> Modular ML framework (FFNN and GBDT)
+            integrating human genomic variation and clinical features to model disease
+            susceptibility. Currently integrating PLINK-based polygenic risk score calculations,
+            combining GWAS-derived signal with machine learning approaches, applied to TCGA cancer
+            genomics data linking germline variation with clinical outcomes.</p>
           <div class="project-status">
-            <div class="status-dot status-active"></div>Adapting to microbial networks
+            <div class="status-dot status-active"></div>Active — PRS integration in progress
           </div>
         </a>
-        <a href="https://github.com/Aridoge13" target="_blank" class="project-link-card">
+        <a href="https://github.com/Aridoge13/Viromics" target="_blank" class="project-link-card">
           <div class="project-tag-row">
-            <span class="project-pill pill-green">GC skew analysis</span>
-            <span class="project-pill pill-green">Genome organisation</span>
+            <span class="project-pill pill-green">Viral genomics</span>
+            <span class="project-pill pill-warm">Host prediction</span>
           </div>
-          <h3>GC Skew &amp; Replication Dynamics</h3>
-          <p>Comparative GC skew analysis across archaeal and bacterial genomes spanning Asgard,
-            TACK, Euryarchaeota, and bacterial outgroups. Revealed variation in replication
-            symmetry consistent with multiple origin usage in certain lineages — connecting
-            genome organisation to broader questions about how structural genomic principles
-            are modified under host dependence and reductive evolution.</p>
+          <h3>Viromics — Virus Discovery Pipeline</h3>
+          <p>Reproducible pipeline for viral genome discovery from metagenomic reads, integrating
+            VirSorter2 and iPHoP for identification of uncultivated viruses and host prediction.
+            Built for large-scale deployment on Google Cloud Platform — directly relevant to
+            working with viral genomic data alongside host genomes.</p>
           <div class="project-status">
-            <div class="status-dot status-active"></div>Extending to symbiont lineages
+            <div class="status-dot status-active"></div>Active — Cloud HPC deployment
+          </div>
+        </a>
+        <a href="https://github.com/Aridoge13/Computational_Biology" target="_blank" class="project-link-card">
+          <div class="project-tag-row">
+            <span class="project-pill pill-green">SNP annotation</span>
+            <span class="project-pill pill-gray">Population genetics</span>
+          </div>
+          <h3>Computational Biology Toolkit</h3>
+          <p>Modular, reproducible workflows for SNP annotation, population genetic analysis, and
+            metagenomics (Kraken), built with Snakemake for scalable deployment across genomic
+            datasets in Linux/HPC environments.</p>
+          <div class="project-status">
+            <div class="status-dot status-active"></div>Active
+          </div>
+        </a>
+        <a href="#about" class="project-link-card">
+          <div class="project-tag-row">
+            <span class="project-pill pill-green">HLA region</span>
+            <span class="project-pill pill-warm">Case–control</span>
+          </div>
+          <h3>Host Susceptibility to Leprosy (Bachelor's Thesis)</h3>
+          <p>Case–control genomic analysis of host susceptibility to <em>Mycobacterium leprae</em>
+            and <em>M. lepromatosis</em> using Indian and Mexican patient cohorts. Performed
+            targeted SNP analysis within the HLA region (6p21) and evaluated IRGM as a candidate
+            susceptibility gene — foundational experience in host–pathogen association testing.</p>
+          <div class="project-status">
+            <div class="status-dot status-done"></div>Completed — Amity University
           </div>
         </a>
       </div>
@@ -1048,11 +1028,11 @@
   <section id="contact">
     <div class="container">
       <div class="section-label">Contact</div>
-      <h2>Discuss symbiosis, archaeal evolution &amp; deep-time genomics</h2>
-      <p class="section-intro">I am actively pursuing a PhD position at the NIOZ Department of Marine
-        Microbiology and Biogeochemistry in the Spang Lab. Open to conversations about my fit for the
-        obligate symbiont evolution project, my computational pipelines, or collaborative ideas in
-        microbial evolutionary genomics.</p>
+      <h2>Discuss statistical genomics, host–pathogen genetics &amp; infectious disease</h2>
+      <p class="section-intro">I am actively pursuing a PhD position at MIVEGEC (CNRS), Montpellier, in
+        the group of Dr. Vincent Pedergnana. Open to conversations about my fit for the dengue
+        genome-to-genome project, my computational pipelines, or collaborative ideas in statistical
+        and host–pathogen genomics.</p>
       <div class="contact-grid">
         <a href="mailto:aritra.mukherjee98@gmail.com" class="contact-item">
           <div class="contact-icon">📨</div>
@@ -1087,7 +1067,7 @@
   </section>
 
   <footer>
-    <p>Aritra Mukherjee · Kolkata, India · Symbiosis, Archaeal Evolution &amp; Microbial Genomics</p>
+    <p>Aritra Mukherjee · Kolkata, India · Statistical Genomics &amp; Host–Pathogen Genetics</p>
   </footer>
 
   <script>
